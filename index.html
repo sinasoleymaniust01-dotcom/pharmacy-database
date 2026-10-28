@@ -1,0 +1,86 @@
+
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>بانک اطلاعات دارویی</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <!-- لوگوی داروخانه در بالای سمت چپ -->
+        <a
+            class="pharmacy-logo-link"
+            href="https://www.144tehranpharmacy.com/blog/pharmaceuticals-and-brands/detail/%D8%AF%D8%A7%D8%B1%D9%88%D8%AE%D8%A7%D9%86%D9%87%20%D9%88%20%D9%86%D9%85%D8%A7%D8%AF%20%D8%A2%D9%86/"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="مشاهده مقاله نماد داروخانه"
+        >
+            <img
+                class="pharmacy-logo"
+                src="https://cdn.144tehranpharmacy.com/uploads/images/blogs/kDr3DE9VH_%D9%86%D9%85%D8%A7%D8%AF-%D9%85%D8%A7%D8%B1-%D9%88-%D8%AC%D8%A7%D9%85.webp"
+                alt="نماد داروخانه"
+            >
+        </a>
+
+        <!-- اطلاعات استاد و دانشجو در بالای سمت راست -->
+        <div class="user-info">
+            <p class="teacher-name">
+                <span dir="ltr">Dr. Hooman Movahed</span>
+            </p>
+
+            <p class="teacher-email" dir="ltr">
+                Hooman.movahed@gmail.com
+            </p>
+
+            <p class="student-name">
+                <span dir="ltr">Sina Soleymani</span>
+            </p>
+
+            <p class="student-email" dir="ltr">
+                Sina.soleymani.k@gmail.com
+            </p>
+        </div>
+
+        <!-- عنوان اصلی -->
+        <h1>بانک دارویی</h1>
+        <p>جهت آموزش تکنسین های داروخانه</p>
+    </header>
+
+    <main>
+        <input
+            type="text"
+            id="searchInput"
+            placeholder="نام دارو یا کاربرد آن را جست‌وجو کن..."
+        >
+
+        <div class="filter-section">
+            <label for="groupFilter">گروه دارو:</label>
+
+            <select id="groupFilter">
+                <option value="">همه گروه‌های دارویی</option>
+            </select>
+        </div>
+
+        <p id="drugCount" class="drug-count"></p>
+
+        <div id="drugList"></div>
+    </main>
+
+    <footer>
+        <p>
+            <span dir="ltr"> Hooman.movahed@gmail.com </span>
+        </p>
+
+        <p>
+            <span dir="ltr"> Sina.soleymani.k@gmail.com </span>
+        </p>
+
+        
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>

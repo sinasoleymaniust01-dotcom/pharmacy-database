@@ -1,0 +1,386 @@
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: "B Nazanin", "Times New Roman", serif;
+    background: #f3f6fa;
+    color: #263238;
+    direction: rtl;
+}
+
+/* سربرگ */
+header {
+    position: relative;
+    background: #176b60;
+    color: white;
+    text-align: center;
+    padding: 30px 15px;
+}
+
+header h1 {
+    margin: 0 0 10px;
+    font-size: 28px;
+}
+
+header > p {
+    margin: 0;
+    font-size: 15px;
+}
+
+/* لوگوی بالای سمت چپ */
+.pharmacy-logo-link {
+    position: absolute;
+    top: 25px;
+    left: 55px;
+    width: 75px;
+    height: 75px;
+    display: block;
+}
+
+.pharmacy-logo {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+/* اطلاعات استاد و دانشجو */
+.user-info {
+    position: absolute;
+    top: 15px;
+    right: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    color: white;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.user-info p {
+    margin: 0;
+    padding: 0;
+    line-height: 1.5;
+    text-align: center;
+}
+
+/* فاصله اسم و ایمیل استاد */
+.user-info .teacher-email {
+    font-size: 12px;
+    margin-top: 2px;
+    margin-bottom: 20px;
+}
+
+/* فاصله اسم و ایمیل دانشجو */
+.user-info .student-email {
+    font-size: 12px;
+    margin-top: 2px;
+}
+
+/* بخش اصلی صفحه */
+main {
+    max-width: 1000px;
+    margin: 30px auto;
+    padding: 0 20px;
+}
+
+/* کادر جست‌وجو */
+#searchInput {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #ccd5df;
+    border-radius: 10px;
+    font-family: inherit;
+    font-size: 16px;
+    outline: none;
+    margin-bottom: 20px;
+}
+
+#searchInput:focus {
+    border-color: #176b60;
+    box-shadow: 0 0 0 3px #176b6020;
+}
+
+/* فیلتر گروه دارویی */
+.filter-section {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 15px;
+}
+
+.filter-section label {
+    font-family: "B Nazanin", serif;
+    font-size: 15px;
+}
+
+#groupFilter {
+    flex: 1;
+    min-width: 220px;
+    padding: 12px;
+    border: 1px solid #ccd5df;
+    border-radius: 10px;
+    background: white;
+    font-family: "B Nazanin", serif;
+    font-size: 15px;
+}
+
+/* تعداد داروها */
+.drug-count {
+    font-family: "B Nazanin", serif;
+    font-size: 15px;
+    color: #176b60;
+    margin: 15px 0;
+}
+
+/* فهرست داروها */
+#drugList {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 18px;
+}
+
+/* کارت دارو */
+.drug-card {
+    background: white;
+    border-radius: 12px;
+    padding: 20px;
+    border: 1px solid #e0e7ed;
+    box-shadow: 0 3px 10px #00000008;
+}
+
+.drug-card h2 {
+    color: #176b60;
+    font-size: 20px;
+    margin-top: 0;
+}
+
+.drug-card p {
+    line-height: 1.9;
+    font-size: 16px;
+    font-family: "B Nazanin", "Times New Roman", serif;
+}
+
+.drug-card strong {
+    color: #37474f;
+    font-family: "B Nazanin", serif;
+}
+
+/* نام ژنریک دارو */
+.drug-card p:nth-of-type(1) {
+    font-family: "Times New Roman", serif;
+}
+
+.drug-card p:nth-of-type(1) .english {
+    color: #191970;
+    font-weight: bold;
+}
+
+/* نام تجاری دارو */
+.drug-card p:nth-of-type(2) .english {
+    color: #006400;
+    font-weight: bold;
+}
+
+/* فونت فارسی و انگلیسی */
+.persian {
+    font-family: "B Nazanin", serif;
+}
+
+.english {
+    font-family: "Times New Roman", serif;
+    direction: ltr;
+    unicode-bidi: isolate;
+    display: inline-block;
+}
+
+/* پیام نبود نتیجه */
+.no-result {
+    text-align: center;
+    padding: 25px;
+    color: #687782;
+}
+
+/* دایره علامت‌گذاری داروی مهم */
+.important-toggle {
+    width: 18px;
+    height: 18px;
+    min-width: 18px;
+    padding: 0;
+    flex: 0 0 18px;
+    border: 1.5px solid #A1A1AA;
+    border-radius: 50%;
+    background: #FFFFFF;
+    color: transparent;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    font-weight: bold;
+    line-height: 1;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    margin: 0 0 8px 8px;
+}
+
+.important-toggle:hover {
+    border-color: #16A34A;
+    transform: scale(1.08);
+}
+
+.important-toggle.is-important {
+    background: #16A34A;
+    border-color: #16A34A;
+    color: #FFFFFF;
+    box-shadow: 0 2px 5px rgba(22, 163, 74, 0.2);
+}
+
+/* بخش گروه‌های دارویی */
+.drug-group-section {
+    margin: 20px 0;
+}
+
+.drug-group-heading {
+    padding: 12px;
+    margin-bottom: 12px;
+    border-radius: 10px;
+    background: #E8F2FF;
+    color: #1D4ED8;
+    font-size: 18px;
+}
+
+.drug-group-count {
+    font-size: 13px;
+    margin-right: 8px;
+    opacity: 0.75;
+}
+
+.drug-group-items {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 12px;
+}
+
+/* کنترل‌های کارت دارو */
+.drug-card-controls {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.drug-group-control {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 13px;
+}
+
+.drug-group-input {
+    width: 52px;
+    padding: 6px;
+    border: 1px solid #CBD5E1;
+    border-radius: 8px;
+    text-align: center;
+    font-size: 15px;
+}
+
+.drug-group-input:focus {
+    outline: 2px solid #60A5FA;
+    border-color: #2563EB;
+}
+
+/* یادداشت‌های استاد */
+.teacher-notes {
+    margin-top: 16px;
+    padding: 14px;
+    border: 1px solid #dbe4ee;
+    border-radius: 12px;
+    background: #f8fafc;
+}
+
+.teacher-notes label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 700;
+    color: #334155;
+}
+
+.teacher-notes-input {
+    box-sizing: border-box;
+    width: 100%;
+    min-height: 85px;
+    padding: 10px 12px;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    background: #ffffff;
+    font-family: inherit;
+    font-size: 14px;
+    line-height: 1.8;
+    resize: vertical;
+}
+
+.teacher-notes-input:focus {
+    outline: none;
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.12);
+}
+
+.notes-status {
+    display: block;
+    margin-top: 6px;
+    color: #64748b;
+    font-size: 12px;
+}
+
+/* پابرگ */
+footer {
+    margin-top: 40px;
+    padding: 18px;
+    background: #176b60;
+    color: white;
+    text-align: center;
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+footer p {
+    margin: 3px 0;
+    text-align: center;
+}
+
+/* چیدمان صفحه‌های کوچک */
+@media (max-width: 600px) {
+    header {
+        padding-top: 145px;
+    }
+
+    .pharmacy-logo-link {
+        top: 10px;
+        left: 10px;
+        width: 50px;
+        height: 50px;
+    }
+
+    .user-info {
+        top: 10px;
+        right: 50%;
+        transform: translateX(50%);
+        width: calc(100% - 20px);
+    }
+
+    .user-info .teacher-email,
+    .user-info .student-email {
+        overflow-wrap: anywhere;
+    }
+}
+
+.pharmacy-logo {
+    filter: brightness(0) invert(1);
+}
