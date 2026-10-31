@@ -455,3 +455,107 @@ footer p {
         overflow-wrap: anywhere;
     }
 }
+
+
+/* صفحه‌بندی جمع‌وجورتر */
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 18px auto;
+    direction: rtl;
+}
+
+.pagination button {
+    background: #176b60;
+    color: white;
+    border: none;
+    border-radius: 7px;
+    padding: 6px 11px;
+    font-family: "B Nazanin", serif;
+    font-size: 14px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.pagination button:hover:not(:disabled) {
+    background: #105247;
+}
+
+.pagination button:disabled {
+    background: #b8c8c4;
+    cursor: not-allowed;
+}
+
+.page-jump {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+}
+
+.page-info {
+    font-family: "B Nazanin", serif;
+    font-size: 13px;
+    color: #333;
+}
+
+.page-search {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.page-search input {
+    width: 70px;
+    height: 29px;
+    box-sizing: border-box;
+    border: 1px solid #b8c8c4;
+    border-radius: 6px;
+    padding: 4px;
+    text-align: center;
+    font-size: 13px;
+    direction: ltr;
+}
+
+.page-search button {
+    padding: 5px 10px;
+    font-size: 13px;
+}
+
+@media (max-width: 480px) {
+    .pagination {
+        gap: 6px;
+    }
+
+    .pagination button {
+        padding: 5px 8px;
+        font-size: 13px;
+    }
+
+    .page-search input {
+        width: 60px;
+    }
+}
+
+.drug-card {
+    position: relative;
+}
+
+.drug-card-number {
+    position: absolute;
+    top: 8px;
+    left: 65%;
+    transform: translateX(-50%);
+    font-family: "B Nazanin", serif;
+    font-size: 12px;
+    color: #176b60;
+    background: #e8f3f0;
+    padding: 2px 9px;
+    border-radius: 10px;
+    direction: rtl;
+    line-height: 1.4;
+}
