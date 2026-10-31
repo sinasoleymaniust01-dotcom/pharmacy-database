@@ -1,31 +1,41 @@
-
 let drugs = [];
 
 const drugList = document.getElementById("drugList");
 const searchInput = document.getElementById("searchInput");
 const groupFilter = document.getElementById("groupFilter");
 const drugCount = document.getElementById("drugCount");
-
-const GROUP_KEY = "drugGroupAssignments";
-const IMPORTANT_KEY = "importantDrugs";
+const importantPageButton = document.getElementById("importantPageButton");
 
 const drugGroupNames = {
     1: "قلبی و عروقی",
     2: "گوارشی",
-    3: " آنتی بیوتیک‌ها و ضد قارچ و ضد ویروس",
+    3: "آنتی‌بیوتیک‌ها و ضد قارچ و ضد ویروس",
     4: "اعصاب و روان",
     5: "هورمونی و تناسلی",
-    6: "تنفسی و آنتی هیستامین",
+    6: "تنفسی و آنتی‌هیستامین",
     7: "ضد درد و التهاب",
     8: "ویتامین‌ها و مکمل‌ها",
-    9: " غدد درون ریز ",
+    9: "غدد درون‌ریز",
     10: "سایر داروها و گروه‌های تخصصی"
 };
 
-let currentDisplayedDrugs = [];
+const ITEMS_PER_PAGE = 50;
 
+const EDITOR_EMAILS = [
+    "sina.soleymaniust01@gmail.com",
+    "hooman.movahed@gmail.com"
+];
+
+let currentDisplayedDrugs = [];
+let currentPage = 1;
+let annotationsByGenericName = {};
+let canEditDrugs = false;
+let showingImportantDrugs = false;
+
+
+// ایمن‌سازی متن‌ها
 function escapeHTML(value) {
-    return String(value).replace(/[&<>"']/g, character => ({
+    return String(value ?? "").replace(/[&<>"']/g, character => ({
         "&": "&amp;",
         "<": "&lt;",
         ">": "&gt;",
@@ -34,78 +44,103 @@ function escapeHTML(value) {
     })[character]);
 }
 
-// دریافت شماره گروه‌های ذخیره‌شده
-function getDrugGroups() {
-    try {
-        return JSON.parse(
-            localStorage.getItem(GROUP_KEY) || "{}"
-        );
-    } catch {
-        return {};
-    }
+
+// بزرگ کردن حرف اول نام
+function capitalizeFirstLetter(name) {
+    if (!name) return "";
+    return String(name).charAt(0).toUpperCase() + String(name).slice(1);
 }
 
-// ذخیره شماره گروه‌ها
-function saveDrugGroups(groups) {
-    localStorage.setItem(
-        GROUP_KEY,
-        JSON.stringify(groups)
-    );
-}
 
-// دریافت شناسه هر دارو
+// شناسه دارو
 function getDrugKey(drug) {
-    return drug.genericName || drug.persianName || "";
+    return String(
+        drug.genericName || drug.generic_name || ""
+    ).trim().toLowerCase();
 }
 
-// دریافت داروهای مهم
-function getImportantDrugs() {
-    try {
-        return JSON.parse(
-            localStorage.getItem(IMPORTANT_KEY) || "[]"
-        );
-    } catch {
-        return [];
-    }
+
+// دریافت اطلاعات تکمیلی دارو
+function getAnnotation(drug) {
+    return annotationsByGenericName[getDrugKey(drug)] || {
+        is_important: false,
+        assigned_groups: [],
+        teacher_notes: ""
+    };
 }
 
-// ذخیره داروهای مهم
-function saveImportantDrugs(ids) {
-    localStorage.setItem(
-        IMPORTANT_KEY,
-        JSON.stringify(ids)
-    );
-}
 
-// ساخت گزینه‌های فیلتر گروه‌ها
+// ساخت فیلتر گروه‌ها
 function createGroupOptions() {
     groupFilter.innerHTML =
         '<option value="">همه گروه‌ها</option>';
 
     Object.entries(drugGroupNames).forEach(([number, name]) => {
         const option = document.createElement("option");
-
         option.value = number;
         option.textContent = `گروه ${number}: ${name}`;
-
         groupFilter.appendChild(option);
     });
 }
 
-// ساخت کارت هر دارو
-function renderDrugCard(drug, importantDrugs, groupAssignments) {
+
+// به‌روزرسانی دکمه داروهای مهم
+function updateImportantPageButton() {
+    if (!importantPageButton) return;
+
+    if (showingImportantDrugs) {
+        importantPageButton.classList.add("active");
+
+        importantPageButton.innerHTML = `
+            <span class="important-page-star"></span>
+            <span class="important-page-text">بازگشت به همه داروها</span>
+        `;
+    } else {
+        importantPageButton.classList.remove("active");
+
+        importantPageButton.innerHTML = `
+            <span class="important-page-star">★</span>
+            <span class="important-page-text">داروهای مهم</span>
+        `;
+    }
+}
+
+
+// کلیک روی دکمه صفحه داروهای مهم
+importantPageButton.addEventListener("click", () => {
+    showingImportantDrugs = !showingImportantDrugs;
+
+    currentPage = 1;
+
+    updateImportantPageButton();
+    filterDrugs();
+
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+});
+
+
+// ساخت کارت دارو
+function renderDrugCard(drug) {
     const key = getDrugKey(drug);
-    const isImportant = importantDrugs.includes(key);
+    const annotation = getAnnotation(drug);
+
+    const isImportant = annotation.is_important === true;
+
+    const assignedGroups = Array.isArray(annotation.assigned_groups)
+        ? annotation.assigned_groups.map(Number)
+        : [];
 
     const brands = Array.isArray(drug.brandNames)
         ? drug.brandNames
-        : drug.brandNames
-            ? [drug.brandNames]
-            : [];
+        : drug.brandNames ? [drug.brandNames] : [];
 
-    return `
-        <article class="drug-card">
+    const controls = canEditDrugs
+        ? `
             <div class="drug-card-controls">
+
                 <button
                     type="button"
                     class="important-toggle ${isImportant ? "is-important" : ""}"
@@ -117,20 +152,64 @@ function renderDrugCard(drug, importantDrugs, groupAssignments) {
                 <label class="drug-group-control">
                     <span>شماره گروه </span>
                     <input
-    type="text"
-    class="drug-group-input"
-    value="${escapeHTML(
-        Array.isArray(groupAssignments[key])
-            ? groupAssignments[key].join("-")
-            : groupAssignments[key] || ""
-    )}"
-    data-drug-key="${escapeHTML(key)}"
-    placeholder="_"
-    aria-label="شماره گروه دارو"
->
+                        type="text"
+                        class="drug-group-input"
+                        value="${escapeHTML(assignedGroups.join("-"))}"
+                        data-drug-key="${escapeHTML(key)}"
+                        placeholder="_"
+                        aria-label="شماره گروه دارو"
+                    >
                 </label>
-            </div>
 
+            </div>
+        `
+        : `
+            <div class="drug-card-controls">
+                ${isImportant
+                    ? '<span class="important-display">✓</span>'
+                    : ""
+                }
+
+                ${assignedGroups.length
+                    ? `<span>گروه: ${escapeHTML(assignedGroups.join("، "))}</span>`
+                    : ""
+                }
+            </div>
+        `;
+
+    const notes = canEditDrugs
+        ? `
+            <div class="teacher-notes">
+                <label
+                    class="persian"
+                    for="notes-${escapeHTML(key)}"
+                >توضیحات :</label>
+
+                <textarea
+                    id="notes-${escapeHTML(key)}"
+                    class="teacher-notes-input persian"
+                    data-drug-key="${escapeHTML(key)}"
+                    placeholder="توضیحات تکمیلی ..."
+                    rows="3"
+                >${escapeHTML(annotation.teacher_notes || "")}</textarea>
+
+                <small class="notes-status persian"></small>
+            </div>
+        `
+        : (
+            annotation.teacher_notes
+                ? `
+                    <div class="teacher-notes">
+                        <strong class="persian">توضیحات استاد:</strong>
+                        <p class="persian">${escapeHTML(annotation.teacher_notes)}</p>
+                    </div>
+                `
+                : ""
+        );
+
+    return `
+        <article class="drug-card">
+            ${controls}
 
             <p>
                 <strong class="persian">نام ژنریک:</strong>
@@ -142,115 +221,273 @@ function renderDrugCard(drug, importantDrugs, groupAssignments) {
             <p>
                 <strong class="persian">نام تجاری:</strong>
                 <span class="english" dir="ltr">
-                   ${brands.map(brand => escapeHTML(capitalizeFirstLetter(brand))).join(", ")}
+                    ${brands.map(brand =>
+                        escapeHTML(capitalizeFirstLetter(brand))
+                    ).join(", ")}
                 </span>
             </p>
 
-<p>
-    <strong class="persian">گروه دارویی :</strong>
-    <span class="persian">
-        ${escapeHTML(drug.drugGroup || "")}
-    </span>
-</p>
+            <p>
+                <strong class="persian">گروه دارویی :</strong>
+                <span class="persian">
+                    ${escapeHTML(drug.drugGroup || "")}
+                </span>
+            </p>
 
-<p>
-    <strong class="persian">کاربرد:</strong>
-    <span class="persian">
-        ${escapeHTML(drug.uses || "")}
-    </span>
-</p>
+            <p>
+                <strong class="persian">کاربرد:</strong>
+                <span class="persian">
+                    ${escapeHTML(drug.uses || "")}
+                </span>
+            </p>
 
-<div class="teacher-notes">
-    <label
-        class="persian"
-        for="notes-${escapeHTML(key)}"
-    >
-        توضیحات :
-    </label>
-
-    <textarea
-        id="notes-${escapeHTML(key)}"
-        class="teacher-notes-input persian"
-        data-drug-key="${escapeHTML(key)}"
-        placeholder="توضیحات تکمیلی ..."
-        rows="3"
-    >${escapeHTML(getDrugNotes(key))}</textarea>
-
-    <small class="notes-status persian">
-    </small>
-</div>
-</article>
-`;
+            ${notes}
+        </article>
+    `;
 }
 
-const NOTES_STORAGE_KEY = "teacherDrugNotes";
 
-function getDrugNotes(key) {
-    const notes = JSON.parse(
-        localStorage.getItem(NOTES_STORAGE_KEY) || "{}"
-    );
+// دریافت تمام اطلاعات تکمیلی داروها از Supabase
+async function loadAnnotations() {
+    console.log("در حال دریافت اطلاعات داروها از Supabase...");
 
-    return notes[key] || "";
+    const pageSize = 1000;
+    let allData = [];
+    let from = 0;
+
+    while (true) {
+        const { data, error } = await supabaseClient
+            .from("Drugs")
+            .select("generic_name, is_important, assigned_groups, teacher_notes")
+            .range(from, from + pageSize - 1);
+
+        if (error) {
+            console.error("خطا در دریافت اطلاعات:", error);
+            throw error;
+        }
+
+        allData = allData.concat(data || []);
+
+        if (!data || data.length < pageSize) {
+            break;
+        }
+
+        from += pageSize;
+    }
+
+    annotationsByGenericName = {};
+
+    allData.forEach(row => {
+        const key = String(row.generic_name || "")
+            .trim()
+            .toLowerCase();
+
+        if (!key) return;
+
+        annotationsByGenericName[key] = {
+            is_important: row.is_important === true,
+            assigned_groups: Array.isArray(row.assigned_groups)
+                ? row.assigned_groups
+                : [],
+            teacher_notes: row.teacher_notes || ""
+        };
+    });
+
+    console.log("تعداد کل اطلاعات دریافت‌شده:", allData.length);
 }
 
-function saveDrugNotes(key, value) {
-    const notes = JSON.parse(
-        localStorage.getItem(NOTES_STORAGE_KEY) || "{}"
-    );
 
-    notes[key] = value;
-    localStorage.setItem(
-        NOTES_STORAGE_KEY,
-        JSON.stringify(notes)
-    );
-}
+// بررسی ورود و مجوز ویرایش
+async function refreshEditorStatus() {
+    const { data, error } =
+        await supabaseClient.auth.getSession();
 
-drugList.addEventListener("input", function (event) {
-    if (!event.target.matches(".teacher-notes-input")) {
+    if (error) {
+        console.error("خطا در بررسی ورود:", error);
+        canEditDrugs = false;
         return;
     }
 
-    const key = event.target.dataset.drugKey;
+    const email =
+        data.session?.user?.email?.toLowerCase() || "";
 
-    saveDrugNotes(key, event.target.value);
-});
+    canEditDrugs = EDITOR_EMAILS.includes(email);
+
+    console.log("کاربر واردشده:", email || "بدون ورود");
+    console.log("اجازه ویرایش:", canEditDrugs);
+}
+
+
+// ذخیره تغییرات در Supabase
+async function updateDrugAnnotation(key, changes) {
+    console.log("تابع ذخیره اجرا شد:", { key, changes });
+
+    if (!canEditDrugs) {
+        throw new Error("اجازه ویرایش ندارید.");
+    }
+
+    const normalizedKey = String(key || "")
+        .trim()
+        .toLowerCase();
+
+    if (!normalizedKey) {
+        throw new Error("شناسه دارو خالی است.");
+    }
+
+    const { data: sessionData, error: sessionError } =
+        await supabaseClient.auth.getSession();
+
+    if (sessionError || !sessionData.session) {
+        throw new Error("نشست کاربری معتبر نیست.");
+    }
+
+    const email =
+        sessionData.session.user.email?.toLowerCase() || "";
+
+    if (!EDITOR_EMAILS.includes(email)) {
+        throw new Error("این حساب اجازه ویرایش ندارد.");
+    }
+
+    console.log("ارسال درخواست به Supabase...");
+
+    const { data, error } = await supabaseClient
+        .from("Drugs")
+        .update(changes)
+        .ilike("generic_name", normalizedKey)
+        .select("generic_name");
+
+    if (error) {
+        console.error("خطای Supabase هنگام ذخیره:", error);
+        throw error;
+    }
+
+    console.log("پاسخ Supabase:", data);
+
+    if (!data || data.length === 0) {
+        throw new Error(
+            "هیچ ردیفی به‌روزرسانی نشد. نام دارو یا Policy را بررسی کن."
+        );
+    }
+
+    annotationsByGenericName[normalizedKey] = {
+        ...getAnnotation({ genericName: normalizedKey }),
+        ...changes
+    };
+
+    console.log("ذخیره با موفقیت انجام شد.");
+
+    return data;
+}
 
 
 // نمایش داروها
 function displayDrugs(drugArray) {
     currentDisplayedDrugs = drugArray;
 
-    drugCount.textContent =
-        `تعداد داروها :${drugArray.length} از ${drugs.length}`;
+    const totalDrugs = drugArray.length;
 
-    if (drugArray.length === 0) {
+    const totalPages = Math.max(
+        1,
+        Math.ceil(totalDrugs / ITEMS_PER_PAGE)
+    );
+
+    currentPage = Math.min(
+        Math.max(currentPage, 1),
+        totalPages
+    );
+
+    drugCount.textContent = showingImportantDrugs
+        ? `تعداد داروهای مهم: ${totalDrugs}`
+        : `تعداد داروها: ${totalDrugs} از ${drugs.length}`;
+
+    if (totalDrugs === 0) {
         drugList.innerHTML =
             '<p class="no-result">دارویی پیدا نشد.</p>';
+
+        renderPagination(0);
         return;
     }
 
-    const importantDrugs = getImportantDrugs();
-    const groupAssignments = getDrugGroups();
+    const startIndex =
+        (currentPage - 1) * ITEMS_PER_PAGE;
 
-    drugList.innerHTML = drugArray
-        .map(drug =>
-            renderDrugCard(drug, importantDrugs, groupAssignments)
-        )
+    const pageDrugs = drugArray.slice(
+        startIndex,
+        startIndex + ITEMS_PER_PAGE
+    );
+
+    drugList.innerHTML = pageDrugs
+        .map(drug => renderDrugCard(drug))
         .join("");
+
+    renderPagination(totalPages);
 }
 
-// جست‌وجو و فیلتر هم‌زمان
+
+// صفحه‌بندی
+function renderPagination(totalPages) {
+    let pagination = document.getElementById("pagination");
+
+    if (!pagination) {
+        pagination = document.createElement("div");
+        pagination.id = "pagination";
+        pagination.className = "pagination";
+
+        drugList.insertAdjacentElement("afterend", pagination);
+    }
+
+    if (totalPages <= 1) {
+        pagination.innerHTML = "";
+        return;
+    }
+
+    pagination.innerHTML = `
+        <button type="button" id="previousPage"
+            ${currentPage === 1 ? "disabled" : ""}>
+            صفحه قبل
+        </button>
+
+        <span class="page-info">
+            صفحه ${currentPage} از ${totalPages}
+        </span>
+
+        <button type="button" id="nextPage"
+            ${currentPage === totalPages ? "disabled" : ""}>
+            صفحه بعد
+        </button>
+    `;
+
+    document.getElementById("previousPage")
+        .addEventListener("click", () => {
+            if (currentPage > 1) {
+                currentPage--;
+                displayDrugs(currentDisplayedDrugs);
+                window.scrollTo({ top: 0, behavior: "smooth" });
+            }
+        });
+
+    document.getElementById("nextPage")
+        .addEventListener("click", () => {
+            if (currentPage < totalPages) {
+                currentPage++;
+                displayDrugs(currentDisplayedDrugs);
+                window.scrollTo({ top: 0, behavior: "smooth" });
+            }
+        });
+}
+
+
+// جست‌وجو و فیلتر داروها
 function filterDrugs() {
     const query = searchInput.value.trim().toLocaleLowerCase();
     const selectedGroup = groupFilter.value;
-    const groupAssignments = getDrugGroups();
 
     const filtered = drugs.filter(drug => {
         const brands = Array.isArray(drug.brandNames)
             ? drug.brandNames
-            : drug.brandNames
-                ? [drug.brandNames]
-                : [];
+            : drug.brandNames ? [drug.brandNames] : [];
+
+        const annotation = getAnnotation(drug);
 
         const allInfo = [
             drug.genericName,
@@ -265,151 +502,233 @@ function filterDrugs() {
 
         const matchesSearch = allInfo.includes(query);
 
-       const assigned = groupAssignments[getDrugKey(drug)];
+        // صفحه مستقل داروهای مهم
+        if (showingImportantDrugs) {
+            return matchesSearch &&
+                annotation.is_important === true;
+        }
 
-const assignedGroups = Array.isArray(assigned)
-    ? assigned.map(Number)
-    : assigned
-        ? [Number(assigned)]
-        : [];
+        // فیلتر عادی گروه‌ها
+        const assignedGroups =
+            Array.isArray(annotation.assigned_groups)
+                ? annotation.assigned_groups.map(Number)
+                : [];
 
-const matchesGroup =
-    selectedGroup === "" ||
-    assignedGroups.includes(Number(selectedGroup));
+        const matchesGroup =
+            selectedGroup === "" ||
+            assignedGroups.includes(Number(selectedGroup));
 
         return matchesSearch && matchesGroup;
     });
 
+    currentPage = 1;
     displayDrugs(filtered);
 }
 
-// جست‌وجو هنگام تایپ
-searchInput.addEventListener("input", filterDrugs);
 
-// فیلتر هنگام تغییر گروه
+searchInput.addEventListener("input", filterDrugs);
 groupFilter.addEventListener("change", filterDrugs);
 
-// ذخیره شماره گروه واردشده
 
+// ذخیره یا پاک کردن گروه‌بندی
+drugList.addEventListener("change", async function (event) {
+    if (!event.target.matches(".drug-group-input")) return;
 
-drugList.addEventListener("change", function (event) {
-    const input = event.target.closest(".drug-group-input");
-
-    if (!input) return;
-
+    const input = event.target;
     const key = input.dataset.drugKey;
     const rawValue = input.value.trim();
-    const groups = getDrugGroups();
 
-    // پاک کردن همه گروه‌های دارو
-    if (rawValue === "") {
-        delete groups[key];
-        saveDrugGroups(groups);
-        input.value = "";
+    if (!canEditDrugs) {
+        alert("اجازه ویرایش ندارید.");
         return;
     }
 
-    // تبدیل ورودی مثل 1-3-5 به آرایه شماره‌ها
-    const parts = rawValue.split("-").map(part => part.trim());
+    let numbers = [];
 
-    const numbers = parts.map(Number);
+    if (rawValue !== "") {
+        const parts = rawValue.split("-").map(part => part.trim());
 
-    const valid =
-        parts.every(part => /^\d+$/.test(part)) &&
-        numbers.every(number =>
-            Number.isInteger(number) && number >= 1 && number <= 10
-        ) &&
-        new Set(numbers).size === numbers.length;
+        const valid =
+            parts.every(part => /^\d+$/.test(part)) &&
+            parts.every(part => {
+                const number = Number(part);
+                return Number.isInteger(number) &&
+                    number >= 1 &&
+                    number <= 10;
+            }) &&
+            new Set(parts.map(Number)).size === parts.length;
 
-    if (!valid) {
-        alert(
-            "شماره گروه‌ها باید بین ۱ تا ۱۰ باشند و با خط تیره جدا شوند؛ مثلاً 1-3-5"
-        );
+        if (!valid) {
+            alert("شماره گروه‌ها باید بین ۱ تا ۱۰ باشند؛ مثال: 1-3-5");
 
-        const previous = groups[key];
-        input.value = Array.isArray(previous)
-            ? previous.join("-")
-            : previous || "";
+            input.value = (
+                getAnnotation({ genericName: key }).assigned_groups || []
+            ).join("-");
 
-        return;
+            return;
+        }
+
+        numbers = parts.map(Number);
     }
 
-    groups[key] = numbers;
-    saveDrugGroups(groups);
+    try {
+        await updateDrugAnnotation(key, {
+            assigned_groups: numbers
+        });
+
+        filterDrugs();
+
+    } catch (error) {
+        console.error("خطای ذخیره گروه‌بندی:", error);
+
+        alert("ذخیره گروه‌بندی ناموفق بود: " + error.message);
+
+        input.value = (
+            getAnnotation({ genericName: key }).assigned_groups || []
+        ).join("-");
+    }
 });
 
 
+// ذخیره یادداشت استاد
+drugList.addEventListener("change", async function (event) {
+    if (!event.target.matches(".teacher-notes-input")) return;
 
-// علامت‌گذاری داروهای مهم
-drugList.addEventListener("click", function (event) {
+    const textarea = event.target;
+    const key = textarea.dataset.drugKey;
+
+    const status =
+        textarea.parentElement.querySelector(".notes-status");
+
+    if (status) status.textContent = "در حال ذخیره...";
+
+    try {
+        await updateDrugAnnotation(key, {
+            teacher_notes: textarea.value
+        });
+
+        if (status) status.textContent = "ذخیره شد";
+
+    } catch (error) {
+        console.error("خطای ذخیره یادداشت:", error);
+
+        if (status) status.textContent = "ذخیره ناموفق بود";
+
+        alert("ذخیره توضیحات ناموفق بود: " + error.message);
+    }
+});
+
+
+// کلیک روی دایره مهم‌کردن
+drugList.addEventListener("click", async function (event) {
     const button = event.target.closest(".important-toggle");
 
     if (!button) return;
 
-    const key = button.dataset.drugKey;
-    const importantDrugs = getImportantDrugs();
-    const index = importantDrugs.indexOf(key);
-
-    if (index === -1) {
-        importantDrugs.push(key);
-    } else {
-        importantDrugs.splice(index, 1);
+    if (!canEditDrugs) {
+        alert("برای ویرایش باید با حساب مجاز وارد شوی.");
+        return;
     }
 
-    saveImportantDrugs(importantDrugs);
+    const key = button.dataset.drugKey;
 
-    const isImportant = importantDrugs.includes(key);
+    const current =
+        getAnnotation({ genericName: key }).is_important === true;
 
-    button.textContent = isImportant ? "✓" : "";
-    button.classList.toggle("is-important", isImportant);
+    button.disabled = true;
+
+    try {
+        await updateDrugAnnotation(key, {
+            is_important: !current
+        });
+
+        // به‌روزرسانی فهرست فعلی
+        // اگر دارو در صفحه مهم‌ها از حالت مهم خارج شود،
+        // از فهرست همان صفحه حذف خواهد شد.
+        filterDrugs();
+
+    } catch (error) {
+        console.error("خطای تغییر وضعیت دارو:", error);
+        alert("ذخیره وضعیت دارو ناموفق بود: " + error.message);
+    }
 });
 
-// بارگذاری اطلاعات از فایل JSON
-fetch("./drugs.json")
-    .then(response => {
+
+// بارگذاری اطلاعات داروها
+async function loadDrugs() {
+    try {
+        console.log("شروع بارگذاری برنامه...");
+
+        await refreshEditorStatus();
+
+        const response = await fetch("./drugs.json");
+
         if (!response.ok) {
             throw new Error("فایل drugs.json پیدا نشد.");
         }
 
-        return response.json();
-    })
-    .then(data => {
+        const data = await response.json();
+
         if (!Array.isArray(data)) {
-            throw new Error(
-                "محتوای drugs.json باید آرایه‌ای از داروها باشد."
-            );
+            throw new Error("ساختار drugs.json معتبر نیست.");
         }
 
         drugs = data;
 
+        await loadAnnotations();
+
         createGroupOptions();
+        updateImportantPageButton();
 
         const sortedDrugs = [...drugs].sort((a, b) =>
-            (a.persianName || "").localeCompare(
-                b.persianName || "",
+            (a.persianName || a.genericName || "").localeCompare(
+                b.persianName || b.genericName || "",
                 "fa"
             )
         );
 
+        currentPage = 1;
         displayDrugs(sortedDrugs);
-    })
-    .catch(error => {
-        console.error("خطا در بارگذاری داروها:", error);
 
-        drugCount.textContent = "بارگذاری داروها ناموفق بود.";
+        console.log("برنامه با موفقیت بارگذاری شد.");
+
+    } catch (error) {
+        console.error("خطا در بارگذاری اطلاعات:", error);
+
+        drugCount.textContent = "بارگذاری اطلاعات ناموفق بود.";
 
         drugList.innerHTML = `
             <p class="no-result">
                 اطلاعات داروها بارگذاری نشد.
-                مطمئن شو فایل drugs.json کنار index.html است
-                و برنامه را با Live Server اجرا می‌کنی.
+                اتصال اینترنت، فایل drugs.json و تنظیمات Supabase را بررسی کن.
             </p>
         `;
-    });
-
-    function capitalizeFirstLetter(name) {
-    if (!name) return "";
-
-    return name.charAt(0).toUpperCase() + name.slice(1);
+    }
 }
 
+
+// تغییر وضعیت ورود و خروج
+supabaseClient.auth.onAuthStateChange((event, session) => {
+    console.log("تغییر وضعیت ورود:", event);
+
+    const email = session?.user?.email?.toLowerCase() || "";
+
+    canEditDrugs = EDITOR_EMAILS.includes(email);
+
+    console.log("حساب فعلی:", email || "بدون ورود");
+    console.log("اجازه ویرایش:", canEditDrugs);
+
+    if (drugs.length) {
+        loadAnnotations()
+            .then(() => {
+                filterDrugs();
+            })
+            .catch(error => {
+                console.error("خطا در دریافت مجدد اطلاعات:", error);
+            });
+    }
+});
+
+
+// شروع برنامه
+loadDrugs();

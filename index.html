@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
 <head>
@@ -10,10 +9,9 @@
 <body>
 
     <header>
-        <!-- لوگوی داروخانه در بالای سمت چپ -->
         <a
             class="pharmacy-logo-link"
-            href="https://www.144tehranpharmacy.com/blog/pharmaceuticals-and-brands/detail/%D8%AF%D8%A7%D8%B1%D9%88%D8%AE%D8%A7%D9%86%D9%87%20%D9%88%20%D9%86%D9%85%D8%A7%D8%AF%20%D8%A2%D9%86/"
+            href="https://www.144tehranpharmacy.com/blog/pharmaceuticals-and-brands/detail/%D8%AF%D8%A7%D8%B1%D9%88%D8%AE%D8%A7%D9%86%D9%87%20%D9%88%20%D9%86%D9%85%D8%A7%D8%AF"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="مشاهده مقاله نماد داروخانه"
@@ -25,14 +23,13 @@
             >
         </a>
 
-        <!-- اطلاعات استاد و دانشجو در بالای سمت راست -->
         <div class="user-info">
             <p class="teacher-name">
                 <span dir="ltr">Dr. Hooman Movahed</span>
             </p>
 
             <p class="teacher-email" dir="ltr">
-                Hooman.movahed@gmail.com
+                hooman.movahed@gmail.com
             </p>
 
             <p class="student-name">
@@ -40,47 +37,101 @@
             </p>
 
             <p class="student-email" dir="ltr">
-                Sina.soleymani.k@gmail.com
+                sina.soleymaniust01@gmail.com
             </p>
         </div>
 
-        <!-- عنوان اصلی -->
         <h1>بانک دارویی</h1>
-        <p>جهت آموزش تکنسین های داروخانه</p>
+        <p>جهت آموزش تکنسین‌های داروخانه</p>
     </header>
 
-    <main>
-        <input
-            type="text"
-            id="searchInput"
-            placeholder="نام دارو یا کاربرد آن را جست‌وجو کن..."
-        >
+    <section id="authSection" class="auth-section">
+        <h2>ورود به بانک اطلاعات دارویی</h2>
 
-        <div class="filter-section">
-            <label for="groupFilter">گروه دارو:</label>
+        <form id="loginForm">
+            <label for="loginEmail">ایمیل</label>
+            <input
+                id="loginEmail"
+                type="email"
+                autocomplete="username"
+                placeholder="ایمیل خود را وارد کنید"
+                required
+            >
 
-            <select id="groupFilter">
-                <option value="">همه گروه‌های دارویی</option>
-            </select>
+            <label for="loginPassword">رمز عبور</label>
+            <input
+                id="loginPassword"
+                type="password"
+                autocomplete="current-password"
+                placeholder="رمز عبور"
+                required
+            >
+
+            <button type="submit">ورود</button>
+
+            <button type="button" id="recoveryButton">
+                فراموشی رمز عبور
+            </button>
+
+            <p id="authMessage" role="status"></p>
+        </form>
+
+        <div id="userInfo" hidden>
+            <p>ورود با موفقیت انجام شد.</p>
+            <span id="currentUserEmail"></span>
+            <button id="logoutButton" type="button">خروج</button>
+        </div>
+    </section>
+
+    <main hidden>
+
+        <div class="search-filter-row">
+
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="نام دارو یا کاربرد آن را جست‌وجو کن..."
+            >
+
+            <div class="filter-section">
+                <label for="groupFilter">گروه دارو:</label>
+
+                <select id="groupFilter">
+                    <option value="">همه گروه‌های دارویی</option>
+                </select>
+            </div>
+
+            <button
+                type="button"
+                id="importantPageButton"
+                class="important-page-button"
+            >
+                <span class="important-page-star">★</span>
+                <span class="important-page-text">داروهای مهم</span>
+            </button>
+
         </div>
 
         <p id="drugCount" class="drug-count"></p>
 
         <div id="drugList"></div>
+
     </main>
 
     <footer>
         <p>
-            <span dir="ltr"> Hooman.movahed@gmail.com </span>
+            <span dir="ltr">hooman.movahed@gmail.com</span>
         </p>
 
         <p>
-            <span dir="ltr"> Sina.soleymani.k@gmail.com </span>
+            <span dir="ltr">sina.soleymaniust01@gmail.com</span>
         </p>
-
-        
     </footer>
 
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="supabase-client.js"></script>
+    <script src="auth.js"></script>
     <script src="app.js"></script>
+
 </body>
 </html>
