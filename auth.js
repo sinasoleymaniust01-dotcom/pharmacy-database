@@ -1,109 +1,123 @@
-const authSection = document.getElementById("authSection");
-const loginForm = document.getElementById("loginForm");
-const authMessage = document.getElementById("authMessage");
-const userInfo = document.getElementById("userInfo");
-const currentUserEmail = document.getElementById("currentUserEmail");
-const logoutButton = document.getElementById("logoutButton");
+(() => {
+    "use strict";
 
+    const authSection = document.getElementById("authSection");
+    const loginForm = document.getElementById("loginForm");
+    const authMessage = document.getElementById("authMessage");
+    const userInfo = document.getElementById("userInfo");
+    const currentUserEmail = document.getElementById("currentUserEmail");
+    const logoutButton = document.getElementById("logoutButton");
+    const recoveryButton = document.getElementById("recoveryButton");
+    const main = document.getElementById("appMain");
 
-const allowedEmails = [
-    "sina.soleymaniust01@gmail.com",
-    "hooman.movahed@gmail.com"
-];
+    const client = window.supabaseClient;
 
+    const EDITOR_EMAILS = [
+        "sina.soleymaniust01@gmail.com",
+        "hooman.movahed@gmail.com"
+    ];
 
-function showAuthMessage(message) {
-
-    if (authMessage) {
-        authMessage.textContent = message;
+    function showAuthMessage(message) {
+        if (authMessage) {
+            authMessage.textContent = message || "";
+        }
     }
 
-}
+    function isEditor(user) {
+        const email = (user?.email || "").trim().toLowerCase();
 
+        return EDITOR_EMAILS.includes(email);
+    }
 
-// نمایش وضعیت ورود موفق
-function setLoggedIn(user) {
+    function updateEditorPermission(user) {
+        const permission = isEditor(user);
 
-    const email = (user.email || "").toLowerCase();
+        window.currentPharmacyUser = user || null;
+        window.canEditPharmacyData = permission;
 
-
-    if (!allowedEmails.includes(email)) {
-
-        showAuthMessage(
-            "این حساب اجازه ورود به سامانه را ندارد."
+        window.dispatchEvent(
+            new CustomEvent("pharmacy-permission-changed", {
+                detail: {
+                    user: user || null,
+                    canEdit: permission
+                }
+            })
         );
 
-        supabaseClient.auth.signOut();
+        window.dispatchEvent(
+            new Event("book-editor-permission-changed")
+        );
+    }
 
+    function setLoggedIn(user) {
+        if (!user) {
+            setLoggedOut();
+            return;
+        }
+
+        if (loginForm) {
+            loginForm.hidden = true;
+        }
+
+        if (userInfo) {
+            userInfo.hidden = false;
+        }
+
+        if (currentUserEmail) {
+            currentUserEmail.textContent = user.email || "";
+        }
+
+        if (main) {
+            main.hidden = false;
+        }
+
+        if (authSection) {
+            authSection.classList.add("is-logged-in");
+        }
+
+        showAuthMessage("");
+
+        updateEditorPermission(user);
+    }
+
+    function setLoggedOut() {
+        if (loginForm) {
+            loginForm.hidden = false;
+        }
+
+        if (userInfo) {
+            userInfo.hidden = true;
+        }
+
+        if (currentUserEmail) {
+            currentUserEmail.textContent = "";
+        }
+
+        // مشاهده بانک برای کاربران بدون ورود هم باز می‌ماند.
+        if (main) {
+            main.hidden = false;
+        }
+
+        if (authSection) {
+            authSection.classList.remove("is-logged-in");
+        }
+
+        updateEditorPermission(null);
+    }
+
+    if (!client) {
+        showAuthMessage(
+            "اتصال به Supabase برقرار نیست. فایل supabase-client.js را بررسی کن."
+        );
+
+        setLoggedOut();
         return;
     }
 
-
+    // ورود
     if (loginForm) {
-        loginForm.hidden = true;
-    }
-
-    if (userInfo) {
-        userInfo.hidden = false;
-    }
-
-    if (currentUserEmail) {
-        currentUserEmail.textContent = email;
-    }
-
-
-    showAuthMessage("");
-
-
-    // بانک دارویی برای همه قابل مشاهده است
-    const main = document.querySelector("main");
-
-    if (main) {
-        main.hidden = false;
-    }
-
-}
-
-
-// نمایش وضعیت خروج
-function setLoggedOut() {
-
-    if (loginForm) {
-        loginForm.hidden = false;
-    }
-
-    if (userInfo) {
-        userInfo.hidden = true;
-    }
-
-    if (currentUserEmail) {
-        currentUserEmail.textContent = "";
-    }
-
-
-    // دانشجویان بدون ورود هم می‌توانند داروها را ببینند
-    const main = document.querySelector("main");
-
-    if (main) {
-        main.hidden = false;
-    }
-
-}
-
-
-// ورود به سامانه
-if (loginForm) {
-
-    loginForm.addEventListener(
-        "submit",
-        async function (event) {
-
+        loginForm.addEventListener("submit", async event => {
             event.preventDefault();
-
-            showAuthMessage(
-                "در حال بررسی اطلاعات ورود..."
-            );
-
 
             const email = document
                 .getElementById("loginEmail")
@@ -114,195 +128,143 @@ if (loginForm) {
                 .getElementById("loginPassword")
                 .value;
 
-
-            if (!allowedEmails.includes(email)) {
-
-                showAuthMessage(
-                    "این ایمیل مجاز به ورود نیست."
-                );
-
+            if (!email || !password) {
+                showAuthMessage("ایمیل و رمز عبور را وارد کن.");
                 return;
             }
 
+            const submitButton = loginForm.querySelector(
+                'button[type="submit"]'
+            );
 
-            const { data, error } =
-                await supabaseClient.auth.signInWithPassword({
+            if (submitButton) {
+                submitButton.disabled = true;
+            }
 
-                    email,
-                    password
+            showAuthMessage("در حال بررسی اطلاعات ورود...");
 
-                });
+            try {
+                const { data, error } =
+                    await client.auth.signInWithPassword({
+                        email,
+                        password
+                    });
 
+                if (error) {
+                    throw error;
+                }
 
-            if (error) {
+                setLoggedIn(data.user);
+
+                showAuthMessage("ورود با موفقیت انجام شد.");
+
+            } catch (error) {
+                console.error("Login error:", error);
 
                 showAuthMessage(
                     "ورود ناموفق بود. ایمیل و رمز عبور را بررسی کن."
                 );
 
-                console.error(
-                    "Login error:",
-                    error
-                );
-
-                return;
+            } finally {
+                if (submitButton) {
+                    submitButton.disabled = false;
+                }
             }
+        });
+    }
 
-
-            if (data.user) {
-
-                setLoggedIn(data.user);
-
-            }
-
-        }
-    );
-
-}
-
-
-// بازیابی رمز عبور
-const recoveryButton =
-    document.getElementById("recoveryButton");
-
-
-if (recoveryButton) {
-
-    recoveryButton.addEventListener(
-        "click",
-        async function () {
-
+    // بازیابی رمز عبور
+    if (recoveryButton) {
+        recoveryButton.addEventListener("click", async () => {
             const email = document
                 .getElementById("loginEmail")
                 .value.trim()
                 .toLowerCase();
 
-
-            if (!allowedEmails.includes(email)) {
-
-                showAuthMessage(
-                    "ابتدا ایمیل مجاز خود را وارد کن."
-                );
-
+            if (!email) {
+                showAuthMessage("ابتدا ایمیل خود را وارد کن.");
                 return;
             }
 
+            showAuthMessage("در حال ارسال لینک بازیابی...");
 
-            showAuthMessage(
-                "در حال ارسال لینک بازیابی..."
-            );
-
-
-            const { error } =
-                await supabaseClient.auth.resetPasswordForEmail(
-                    email,
-                    {
+            try {
+                const { error } =
+                    await client.auth.resetPasswordForEmail(email, {
                         redirectTo:
                             "https://sinasoleymaniust01-dotcom.github.io/pharmacy-database/reset-password.html"
-                    }
+                    });
+
+                if (error) {
+                    throw error;
+                }
+
+                showAuthMessage(
+                    "در صورت معتبر بودن ایمیل، لینک بازیابی برای شما ارسال می‌شود."
                 );
 
-
-            if (error) {
+            } catch (error) {
+                console.error("Recovery error:", error);
 
                 showAuthMessage(
                     "ارسال لینک بازیابی ناموفق بود."
                 );
-
-                console.error(
-                    "Recovery error:",
-                    error
-                );
-
-                return;
             }
+        });
+    }
 
+    // خروج
+    if (logoutButton) {
+        logoutButton.addEventListener("click", async () => {
+            showAuthMessage("در حال خروج...");
 
-            showAuthMessage(
-                "اگر ارسال ایمیل موفق باشد، لینک بازیابی به ایمیل شما فرستاده می‌شود."
-            );
-
-        }
-    );
-
-}
-
-
-// خروج از سامانه
-if (logoutButton) {
-
-    logoutButton.addEventListener(
-        "click",
-        async function () {
-
-            const { error } =
-                await supabaseClient.auth.signOut();
-
+            const { error } = await client.auth.signOut();
 
             if (error) {
-
-                showAuthMessage(
-                    "خروج ناموفق بود."
-                );
-
-                console.error(error);
-
+                console.error("Logout error:", error);
+                showAuthMessage("خروج ناموفق بود.");
                 return;
             }
 
-
             setLoggedOut();
+            showAuthMessage("با موفقیت خارج شدید.");
+        });
+    }
 
+    // بررسی نشست هنگام باز شدن سایت
+    async function initializeAuth() {
+        setLoggedOut();
+
+        try {
+            const { data, error } = await client.auth.getSession();
+
+            if (error) {
+                throw error;
+            }
+
+            if (data.session?.user) {
+                setLoggedIn(data.session.user);
+            }
+
+        } catch (error) {
+            console.error("Session error:", error);
+
+            showAuthMessage(
+                "بررسی وضعیت ورود ناموفق بود."
+            );
         }
-    );
-
-}
-
-
-// بررسی وضعیت ورود هنگام باز شدن سایت
-async function initializeAuth() {
-
-    setLoggedOut();
-
-
-    const { data, error } =
-        await supabaseClient.auth.getSession();
-
-
-    if (error) {
-
-        showAuthMessage(
-            "بررسی وضعیت ورود ناموفق بود."
-        );
-
-        console.error(error);
-
-        return;
     }
 
+    // همگام‌سازی وضعیت ورود و خروج
+    client.auth.onAuthStateChange((event, session) => {
+        setTimeout(() => {
+            if (session?.user) {
+                setLoggedIn(session.user);
+            } else {
+                setLoggedOut();
+            }
+        }, 0);
+    });
 
-    if (data.session?.user) {
-
-        setLoggedIn(data.session.user);
-
-    }
-
-}
-
-
-// بررسی تغییر وضعیت ورود
-supabaseClient.auth.onAuthStateChange(
-    (event, session) => {
-
-        if (event === "SIGNED_OUT" || !session) {
-
-            setLoggedOut();
-
-        }
-
-    }
-);
-
-
-// اجرای اولیه
-initializeAuth();
+    initializeAuth();
+})();

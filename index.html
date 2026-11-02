@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>بانک اطلاعات دارویی</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="book-drugs.css">
 </head>
 <body>
 
@@ -83,38 +84,94 @@
         </div>
     </section>
 
-    <main hidden>
+    <main id="appMain" hidden>
 
-        <div class="search-filter-row">
-
-            <input
-                type="text"
-                id="searchInput"
-                placeholder="نام دارو یا کاربرد آن را جست‌وجو کن..."
-            >
-
-            <div class="filter-section">
-                <label for="groupFilter">گروه دارو:</label>
-
-                <select id="groupFilter">
-                    <option value="">همه گروه‌های دارویی</option>
-                </select>
+        <!-- صفحه انتخاب بانک اطلاعاتی -->
+        <section id="bankHome" class="bank-home">
+            <div class="bank-home-heading">
+                <h2>به بانک اطلاعات دارویی خوش آمدید</h2>
+                <p>لطفاً بانک اطلاعاتی موردنظر خود را انتخاب کنید.</p>
             </div>
 
-            <button
-                type="button"
-                id="importantPageButton"
-                class="important-page-button"
-            >
-                <span class="important-page-star">★</span>
-                <span class="important-page-text">داروهای مهم</span>
-            </button>
+            <div class="bank-choice-grid">
+                <button type="button" id="openComprehensiveBank" class="bank-choice-card comprehensive-choice">
+                    <span class="bank-choice-icon" aria-hidden="true">▦</span>
+                    <span class="bank-choice-title">بانک جامع دارویی</span>
+                    <span class="bank-choice-description">دسترسی به بانک اطلاعاتی اصلی داروها، جست‌وجو، گروه‌بندی و داروهای مهم.</span>
+                    <span class="bank-choice-action">ورود به بانک جامع ←</span>
+                </button>
 
-        </div>
+                <button type="button" id="openBookBank" class="bank-choice-card book-choice">
+                    <span class="bank-choice-icon" aria-hidden="true">▤</span>
+                    <span class="bank-choice-title">داروهای کتاب</span>
+                    <span class="bank-choice-description">فهرست داروهای کتاب، با امکان جست‌وجو و فیلتر بر اساس فصل.</span>
+                    <span class="bank-choice-action">ورود به داروهای کتاب ←</span>
+                </button>
+            </div>
+        </section>
 
-        <p id="drugCount" class="drug-count"></p>
+        <!-- بانک جامع -->
+        <section id="comprehensiveBankView" hidden>
+            <div class="bank-view-toolbar">
+                <button type="button" class="back-to-bank-home">← بازگشت به انتخاب بانک</button>
+                <h2>بانک جامع دارویی</h2>
+            </div>
 
-        <div id="drugList"></div>
+            <div class="search-filter-row">
+                <input
+                    type="text"
+                    id="searchInput"
+                    placeholder="نام دارو یا کاربرد آن را جست‌وجو کن..."
+                >
+
+                <div class="filter-section">
+                    <label for="groupFilter">گروه دارو:</label>
+
+                    <select id="groupFilter">
+                        <option value="">همه گروه‌های دارویی</option>
+                    </select>
+                </div>
+
+                <button
+                    type="button"
+                    id="importantPageButton"
+                    class="important-page-button"
+                >
+                    <span class="important-page-star">★</span>
+                    <span class="important-page-text">داروهای مهم</span>
+                </button>
+            </div>
+
+            <p id="drugCount" class="drug-count"></p>
+            <div id="drugList"></div>
+        </section>
+
+        <!-- بانک داروهای کتاب -->
+        <section id="bookBankView" hidden>
+            <div class="bank-view-toolbar">
+                <button type="button" class="back-to-bank-home">← بازگشت به انتخاب بانک</button>
+                <h2>داروهای کتاب</h2>
+            </div>
+
+            <div class="book-search-filter-row">
+                <input
+                    id="bookSearchInput"
+                    type="search"
+                    placeholder="نام ژنریک، نام تجاری یا کاربرد دارو را جست‌وجو کنید..."
+                >
+
+                <div class="book-chapter-filter">
+                    <label for="bookChapterFilter">فصل کتاب:</label>
+
+                    <select id="bookChapterFilter">
+                        <option value="">همه فصل‌ها</option>
+                    </select>
+                </div>
+            </div>
+
+            <p id="bookDrugCount" class="book-drug-count" aria-live="polite"></p>
+            <div id="bookDrugList" class="book-drug-list"></div>
+        </section>
 
     </main>
 
@@ -132,6 +189,7 @@
     <script src="supabase-client.js"></script>
     <script src="auth.js"></script>
     <script src="app.js"></script>
+    <script src="book-drugs.js"></script>
 
 </body>
 </html>

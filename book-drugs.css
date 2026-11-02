@@ -1,0 +1,306 @@
+/* استایل مستقل بانک داروهای کتاب */
+.book-search-filter-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 12px;
+}
+
+#bookSearchInput {
+    flex: 1;
+    min-width: 180px;
+    padding: 12px 15px;
+    border: 1px solid #ccd5df;
+    border-radius: 10px;
+    font-family: inherit;
+    font-size: 16px;
+}
+
+.book-chapter-filter {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    white-space: nowrap;
+}
+
+#bookChapterFilter {
+    min-width: 145px;
+    padding: 11px;
+    border: 1px solid #ccd5df;
+    border-radius: 10px;
+    background: #fff;
+    font-family: inherit;
+    font-size: 15px;
+}
+
+.book-drug-count {
+    color: #287044;
+    margin: 15px 0;
+    font-size: 15px;
+}
+
+.book-drug-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+    gap: 17px;
+}
+
+.book-drug-card {
+    min-width: 0;
+    padding: 19px;
+    background: #fff;
+    border: 1px solid #e0e7ed;
+    border-radius: 13px;
+    box-shadow: 0 3px 10px #00000008;
+}
+
+.book-drug-card h3 {
+    margin: 12px 0;
+    color: #176b60;
+    font-family: "Times New Roman", serif;
+    font-size: 19px;
+    overflow-wrap: anywhere;
+}
+
+.book-drug-card p {
+    margin: 9px 0;
+    font-family: "B Nazanin", "Times New Roman", serif;
+    font-size: 15px;
+    line-height: 1.9;
+    overflow-wrap: anywhere;
+}
+
+.book-drug-card p strong {
+    color: #37474f;
+}
+
+.book-english {
+    font-family: "Times New Roman", serif;
+    direction: ltr;
+    unicode-bidi: isolate;
+}
+
+.book-dose {
+    display: block;
+    margin-top: 4px;
+    direction: ltr;
+    text-align: left;
+    white-space: pre-line;
+    font-family: "Times New Roman", serif;
+    line-height: 1.7;
+}
+
+.book-drug-card-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.book-chapter-badge {
+    padding: 4px 10px;
+    border-radius: 20px;
+    background: #edf5ed;
+    color: #287044;
+    font-size: 13px;
+}
+
+.book-important-toggle {
+    width: 30px;
+    height: 30px;
+    border: 1px solid #d2d8de;
+    border-radius: 50%;
+    background: #fff;
+    color: #9aa3aa;
+    font-size: 19px;
+    cursor: pointer;
+}
+
+.book-important-toggle.is-important {
+    color: #d69b00;
+    border-color: #e8c45d;
+    background: #fff8dc;
+}
+
+
+.book-source-row {
+    display: block;
+    margin-top: 12px;
+    color: #87939b;
+    font-size: 11px;
+}
+
+.book-pagination {
+    grid-column: 1 / -1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 14px;
+    margin: 20px auto;
+    font-size: 14px;
+}
+
+.book-pagination button {
+    padding: 7px 13px;
+    border: 0;
+    border-radius: 7px;
+    background: #176b60;
+    color: white;
+    font-family: inherit;
+    cursor: pointer;
+}
+
+.book-pagination button:disabled {
+    background: #aab7b5;
+    cursor: not-allowed;
+}
+
+@media (max-width: 650px) {
+    .book-search-filter-row {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    #bookSearchInput,
+    #bookChapterFilter {
+        width: 100%;
+    }
+
+    .book-chapter-filter {
+        align-items: center;
+    }
+
+    .book-chapter-filter label {
+        white-space: nowrap;
+    }
+}
+
+/* ==========================================
+   باکس توضیحات مشترک داروهای کتاب
+========================================== */
+
+.book-notes-box {
+    margin-top: 16px;
+    padding: 12px;
+    border: 1px solid #cbded9;
+    border-radius: 10px;
+    background: #f7fbfa;
+    direction: rtl;
+}
+
+.book-notes-title {
+    display: block;
+    margin-bottom: 9px;
+    color: #176b60;
+    font-family: "B Nazanin", serif;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.book-notes-input {
+    display: block;
+    width: 100%;
+    min-height: 85px;
+    padding: 10px;
+    border: 1px solid #ccd5df;
+    border-radius: 8px;
+    background: #fff;
+    color: #263238;
+    font-family: "B Nazanin", serif;
+    font-size: 15px;
+    line-height: 1.8;
+    resize: vertical;
+    box-sizing: border-box;
+}
+
+.book-notes-input:focus {
+    outline: none;
+    border-color: #176b60;
+    box-shadow: 0 0 0 2px #176b6020;
+}
+
+.book-notes-input::placeholder {
+    color: #a0a9ad;
+}
+
+.book-notes-display {
+    min-height: 45px;
+    padding: 9px;
+    border-radius: 7px;
+    background: #fff;
+    color: #37474f;
+    font-family: "B Nazanin", serif;
+    font-size: 15px;
+    line-height: 1.9;
+    white-space: normal;
+    overflow-wrap: anywhere;
+}
+
+.book-notes-actions {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 9px;
+}
+
+.book-notes-save {
+    padding: 7px 15px;
+    border: none;
+    border-radius: 7px;
+    background: #176b60;
+    color: #fff;
+    font-family: "B Nazanin", serif;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.book-notes-save:hover {
+    background: #105247;
+}
+
+.book-notes-save:disabled {
+    opacity: 0.6;
+    cursor: wait;
+}
+
+.book-notes-status {
+    color: #287044;
+    font-family: "B Nazanin", serif;
+    font-size: 13px;
+}
+
+
+.book-important-view {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    border: 1px solid #d2d8de;
+    border-radius: 50%;
+    color: #9aa3aa;
+    background: #fff;
+    font-size: 19px;
+    line-height: 1;
+    user-select: none;
+}
+
+.book-important-view.is-important {
+    color: #d69b00;
+    border-color: #e8c45d;
+    background: #fff8dc;
+}
+.book-important-view {
+    width: auto;
+    height: auto;
+    border: none;
+    border-radius: 0;
+    background: transparent;
+    font-size: 22px;
+    padding: 0;
+}
+
+.book-important-view.is-important {
+    border: none;
+    background: transparent;
+}

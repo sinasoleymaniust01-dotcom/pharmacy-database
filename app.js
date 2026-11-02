@@ -1,4 +1,3 @@
-
 let drugs = [];
 let sortedDrugs = [];
 
@@ -849,3 +848,50 @@ supabaseClient.auth.onAuthStateChange((event, session) => {
 
 // اجرای برنامه
 loadDrugs();
+
+
+// ==========================================
+// ناوبری بین صفحه انتخاب بانک و دو بانک مستقل
+// ==========================================
+(function setupBankNavigation() {
+    const bankHome = document.getElementById("bankHome");
+    const comprehensiveView = document.getElementById("comprehensiveBankView");
+    const bookView = document.getElementById("bookBankView");
+    const openComprehensiveButton = document.getElementById("openComprehensiveBank");
+    const openBookButton = document.getElementById("openBookBank");
+    const backButtons = document.querySelectorAll(".back-to-bank-home");
+
+    function showView(viewName) {
+        if (!bankHome || !comprehensiveView || !bookView) return;
+
+        bankHome.hidden = viewName !== "home";
+        comprehensiveView.hidden = viewName !== "comprehensive";
+        bookView.hidden = viewName !== "book";
+
+        window.scrollTo({ top: 0, behavior: "smooth" });
+
+        if (viewName === "comprehensive" && typeof filterDrugs === "function") {
+            currentPage = 1;
+            filterDrugs();
+        }
+
+        if (viewName === "book") {
+            window.dispatchEvent(new CustomEvent("book-bank-opened"));
+        }
+    }
+
+    openComprehensiveButton?.addEventListener("click", () => {
+        showView("comprehensive");
+    });
+
+    openBookButton?.addEventListener("click", () => {
+        showView("book");
+    });
+
+    backButtons.forEach(button => {
+        button.addEventListener("click", () => showView("home"));
+    });
+
+    // پس از ورود موفق، صفحه انتخاب بانک نمایش داده می‌شود.
+    showView("home");
+})();
