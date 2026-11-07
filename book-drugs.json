@@ -1,7 +1,11 @@
 {
   "schemaVersion": 1,
-  "source": "کل.xlsx + فصل ۴.xlsx + فصل ۵.xlsx + فصل ۷.xlsx + فصل ۱۱.xlsx",
+  "source": "کل.xlsx + فصل ۳.docx + اطلاعات دارویی فصل ۱۰.xlsx",
   "chapters": [
+    {
+      "number": 3,
+      "title": "فصل 3"
+    },
     {
       "number": 4,
       "title": "فصل 4"
@@ -23,19 +27,501 @@
       "title": "فصل 9"
     },
     {
+      "number": 10,
+      "title": "فصل 10"
+    },
+    {
       "number": 11,
       "title": "فصل 11"
     }
   ],
   "drugs": [
     {
-      "id": "book-ch4-r4",
-      "genericName": "Acetylsaliclic Asid (Asa)",
+      "id": "book-ch3-r1",
+      "genericName": "Theophylline G",
       "persianName": "",
-      "brandNamesRaw": "Asprin",
-      "uses": "ضدالتهاب غیر استروییدی",
-      "dosageForms": "Tablet:80,81,325,500mg>chewable tablet:100mg",
-      "chapter": 4,
+      "brandNamesRaw": "",
+      "uses": "گشادکننده مجاری تنفسی",
+      "dosageForms": "Elixir",
+      "chapter": 3,
+      "sourceRows": [
+        1
+      ],
+      "reviewRequired": true,
+      "reviewFlags": [
+        "نام تجاری در همین ردیف ثبت نشده"
+      ]
+    },
+    {
+      "id": "book-ch3-r10",
+      "genericName": "Thermo Rub",
+      "persianName": "",
+      "brandNamesRaw": "",
+      "uses": "کمک به بهبود علائم سرماخوردگی",
+      "dosageForms": "Nasal Spray",
+      "chapter": 3,
+      "sourceRows": [
+        10
+      ],
+      "reviewRequired": true,
+      "reviewFlags": [
+        "نام تجاری در همین ردیف ثبت نشده"
+      ]
+    },
+    {
+      "id": "book-ch3-r11",
+      "genericName": "Chlorpheniramine Maleate",
+      "persianName": "",
+      "brandNamesRaw": "Histadic",
+      "uses": "آنتی‌هیستامین، ضد حساسیت",
+      "dosageForms": "Tablet 4 mg، Syrup 2 mg/5 mL، Injection 10 mg/mL",
+      "chapter": 3,
+      "sourceRows": [
+        11
+      ],
+      "reviewRequired": false,
+      "reviewFlags": []
+    },
+    {
+      "id": "book-ch3-r12",
+      "genericName": "Clemastine",
+      "persianName": "",
+      "brandNamesRaw": "Microclenastine",
+      "uses": "ضد حساسیت",
+      "dosageForms": "Tablet 1 mg، Injection 1 mg/mL",
+      "chapter": 3,
+      "sourceRows": [
+        12
+      ],
+      "reviewRequired": false,
+      "reviewFlags": []
+    },
+    {
+      "id": "book-ch3-r13",
+      "genericName": "Promethazine",
+      "persianName": "",
+      "brandNamesRaw": "Phenergan",
+      "uses": "ضد تهوع، خواب‌آور، ضد حساسیت",
+      "dosageForms": "Tablet 25 mg، Syrup 5 mg/5 mL، Injection 25 mg/mL",
+      "chapter": 3,
+      "sourceRows": [
+        13
+      ],
+      "reviewRequired": false,
+      "reviewFlags": []
+    },
+    {
+      "id": "book-ch3-r14",
+      "genericName": "Cyproheptadine",
+      "persianName": "",
+      "brandNamesRaw": "Practin / Tresorix / RaciP",
+      "uses": "اشتها‌آور و ضد حساسیت",
+      "dosageForms": "Tablet 4 mg، Syrup 2 mg/5 mL",
+      "chapter": 3,
+      "sourceRows": [
+        14
+      ],
+      "reviewRequired": false,
+      "reviewFlags": []
+    },
+    {
+      "id": "book-ch3-r15",
+      "genericName": "Hydroxyzine",
+      "persianName": "",
+      "brandNamesRaw": "Atarax",
+      "uses": "خارش، اضطراب و اختلالات خواب",
+      "dosageForms": "Tablet 10 mg، Syrup 2 mg/5 mL",
+      "chapter": 3,
+      "sourceRows": [
+        15
+      ],
+      "reviewRequired": false,
+      "reviewFlags": []
+    },
+    {
+      "id": "book-ch3-r16",
+      "genericName": "Diphenhydramine",
+      "persianName": "",
+      "brandNamesRaw": "Diphen / Benadryl",
+      "uses": "ضد حساسیت و کمک به خواب",
+      "dosageForms": "Tablet 25 mg، Injection 10 mg/mL، Capsule 25 mg، Elixir 12.5 mg/5 mL",
+      "chapter": 3,
+      "sourceRows": [
+        16
+      ],
+      "reviewRequired": false,
+      "reviewFlags": []
+    },
+    {
+      "id": "book-ch3-r17",
+      "genericName": "Diphenhydramine Compound",
+      "persianName": "",
+      "brandNamesRaw": "Diframix",
+      "uses": "ضد سرفه",
+      "dosageForms": "Syrup",
+      "chapter": 3,
+      "sourceRows": [
+        17
+      ],
+      "reviewRequired": false,
+      "reviewFlags": []
+    },
+    {
+      "id": "book-ch3-r18",
+      "genericName": "Antihistamine + Decongestant",
+      "persianName": "",
+      "brandNamesRaw": "Histagel / Rafadrin / Corizan",
+      "uses": "آنتی‌هیستامین و ضد احتقان",
+      "dosageForms": "Tablet / Capsule",
+      "chapter": 3,
+      "sourceRows": [
+        18
+      ],
+      "reviewRequired": false,
+      "reviewFlags": []
+    },
+    {
+      "id": "book-ch3-r19",
+      "genericName": "Cyclizine",
+      "persianName": "",
+      "brandNamesRaw": "",
+      "uses": "تهوع و استفراغ ناشی از مسافرت",
+      "dosageForms": "Tablet 50 mg، Chewable 25 mg",
+      "chapter": 3,
+      "sourceRows": [
+        19
+      ],
+      "reviewRequired": true,
+      "reviewFlags": [
+        "نام تجاری در همین ردیف ثبت نشده"
+      ]
+    },
+    {
+      "id": "book-ch3-r2",
+      "genericName": "N-Acetylcysteine",
+      "persianName": "",
+      "brandNamesRaw": "ACC / Fluimucil",
+      "uses": "خلط‌آور و رقیق‌کننده ترشحات تنفسی",
+      "dosageForms": "Tablet 200 mg، Eff Tab 600 mg، Injection 200 mg/3 mL",
+      "chapter": 3,
+      "sourceRows": [
+        2
+      ],
+      "reviewRequired": false,
+      "reviewFlags": []
+    },
+    {
+      "id": "book-ch3-r20",
+      "genericName": "Cinnarizine",
+      "persianName": "",
+      "brandNamesRaw": "",
+      "uses": "سرگیجه و تهوع",
+      "dosageForms": "Tablet 25 mg",
+      "chapter": 3,
+      "sourceRows": [
+        20
+      ],
+      "reviewRequired": true,
+      "reviewFlags": [
+        "نام تجاری در همین ردیف ثبت نشده"
+      ]
+    },
+    {
+      "id": "book-ch3-r21",
+      "genericName": "Meclizine",
+      "persianName": "",
+      "brandNamesRaw": "ANTIVERT",
+      "uses": "سرگیجه و تهوع",
+      "dosageForms": "Tablet 12.5/25/50 mg",
+      "chapter": 3,
+      "sourceRows": [
+        21
+      ],
+      "reviewRequired": false,
+      "reviewFlags": []
+    },
+    {
+      "id": "book-ch3-r22",
+      "genericName": "Dimenhydrinate",
+      "persianName": "",
+      "brandNamesRaw": "Dramamine",
+      "uses": "تهوع ناشی از مسافرت",
+      "dosageForms": "Tablet 50 mg",
+      "chapter": 3,
+      "sourceRows": [
+        22
+      ],
+      "reviewRequired": false,
+      "reviewFlags": []
+    },
+    {
+      "id": "book-ch3-r23",
+      "genericName": "Fexofenadine",
+      "persianName": "",
+      "brandNamesRaw": "Telfast / Fexigra / Fastover",
+      "uses": "ضد آلرژی",
+      "dosageForms": "Tablet 30/60/120/180 mg، Suspension 30 mg/5 mL",
+      "chapter": 3,
+      "sourceRows": [
+        23
+      ],
+      "reviewRequired": false,
+      "reviewFlags": []
+    },
+    {
+      "id": "book-ch3-r24",
+      "genericName": "Cetirizine",
+      "persianName": "",
+      "brandNamesRaw": "Letizen / Zyrtec",
+      "uses": "ضد آلرژی",
+      "dosageForms": "Tablet 5/10 mg، Soft Cap 10 mg، Syrup 5 mg/5 mL",
+      "chapter": 3,
+      "sourceRows": [
+        24
+      ],
+      "reviewRequired": false,
+      "reviewFlags": []
+    },
+    {
+      "id": "book-ch3-r25",
+      "genericName": "Biolenol Cold",
+      "persianName": "",
+      "brandNamesRaw": "",
+      "uses": "تسکین علائم سرماخوردگی\nسینوزیت،سیاه سرفه،آنفولانزا",
+      "dosageForms": "Tablet",
+      "chapter": 3,
+      "sourceRows": [
+        25
+      ],
+      "reviewRequired": true,
+      "reviewFlags": [
+        "نام تجاری در همین ردیف ثبت نشده"
+      ]
+    },
+    {
+      "id": "book-ch3-r26",
+      "genericName": "Children Cold",
+      "persianName": "",
+      "brandNamesRaw": "",
+      "uses": "سرماخوردگی اطفال",
+      "dosageForms": "Tablet",
+      "chapter": 3,
+      "sourceRows": [
+        26
+      ],
+      "reviewRequired": true,
+      "reviewFlags": [
+        "نام تجاری در همین ردیف ثبت نشده"
+      ]
+    },
+    {
+      "id": "book-ch3-r27",
+      "genericName": "Pediatric Grip",
+      "persianName": "",
+      "brandNamesRaw": "Cold syrup",
+      "uses": "شربت سرماخوردگی اطفال",
+      "dosageForms": "Syrup",
+      "chapter": 3,
+      "sourceRows": [
+        27
+      ],
+      "reviewRequired": false,
+      "reviewFlags": []
+    },
+    {
+      "id": "book-ch3-r28",
+      "genericName": "Corizan",
+      "persianName": "",
+      "brandNamesRaw": "Cold and Flu",
+      "uses": "شربت سرماخوردگی",
+      "dosageForms": "Syrup",
+      "chapter": 3,
+      "sourceRows": [
+        28
+      ],
+      "reviewRequired": false,
+      "reviewFlags": []
+    },
+    {
+      "id": "book-ch3-r29",
+      "genericName": "Pseudoephedrine",
+      "persianName": "",
+      "brandNamesRaw": "Pseuted-Efrigen",
+      "uses": "مسکن ضداحتقان-افزایش انرژی و ورزشکاران",
+      "dosageForms": "Syrup: 30mg/5cc\nCap: 30mg",
+      "chapter": 3,
+      "sourceRows": [
+        29
+      ],
+      "reviewRequired": false,
+      "reviewFlags": []
+    },
+    {
+      "id": "book-ch3-r3",
+      "genericName": "Expectorant Codeine",
+      "persianName": "",
+      "brandNamesRaw": "",
+      "uses": "ضد سرفه",
+      "dosageForms": "Syrup",
+      "chapter": 3,
+      "sourceRows": [
+        3
+      ],
+      "reviewRequired": true,
+      "reviewFlags": [
+        "نام تجاری در همین ردیف ثبت نشده"
+      ]
+    },
+    {
+      "id": "book-ch3-r30",
+      "genericName": "Phenylephrine",
+      "persianName": "",
+      "brandNamesRaw": "Decophen",
+      "uses": "ضداحتقان",
+      "dosageForms": "Nasal drop: 0.125% - 0.25% Drop 0.5% (شیرخواران و مدرسه)",
+      "chapter": 3,
+      "sourceRows": [
+        30
+      ],
+      "reviewRequired": false,
+      "reviewFlags": []
+    },
+    {
+      "id": "book-ch3-r31",
+      "genericName": "Naphazoline",
+      "persianName": "",
+      "brandNamesRaw": "Privine",
+      "uses": "ضداحتقان-آنتی هیستامین-قرمزی چشم",
+      "dosageForms": "Nasal spray: 0.05%,0.025%",
+      "chapter": 3,
+      "sourceRows": [
+        31
+      ],
+      "reviewRequired": false,
+      "reviewFlags": []
+    },
+    {
+      "id": "book-ch3-r32",
+      "genericName": "Oxymetazoline",
+      "persianName": "",
+      "brandNamesRaw": "Rinozoline-Congestop",
+      "uses": "ضداحتقان",
+      "dosageForms": "Nasal spray: 0.05%, 0.025%",
+      "chapter": 3,
+      "sourceRows": [
+        32
+      ],
+      "reviewRequired": false,
+      "reviewFlags": []
+    },
+    {
+      "id": "book-ch3-r33",
+      "genericName": "Dextromethorphan",
+      "persianName": "",
+      "brandNamesRaw": "",
+      "uses": "ضدسرفه خشک",
+      "dosageForms": "Tablet: 15mg\nSyrup: 15mg/5mL\nCap: 15mg\nDrop: 4mg/1mL",
+      "chapter": 3,
+      "sourceRows": [
+        33
+      ],
+      "reviewRequired": true,
+      "reviewFlags": [
+        "نام تجاری در همین ردیف ثبت نشده"
+      ]
+    },
+    {
+      "id": "book-ch3-r34",
+      "genericName": "Dextromethorphan",
+      "persianName": "",
+      "brandNamesRaw": "PD Cough",
+      "uses": "ضدسرفه (بدون خلط)",
+      "dosageForms": "Syrup",
+      "chapter": 3,
+      "sourceRows": [
+        34
+      ],
+      "reviewRequired": false,
+      "reviewFlags": []
+    },
+    {
+      "id": "book-ch3-r35",
+      "genericName": "Bromhexine",
+      "persianName": "",
+      "brandNamesRaw": "Bisolvan",
+      "uses": "خلط آور سینه (درافراد سیگاری)",
+      "dosageForms": "Tablet: 8mg\nElixir: 4mg/1mL\nInjection: 2mg/1mL",
+      "chapter": 3,
+      "sourceRows": [
+        35
+      ],
+      "reviewRequired": false,
+      "reviewFlags": []
+    },
+    {
+      "id": "book-ch3-r36",
+      "genericName": "Guaifenesin",
+      "persianName": "",
+      "brandNamesRaw": "G-max-Gaxol",
+      "uses": "ضدسرفه-خلط آور",
+      "dosageForms": "Syrup: 100mg/5mL\nSoft cap: 100-200mg",
+      "chapter": 3,
+      "sourceRows": [
+        36
+      ],
+      "reviewRequired": false,
+      "reviewFlags": []
+    },
+    {
+      "id": "book-ch3-r37",
+      "genericName": "Ketotifen",
+      "persianName": "",
+      "brandNamesRaw": "Zaditen- Denerel - Ketof",
+      "uses": "ضدحساسیت - بیماری آسم-\nسرفه حساسیت - جلوگیری از اشتها",
+      "dosageForms": "Tablet:1mg\nSyrup: 1mg/5mL\nDrop: 0.025%",
+      "chapter": 3,
+      "sourceRows": [
+        37
+      ],
+      "reviewRequired": false,
+      "reviewFlags": []
+    },
+    {
+      "id": "book-ch3-r38",
+      "genericName": "Loratadine",
+      "persianName": "",
+      "brandNamesRaw": "Claritin",
+      "uses": "کنترل خواب‌آلودگی - آلرژی - ضد حساسیت",
+      "dosageForms": "Tablet: 10mg\nSyrup: 5mg/5mL\nSoft cap: 10mg",
+      "chapter": 3,
+      "sourceRows": [
+        38
+      ],
+      "reviewRequired": false,
+      "reviewFlags": []
+    },
+    {
+      "id": "book-ch3-r39",
+      "genericName": "Desloratadine",
+      "persianName": "",
+      "brandNamesRaw": "Neotadine",
+      "uses": "ضدحساسیت",
+      "dosageForms": "Tablet: 5mg\nSyrup: 2.5mg/5mL",
+      "chapter": 3,
+      "sourceRows": [
+        39
+      ],
+      "reviewRequired": false,
+      "reviewFlags": []
+    },
+    {
+      "id": "book-ch3-r4",
+      "genericName": "Thymian",
+      "persianName": "",
+      "brandNamesRaw": "Thymoral / Thymax",
+      "uses": "ضد سرفه و خلط‌آور گیاهی",
+      "dosageForms": "Syrup",
+      "chapter": 3,
       "sourceRows": [
         4
       ],
@@ -43,13 +529,143 @@
       "reviewFlags": []
     },
     {
-      "id": "book-ch4-r5",
-      "genericName": "Ibuprofen",
+      "id": "book-ch3-r40",
+      "genericName": "Levocetirizine",
       "persianName": "",
-      "brandNamesRaw": "Advil/Actopin/Brufen/Gelofen",
-      "uses": "ضدالتهاب غیر استروییدی",
-      "dosageForms": "Tablet:200,400,800mg>Soft capsul:200,400mg>Ampule:400mg/4ml",
-      "chapter": 4,
+      "brandNamesRaw": "Xyzal",
+      "uses": "-----",
+      "dosageForms": "Tablet: 5mg",
+      "chapter": 3,
+      "sourceRows": [
+        40
+      ],
+      "reviewRequired": false,
+      "reviewFlags": []
+    },
+    {
+      "id": "book-ch3-r41",
+      "genericName": "Bilastine",
+      "persianName": "",
+      "brandNamesRaw": "",
+      "uses": "بهبود رینیت آلرژیک، خارش بینی",
+      "dosageForms": "Tablet: 20mg",
+      "chapter": 3,
+      "sourceRows": [
+        41
+      ],
+      "reviewRequired": true,
+      "reviewFlags": [
+        "نام تجاری در همین ردیف ثبت نشده"
+      ]
+    },
+    {
+      "id": "book-ch3-r42",
+      "genericName": "Antazolin +Naphazolin",
+      "persianName": "",
+      "brandNamesRaw": "AnaPrivin",
+      "uses": "ضداحتقان ضدحساسیت - سرفه وعطسه",
+      "dosageForms": "Drop: 1mL",
+      "chapter": 3,
+      "sourceRows": [
+        42
+      ],
+      "reviewRequired": false,
+      "reviewFlags": []
+    },
+    {
+      "id": "book-ch3-r43",
+      "genericName": "Azelastine",
+      "persianName": "",
+      "brandNamesRaw": "Allergodil",
+      "uses": "حساسیت آلرژی - سرفه - عطسه",
+      "dosageForms": "Nasal spray: 0.1%",
+      "chapter": 3,
+      "sourceRows": [
+        43
+      ],
+      "reviewRequired": false,
+      "reviewFlags": []
+    },
+    {
+      "id": "book-ch3-r44",
+      "genericName": "Olopatadine",
+      "persianName": "",
+      "brandNamesRaw": "Patanol",
+      "uses": "حساسیت فصلی - ضدسرفه و عطسه",
+      "dosageForms": "Drop: 0.1mg/1mL Nasal spray",
+      "chapter": 3,
+      "sourceRows": [
+        44
+      ],
+      "reviewRequired": false,
+      "reviewFlags": []
+    },
+    {
+      "id": "book-ch3-r45",
+      "genericName": "Cromolyn sodium",
+      "persianName": "",
+      "brandNamesRaw": "Cromal",
+      "uses": "پایدارکننده ماستوسیت‌ها - ضدحساسیت",
+      "dosageForms": "Inhaler cap: 20mg Eye drop: 2% Nasal spray: 2%",
+      "chapter": 3,
+      "sourceRows": [
+        45
+      ],
+      "reviewRequired": false,
+      "reviewFlags": []
+    },
+    {
+      "id": "book-ch3-r46",
+      "genericName": "Betahistin",
+      "persianName": "",
+      "brandNamesRaw": "Betaserc - Vertilox - Bestin",
+      "uses": "درمان سرگیجه - کاهش علائم بیماری منیر",
+      "dosageForms": "Tablet: 8-24mg",
+      "chapter": 3,
+      "sourceRows": [
+        46
+      ],
+      "reviewRequired": false,
+      "reviewFlags": []
+    },
+    {
+      "id": "book-ch3-r47",
+      "genericName": "Influenza vaccine",
+      "persianName": "",
+      "brandNamesRaw": "Influvac",
+      "uses": "واکسیناسیون در برابر آنفولانزا",
+      "dosageForms": "Prefilled syringe Inj: 0.5mL",
+      "chapter": 3,
+      "sourceRows": [
+        47
+      ],
+      "reviewRequired": false,
+      "reviewFlags": []
+    },
+    {
+      "id": "book-ch3-r48",
+      "genericName": "Coldax",
+      "persianName": "",
+      "brandNamesRaw": "",
+      "uses": "تسکین علائم سرماخوردگی - سینوزیت - سیاه‌سرفه - آنفولانزا",
+      "dosageForms": "Tablet",
+      "chapter": 3,
+      "sourceRows": [
+        48
+      ],
+      "reviewRequired": true,
+      "reviewFlags": [
+        "نام تجاری در همین ردیف ثبت نشده"
+      ]
+    },
+    {
+      "id": "book-ch3-r5",
+      "genericName": "Prospan",
+      "persianName": "",
+      "brandNamesRaw": "Pectogal",
+      "uses": "ضد سرفه و خلط‌آور گیاهی",
+      "dosageForms": "Syrup",
+      "chapter": 3,
       "sourceRows": [
         5
       ],
@@ -57,60 +673,68 @@
       "reviewFlags": []
     },
     {
-      "id": "book-ch4-r6",
-      "genericName": "Indometacin",
+      "id": "book-ch3-r6",
+      "genericName": "Rutafin",
       "persianName": "",
-      "brandNamesRaw": "Indocid",
-      "uses": "ضدالتهاب غیر استروییدی",
-      "dosageForms": "Tabet:75mg>Capsul:25mg>Suppository:50,100g",
-      "chapter": 4,
+      "brandNamesRaw": "",
+      "uses": "ضد سرفه گیاهی، مناسب مشکلات تنفسی",
+      "dosageForms": "Powder",
+      "chapter": 3,
       "sourceRows": [
         6
       ],
-      "reviewRequired": false,
-      "reviewFlags": []
+      "reviewRequired": true,
+      "reviewFlags": [
+        "نام تجاری در همین ردیف ثبت نشده"
+      ]
     },
     {
-      "id": "book-ch4-r7",
-      "genericName": "Ibuprofen Lysine",
+      "id": "book-ch3-r7",
+      "genericName": "Echi Herb",
       "persianName": "",
-      "brandNamesRaw": "Advalgin",
-      "uses": "ضدالتهاب غیر استروییدی",
-      "dosageForms": "Tablet:342,684mg",
-      "chapter": 4,
+      "brandNamesRaw": "",
+      "uses": "تقویت‌کننده سیستم ایمنی",
+      "dosageForms": "Tablet",
+      "chapter": 3,
       "sourceRows": [
         7
       ],
-      "reviewRequired": false,
-      "reviewFlags": []
+      "reviewRequired": true,
+      "reviewFlags": [
+        "نام تجاری در همین ردیف ثبت نشده"
+      ]
     },
     {
-      "id": "book-ch4-r8",
-      "genericName": "Mefenamic Acid",
+      "id": "book-ch3-r8",
+      "genericName": "Allergol",
       "persianName": "",
-      "brandNamesRaw": "Ponstant",
-      "uses": "ضدالتهاب غیر استروییدی",
-      "dosageForms": "Capsul:250,500mg",
-      "chapter": 4,
+      "brandNamesRaw": "",
+      "uses": "درمان علائم آلرژی و حساسیت بینی",
+      "dosageForms": "Nasal Spray",
+      "chapter": 3,
       "sourceRows": [
         8
       ],
-      "reviewRequired": false,
-      "reviewFlags": []
+      "reviewRequired": true,
+      "reviewFlags": [
+        "نام تجاری در همین ردیف ثبت نشده"
+      ]
     },
     {
-      "id": "book-ch4-r9",
-      "genericName": "Ketorolac",
+      "id": "book-ch3-r9",
+      "genericName": "Menthol",
       "persianName": "",
-      "brandNamesRaw": "Acular",
-      "uses": "ضدالتهاب غیر استروییدی",
-      "dosageForms": "Tablet:10mg>Ampoule:30mg/ml>Eye drop:0.5%",
-      "chapter": 4,
+      "brandNamesRaw": "",
+      "uses": "کمک به رفع گرفتگی بینی",
+      "dosageForms": "Drop",
+      "chapter": 3,
       "sourceRows": [
         9
       ],
-      "reviewRequired": false,
-      "reviewFlags": []
+      "reviewRequired": true,
+      "reviewFlags": [
+        "نام تجاری در همین ردیف ثبت نشده"
+      ]
     },
     {
       "id": "book-ch4-r10",
@@ -533,6 +1157,20 @@
       "reviewFlags": []
     },
     {
+      "id": "book-ch4-r4",
+      "genericName": "Acetylsaliclic Asid (Asa)",
+      "persianName": "",
+      "brandNamesRaw": "Asprin",
+      "uses": "ضدالتهاب غیر استروییدی",
+      "dosageForms": "Tablet:80,81,325,500mg>chewable tablet:100mg",
+      "chapter": 4,
+      "sourceRows": [
+        4
+      ],
+      "reviewRequired": false,
+      "reviewFlags": []
+    },
+    {
       "id": "book-ch4-r40",
       "genericName": "Flexi-Gol",
       "persianName": "",
@@ -668,6 +1306,20 @@
       "chapter": 4,
       "sourceRows": [
         49
+      ],
+      "reviewRequired": false,
+      "reviewFlags": []
+    },
+    {
+      "id": "book-ch4-r5",
+      "genericName": "Ibuprofen",
+      "persianName": "",
+      "brandNamesRaw": "Advil/Actopin/Brufen/Gelofen",
+      "uses": "ضدالتهاب غیر استروییدی",
+      "dosageForms": "Tablet:200,400,800mg>Soft capsul:200,400mg>Ampule:400mg/4ml",
+      "chapter": 4,
+      "sourceRows": [
+        5
       ],
       "reviewRequired": false,
       "reviewFlags": []
@@ -813,6 +1465,20 @@
       "reviewFlags": []
     },
     {
+      "id": "book-ch4-r6",
+      "genericName": "Indometacin",
+      "persianName": "",
+      "brandNamesRaw": "Indocid",
+      "uses": "ضدالتهاب غیر استروییدی",
+      "dosageForms": "Tabet:75mg>Capsul:25mg>Suppository:50,100g",
+      "chapter": 4,
+      "sourceRows": [
+        6
+      ],
+      "reviewRequired": false,
+      "reviewFlags": []
+    },
+    {
       "id": "book-ch4-r60",
       "genericName": "Fludrocortisone",
       "persianName": "",
@@ -953,6 +1619,20 @@
       "reviewFlags": []
     },
     {
+      "id": "book-ch4-r7",
+      "genericName": "Ibuprofen Lysine",
+      "persianName": "",
+      "brandNamesRaw": "Advalgin",
+      "uses": "ضدالتهاب غیر استروییدی",
+      "dosageForms": "Tablet:342,684mg",
+      "chapter": 4,
+      "sourceRows": [
+        7
+      ],
+      "reviewRequired": false,
+      "reviewFlags": []
+    },
+    {
       "id": "book-ch4-r70",
       "genericName": "Zolmitriptan",
       "persianName": "",
@@ -1081,71 +1761,13 @@
       ]
     },
     {
-      "id": "book-ch5-r4",
-      "genericName": "Penicillin V",
+      "id": "book-ch4-r8",
+      "genericName": "Mefenamic Acid",
       "persianName": "",
-      "brandNamesRaw": "Pen-VK",
-      "uses": "آنتی‌بیوتیک (پنی‌سیلین)",
-      "dosageForms": "Film-coated tablet: 500 mg\nPowder for oral suspension: 250 mg/5 mL",
-      "chapter": 5,
-      "sourceRows": [
-        4
-      ],
-      "reviewRequired": false,
-      "reviewFlags": []
-    },
-    {
-      "id": "book-ch5-r5",
-      "genericName": "Penicillin V benzathine",
-      "persianName": "",
-      "brandNamesRaw": "",
-      "uses": "آنتی‌بیوتیک (پنی‌سیلین)",
-      "dosageForms": "Powder for oral suspension: 200,000 and 400,000 IU/5 mL",
-      "chapter": 5,
-      "sourceRows": [
-        5
-      ],
-      "reviewRequired": true,
-      "reviewFlags": [
-        "نام تجاری در همین ردیف ثبت نشده"
-      ]
-    },
-    {
-      "id": "book-ch5-r6",
-      "genericName": "Penicillin 6.3.3\n(Benzathine Penicillin G + Penicillin G Potassium + Procaine Penicillin G)",
-      "persianName": "",
-      "brandNamesRaw": "Tri-Pen 6.3.3\nPen 6.3.3",
-      "uses": "آنتی‌بیوتیک (پنی‌سیلین)",
-      "dosageForms": "Vial (injection powder): 600,000 U + 300,000 U + 300,000 U",
-      "chapter": 5,
-      "sourceRows": [
-        6
-      ],
-      "reviewRequired": false,
-      "reviewFlags": []
-    },
-    {
-      "id": "book-ch5-r7",
-      "genericName": "Penicillin G (Procaine + Potassium)",
-      "persianName": "",
-      "brandNamesRaw": "Pen 400\nPen 800\nPenicillin Procaine",
-      "uses": "آنتی‌بیوتیک (پنی‌سیلین)",
-      "dosageForms": "Vial (injection powder): 400,000 and 800,000 (Pen 400, Pen 800)",
-      "chapter": 5,
-      "sourceRows": [
-        7
-      ],
-      "reviewRequired": false,
-      "reviewFlags": []
-    },
-    {
-      "id": "book-ch5-r8",
-      "genericName": "Penicillin benzathine",
-      "persianName": "",
-      "brandNamesRaw": "Pendur*\nBenza 1,200,000\nPen 1,200,000",
-      "uses": "آنتی‌بیوتیک (پنی‌سیلین)",
-      "dosageForms": "Vial (injection powder): 1,200,000 IU",
-      "chapter": 5,
+      "brandNamesRaw": "Ponstant",
+      "uses": "ضدالتهاب غیر استروییدی",
+      "dosageForms": "Capsul:250,500mg",
+      "chapter": 4,
       "sourceRows": [
         8
       ],
@@ -1153,13 +1775,13 @@
       "reviewFlags": []
     },
     {
-      "id": "book-ch5-r9",
-      "genericName": "Penicillin G sodium",
+      "id": "book-ch4-r9",
+      "genericName": "Ketorolac",
       "persianName": "",
-      "brandNamesRaw": "Pen Sodium\nPen G Na",
-      "uses": "آنتی‌بیوتیک (پنی‌سیلین)",
-      "dosageForms": "Vial (injection powder): 5,000,000 IU",
-      "chapter": 5,
+      "brandNamesRaw": "Acular",
+      "uses": "ضدالتهاب غیر استروییدی",
+      "dosageForms": "Tablet:10mg>Ampoule:30mg/ml>Eye drop:0.5%",
+      "chapter": 4,
       "sourceRows": [
         9
       ],
@@ -1181,6 +1803,156 @@
       "reviewFlags": []
     },
     {
+      "id": "book-ch5-r100",
+      "genericName": "Clotrimazole",
+      "persianName": "",
+      "brandNamesRaw": "Conesten\nClo-Gym\nCanazole\nClotizol\nCandizol\nAfitrimazole",
+      "uses": "ضدقارچ",
+      "dosageForms": "Topical cream: 1%\nVaginal cream: 1, 2%\nLotion: 1%\nSolution: 1%\nVaginal tablet: 100, 500 mg",
+      "chapter": 5,
+      "sourceRows": [
+        100
+      ],
+      "reviewRequired": false,
+      "reviewFlags": []
+    },
+    {
+      "id": "book-ch5-r101",
+      "genericName": "Isoniazid + Pyrazinamide + Rifampin\n(Isoniazid-FR)",
+      "persianName": "",
+      "brandNamesRaw": "",
+      "uses": "ضدسل",
+      "dosageForms": "Scored tablet: 50 mg + 300 mg + 120 mg",
+      "chapter": 5,
+      "sourceRows": [
+        101
+      ],
+      "reviewRequired": true,
+      "reviewFlags": [
+        "نام تجاری در همین ردیف ثبت نشده"
+      ]
+    },
+    {
+      "id": "book-ch5-r102",
+      "genericName": "Pyrazinamide",
+      "persianName": "",
+      "brandNamesRaw": "",
+      "uses": "ضدسل",
+      "dosageForms": "Scored tablet: 500 mg",
+      "chapter": 5,
+      "sourceRows": [
+        102
+      ],
+      "reviewRequired": true,
+      "reviewFlags": [
+        "نام تجاری در همین ردیف ثبت نشده"
+      ]
+    },
+    {
+      "id": "book-ch5-r103",
+      "genericName": "Rifampin",
+      "persianName": "",
+      "brandNamesRaw": "Rifadin",
+      "uses": "ضدسل",
+      "dosageForms": "Vial: 600 mg\nCapsule: 150, 300 mg\nDrop: 153 mg/ml",
+      "chapter": 5,
+      "sourceRows": [
+        103
+      ],
+      "reviewRequired": false,
+      "reviewFlags": []
+    },
+    {
+      "id": "book-ch5-r104",
+      "genericName": "Clofazimine",
+      "persianName": "",
+      "brandNamesRaw": "Hansepran",
+      "uses": "ضدجذام",
+      "dosageForms": "Capsule: 50, 100 mg",
+      "chapter": 5,
+      "sourceRows": [
+        104
+      ],
+      "reviewRequired": false,
+      "reviewFlags": []
+    },
+    {
+      "id": "book-ch5-r105",
+      "genericName": "Dapsone",
+      "persianName": "",
+      "brandNamesRaw": "",
+      "uses": "ضدجذام",
+      "dosageForms": "Tablet: 50, 100 mg",
+      "chapter": 5,
+      "sourceRows": [
+        105
+      ],
+      "reviewRequired": true,
+      "reviewFlags": [
+        "نام تجاری در همین ردیف ثبت نشده"
+      ]
+    },
+    {
+      "id": "book-ch5-r106",
+      "genericName": "Iodoquinol",
+      "persianName": "",
+      "brandNamesRaw": "",
+      "uses": "ضدآمیب",
+      "dosageForms": "Tablet: 210 mg",
+      "chapter": 5,
+      "sourceRows": [
+        106
+      ],
+      "reviewRequired": true,
+      "reviewFlags": [
+        "نام تجاری در همین ردیف ثبت نشده"
+      ]
+    },
+    {
+      "id": "book-ch5-r107",
+      "genericName": "Meglumine antimoniate",
+      "persianName": "",
+      "brandNamesRaw": "Glucantime",
+      "uses": "درمان لیشمانیوز",
+      "dosageForms": "Ampoule: 300 mg/5 mL",
+      "chapter": 5,
+      "sourceRows": [
+        107
+      ],
+      "reviewRequired": false,
+      "reviewFlags": []
+    },
+    {
+      "id": "book-ch5-r108",
+      "genericName": "Rifaximin",
+      "persianName": "",
+      "brandNamesRaw": "Xifaxan\nXigut\nFaxirin",
+      "uses": "آنتی‌بیوتیک برای درمان عفونت‌های باکتریایی",
+      "dosageForms": "Tablet: 200, 550 mg",
+      "chapter": 5,
+      "sourceRows": [
+        108
+      ],
+      "reviewRequired": false,
+      "reviewFlags": []
+    },
+    {
+      "id": "book-ch5-r109",
+      "genericName": "Ethambutol",
+      "persianName": "",
+      "brandNamesRaw": "",
+      "uses": "داروی ضدسل (برای درمان بیماری سل استفاده می‌شود)",
+      "dosageForms": "Tablet FC double scored: 400 mg",
+      "chapter": 5,
+      "sourceRows": [
+        109
+      ],
+      "reviewRequired": true,
+      "reviewFlags": [
+        "نام تجاری در همین ردیف ثبت نشده"
+      ]
+    },
+    {
       "id": "book-ch5-r11",
       "genericName": "Cloxacillin",
       "persianName": "",
@@ -1190,6 +1962,50 @@
       "chapter": 5,
       "sourceRows": [
         11
+      ],
+      "reviewRequired": true,
+      "reviewFlags": [
+        "نام تجاری در همین ردیف ثبت نشده"
+      ]
+    },
+    {
+      "id": "book-ch5-r110",
+      "genericName": "Ethambutol + Isoniazid + Rifampin",
+      "persianName": "",
+      "brandNamesRaw": "Akurit-3*",
+      "uses": "داروی ضدسل (برای درمان بیماری سل استفاده می‌شود)",
+      "dosageForms": "Tablet: Ethambutol 275 mg + Isoniazid 75 mg + Rifampin 150 mg",
+      "chapter": 5,
+      "sourceRows": [
+        110
+      ],
+      "reviewRequired": false,
+      "reviewFlags": []
+    },
+    {
+      "id": "book-ch5-r111",
+      "genericName": "Ethambutol + Isoniazid + Pyrazinamide + Rifampin",
+      "persianName": "",
+      "brandNamesRaw": "Akurit-4*",
+      "uses": "داروی ضدسل (برای درمان بیماری سل استفاده می‌شود)",
+      "dosageForms": "Tablet: Ethambutol 275 mg + Isoniazid 75 mg + Pyrazinamide 400 mg + Rifampin 150 mg",
+      "chapter": 5,
+      "sourceRows": [
+        111
+      ],
+      "reviewRequired": false,
+      "reviewFlags": []
+    },
+    {
+      "id": "book-ch5-r112",
+      "genericName": "Isoniazid FR",
+      "persianName": "",
+      "brandNamesRaw": "",
+      "uses": "داروی ضدسل (برای درمان بیماری سل استفاده می‌شود)",
+      "dosageForms": "Double scored tablet: 100 mg\nDouble scored tablet: 300 mg",
+      "chapter": 5,
+      "sourceRows": [
+        112
       ],
       "reviewRequired": true,
       "reviewFlags": [
@@ -1595,6 +2411,20 @@
       ]
     },
     {
+      "id": "book-ch5-r4",
+      "genericName": "Penicillin V",
+      "persianName": "",
+      "brandNamesRaw": "Pen-VK",
+      "uses": "آنتی‌بیوتیک (پنی‌سیلین)",
+      "dosageForms": "Film-coated tablet: 500 mg\nPowder for oral suspension: 250 mg/5 mL",
+      "chapter": 5,
+      "sourceRows": [
+        4
+      ],
+      "reviewRequired": false,
+      "reviewFlags": []
+    },
+    {
       "id": "book-ch5-r40",
       "genericName": "Ciprofloxacin",
       "persianName": "",
@@ -1735,6 +2565,22 @@
       "reviewFlags": []
     },
     {
+      "id": "book-ch5-r5",
+      "genericName": "Penicillin V benzathine",
+      "persianName": "",
+      "brandNamesRaw": "",
+      "uses": "آنتی‌بیوتیک (پنی‌سیلین)",
+      "dosageForms": "Powder for oral suspension: 200,000 and 400,000 IU/5 mL",
+      "chapter": 5,
+      "sourceRows": [
+        5
+      ],
+      "reviewRequired": true,
+      "reviewFlags": [
+        "نام تجاری در همین ردیف ثبت نشده"
+      ]
+    },
+    {
       "id": "book-ch5-r50",
       "genericName": "Tetracycline",
       "persianName": "",
@@ -1870,6 +2716,20 @@
       "chapter": 5,
       "sourceRows": [
         59
+      ],
+      "reviewRequired": false,
+      "reviewFlags": []
+    },
+    {
+      "id": "book-ch5-r6",
+      "genericName": "Penicillin 6.3.3\n(Benzathine Penicillin G + Penicillin G Potassium + Procaine Penicillin G)",
+      "persianName": "",
+      "brandNamesRaw": "Tri-Pen 6.3.3\nPen 6.3.3",
+      "uses": "آنتی‌بیوتیک (پنی‌سیلین)",
+      "dosageForms": "Vial (injection powder): 600,000 U + 300,000 U + 300,000 U",
+      "chapter": 5,
+      "sourceRows": [
+        6
       ],
       "reviewRequired": false,
       "reviewFlags": []
@@ -2014,6 +2874,20 @@
       "chapter": 5,
       "sourceRows": [
         69
+      ],
+      "reviewRequired": false,
+      "reviewFlags": []
+    },
+    {
+      "id": "book-ch5-r7",
+      "genericName": "Penicillin G (Procaine + Potassium)",
+      "persianName": "",
+      "brandNamesRaw": "Pen 400\nPen 800\nPenicillin Procaine",
+      "uses": "آنتی‌بیوتیک (پنی‌سیلین)",
+      "dosageForms": "Vial (injection powder): 400,000 and 800,000 (Pen 400, Pen 800)",
+      "chapter": 5,
+      "sourceRows": [
+        7
       ],
       "reviewRequired": false,
       "reviewFlags": []
@@ -2169,6 +3043,20 @@
       ]
     },
     {
+      "id": "book-ch5-r8",
+      "genericName": "Penicillin benzathine",
+      "persianName": "",
+      "brandNamesRaw": "Pendur*\nBenza 1,200,000\nPen 1,200,000",
+      "uses": "آنتی‌بیوتیک (پنی‌سیلین)",
+      "dosageForms": "Vial (injection powder): 1,200,000 IU",
+      "chapter": 5,
+      "sourceRows": [
+        8
+      ],
+      "reviewRequired": false,
+      "reviewFlags": []
+    },
+    {
       "id": "book-ch5-r80",
       "genericName": "Oseltamivir",
       "persianName": "",
@@ -2311,6 +3199,20 @@
       "reviewFlags": [
         "نام تجاری در همین ردیف ثبت نشده"
       ]
+    },
+    {
+      "id": "book-ch5-r9",
+      "genericName": "Penicillin G sodium",
+      "persianName": "",
+      "brandNamesRaw": "Pen Sodium\nPen G Na",
+      "uses": "آنتی‌بیوتیک (پنی‌سیلین)",
+      "dosageForms": "Vial (injection powder): 5,000,000 IU",
+      "chapter": 5,
+      "sourceRows": [
+        9
+      ],
+      "reviewRequired": false,
+      "reviewFlags": []
     },
     {
       "id": "book-ch5-r90",
@@ -2465,286 +3367,6 @@
       ]
     },
     {
-      "id": "book-ch5-r100",
-      "genericName": "Clotrimazole",
-      "persianName": "",
-      "brandNamesRaw": "Conesten\nClo-Gym\nCanazole\nClotizol\nCandizol\nAfitrimazole",
-      "uses": "ضدقارچ",
-      "dosageForms": "Topical cream: 1%\nVaginal cream: 1, 2%\nLotion: 1%\nSolution: 1%\nVaginal tablet: 100, 500 mg",
-      "chapter": 5,
-      "sourceRows": [
-        100
-      ],
-      "reviewRequired": false,
-      "reviewFlags": []
-    },
-    {
-      "id": "book-ch5-r101",
-      "genericName": "Isoniazid + Pyrazinamide + Rifampin\n(Isoniazid-FR)",
-      "persianName": "",
-      "brandNamesRaw": "",
-      "uses": "ضدسل",
-      "dosageForms": "Scored tablet: 50 mg + 300 mg + 120 mg",
-      "chapter": 5,
-      "sourceRows": [
-        101
-      ],
-      "reviewRequired": true,
-      "reviewFlags": [
-        "نام تجاری در همین ردیف ثبت نشده"
-      ]
-    },
-    {
-      "id": "book-ch5-r102",
-      "genericName": "Pyrazinamide",
-      "persianName": "",
-      "brandNamesRaw": "",
-      "uses": "ضدسل",
-      "dosageForms": "Scored tablet: 500 mg",
-      "chapter": 5,
-      "sourceRows": [
-        102
-      ],
-      "reviewRequired": true,
-      "reviewFlags": [
-        "نام تجاری در همین ردیف ثبت نشده"
-      ]
-    },
-    {
-      "id": "book-ch5-r103",
-      "genericName": "Rifampin",
-      "persianName": "",
-      "brandNamesRaw": "Rifadin",
-      "uses": "ضدسل",
-      "dosageForms": "Vial: 600 mg\nCapsule: 150, 300 mg\nDrop: 153 mg/ml",
-      "chapter": 5,
-      "sourceRows": [
-        103
-      ],
-      "reviewRequired": false,
-      "reviewFlags": []
-    },
-    {
-      "id": "book-ch5-r104",
-      "genericName": "Clofazimine",
-      "persianName": "",
-      "brandNamesRaw": "Hansepran",
-      "uses": "ضدجذام",
-      "dosageForms": "Capsule: 50, 100 mg",
-      "chapter": 5,
-      "sourceRows": [
-        104
-      ],
-      "reviewRequired": false,
-      "reviewFlags": []
-    },
-    {
-      "id": "book-ch5-r105",
-      "genericName": "Dapsone",
-      "persianName": "",
-      "brandNamesRaw": "",
-      "uses": "ضدجذام",
-      "dosageForms": "Tablet: 50, 100 mg",
-      "chapter": 5,
-      "sourceRows": [
-        105
-      ],
-      "reviewRequired": true,
-      "reviewFlags": [
-        "نام تجاری در همین ردیف ثبت نشده"
-      ]
-    },
-    {
-      "id": "book-ch5-r106",
-      "genericName": "Iodoquinol",
-      "persianName": "",
-      "brandNamesRaw": "",
-      "uses": "ضدآمیب",
-      "dosageForms": "Tablet: 210 mg",
-      "chapter": 5,
-      "sourceRows": [
-        106
-      ],
-      "reviewRequired": true,
-      "reviewFlags": [
-        "نام تجاری در همین ردیف ثبت نشده"
-      ]
-    },
-    {
-      "id": "book-ch5-r107",
-      "genericName": "Meglumine antimoniate",
-      "persianName": "",
-      "brandNamesRaw": "Glucantime",
-      "uses": "درمان لیشمانیوز",
-      "dosageForms": "Ampoule: 300 mg/5 mL",
-      "chapter": 5,
-      "sourceRows": [
-        107
-      ],
-      "reviewRequired": false,
-      "reviewFlags": []
-    },
-    {
-      "id": "book-ch5-r108",
-      "genericName": "Rifaximin",
-      "persianName": "",
-      "brandNamesRaw": "Xifaxan\nXigut\nFaxirin",
-      "uses": "آنتی‌بیوتیک برای درمان عفونت‌های باکتریایی",
-      "dosageForms": "Tablet: 200, 550 mg",
-      "chapter": 5,
-      "sourceRows": [
-        108
-      ],
-      "reviewRequired": false,
-      "reviewFlags": []
-    },
-    {
-      "id": "book-ch5-r109",
-      "genericName": "Ethambutol",
-      "persianName": "",
-      "brandNamesRaw": "",
-      "uses": "داروی ضدسل (برای درمان بیماری سل استفاده می‌شود)",
-      "dosageForms": "Tablet FC double scored: 400 mg",
-      "chapter": 5,
-      "sourceRows": [
-        109
-      ],
-      "reviewRequired": true,
-      "reviewFlags": [
-        "نام تجاری در همین ردیف ثبت نشده"
-      ]
-    },
-    {
-      "id": "book-ch5-r110",
-      "genericName": "Ethambutol + Isoniazid + Rifampin",
-      "persianName": "",
-      "brandNamesRaw": "Akurit-3*",
-      "uses": "داروی ضدسل (برای درمان بیماری سل استفاده می‌شود)",
-      "dosageForms": "Tablet: Ethambutol 275 mg + Isoniazid 75 mg + Rifampin 150 mg",
-      "chapter": 5,
-      "sourceRows": [
-        110
-      ],
-      "reviewRequired": false,
-      "reviewFlags": []
-    },
-    {
-      "id": "book-ch5-r111",
-      "genericName": "Ethambutol + Isoniazid + Pyrazinamide + Rifampin",
-      "persianName": "",
-      "brandNamesRaw": "Akurit-4*",
-      "uses": "داروی ضدسل (برای درمان بیماری سل استفاده می‌شود)",
-      "dosageForms": "Tablet: Ethambutol 275 mg + Isoniazid 75 mg + Pyrazinamide 400 mg + Rifampin 150 mg",
-      "chapter": 5,
-      "sourceRows": [
-        111
-      ],
-      "reviewRequired": false,
-      "reviewFlags": []
-    },
-    {
-      "id": "book-ch5-r112",
-      "genericName": "Isoniazid FR",
-      "persianName": "",
-      "brandNamesRaw": "",
-      "uses": "داروی ضدسل (برای درمان بیماری سل استفاده می‌شود)",
-      "dosageForms": "Double scored tablet: 100 mg\nDouble scored tablet: 300 mg",
-      "chapter": 5,
-      "sourceRows": [
-        112
-      ],
-      "reviewRequired": true,
-      "reviewFlags": [
-        "نام تجاری در همین ردیف ثبت نشده"
-      ]
-    },
-    {
-      "id": "book-ch7-r4",
-      "genericName": "Furosemide",
-      "persianName": "",
-      "brandNamesRaw": "Lasix",
-      "uses": "نارسایی قلبی \nسیروز کبدی \nبیماری های کلیوی",
-      "dosageForms": "Tablet: 40mg\nAmpoule: 20mg/2ml, 40mg/4ml, 40mg/2ml",
-      "chapter": 7,
-      "sourceRows": [
-        4
-      ],
-      "reviewRequired": false,
-      "reviewFlags": []
-    },
-    {
-      "id": "book-ch7-r5",
-      "genericName": "Bumetanide",
-      "persianName": "",
-      "brandNamesRaw": "Bumex",
-      "uses": "ورم و فشار خون بالا در اثر نارسایی قلبیی \nنارسایی کبد و نارسایی کلیوی",
-      "dosageForms": "(Tablet: 0.5, 1, 2mg)\nVial (Liquid): 2.5mg/10ml",
-      "chapter": 7,
-      "sourceRows": [
-        5
-      ],
-      "reviewRequired": false,
-      "reviewFlags": []
-    },
-    {
-      "id": "book-ch7-r6",
-      "genericName": "Hidrochlorothiazide",
-      "persianName": "",
-      "brandNamesRaw": "HTZ\nHCTZ",
-      "uses": "درمان فشار خون بالا",
-      "dosageForms": "Tablet: 25, 50mg",
-      "chapter": 7,
-      "sourceRows": [
-        6
-      ],
-      "reviewRequired": false,
-      "reviewFlags": []
-    },
-    {
-      "id": "book-ch7-r7",
-      "genericName": "Indapamide",
-      "persianName": "",
-      "brandNamesRaw": "Natrilix SR",
-      "uses": "درمان  فشار خون بالا",
-      "dosageForms": "Tablet: 1.5mg",
-      "chapter": 7,
-      "sourceRows": [
-        7
-      ],
-      "reviewRequired": false,
-      "reviewFlags": []
-    },
-    {
-      "id": "book-ch7-r8",
-      "genericName": "Chlortalidone",
-      "persianName": "",
-      "brandNamesRaw": "Hygroton",
-      "uses": "درمان پر فشاری خون اولیه",
-      "dosageForms": "Tablet: 50mg",
-      "chapter": 7,
-      "sourceRows": [
-        8
-      ],
-      "reviewRequired": false,
-      "reviewFlags": []
-    },
-    {
-      "id": "book-ch7-r9",
-      "genericName": "Metolazone",
-      "persianName": "",
-      "brandNamesRaw": "",
-      "uses": "کنترل فشار خون بالا،نارسایی قلبی",
-      "dosageForms": "Tablet: 5mg",
-      "chapter": 7,
-      "sourceRows": [
-        9
-      ],
-      "reviewRequired": true,
-      "reviewFlags": [
-        "نام تجاری در همین ردیف ثبت نشده"
-      ]
-    },
-    {
       "id": "book-ch7-r10",
       "genericName": "Acetazolamide",
       "persianName": "",
@@ -2754,6 +3376,146 @@
       "chapter": 7,
       "sourceRows": [
         10
+      ],
+      "reviewRequired": false,
+      "reviewFlags": []
+    },
+    {
+      "id": "book-ch7-r100",
+      "genericName": "Urokinase",
+      "persianName": "",
+      "brandNamesRaw": "Uronase\nAbbokinase\nKinlytic",
+      "uses": "انسداد عروق محیطی",
+      "dosageForms": "Vial (Injection Powder): 250000IU, 500000IU",
+      "chapter": 7,
+      "sourceRows": [
+        100
+      ],
+      "reviewRequired": false,
+      "reviewFlags": []
+    },
+    {
+      "id": "book-ch7-r101",
+      "genericName": "Factor VIII Inhibitor Bypassindg Fraction",
+      "persianName": "",
+      "brandNamesRaw": "Uman Complex\nFeiba\nOctaplex",
+      "uses": "درمان بیماران هموفیلی",
+      "dosageForms": "Vial (Injection Powder): 500, 1000IU",
+      "chapter": 7,
+      "sourceRows": [
+        101
+      ],
+      "reviewRequired": false,
+      "reviewFlags": []
+    },
+    {
+      "id": "book-ch7-r102",
+      "genericName": "Factor IX",
+      "persianName": "",
+      "brandNamesRaw": "Aimafix\nNanotiv\nImmunine\nBerinin\nOctamin F",
+      "uses": "درمان و پیشگیری از خون ریزی در هموفیلی",
+      "dosageForms": "Vial (Injection Powder): 500, 1000IU",
+      "chapter": 7,
+      "sourceRows": [
+        102
+      ],
+      "reviewRequired": false,
+      "reviewFlags": []
+    },
+    {
+      "id": "book-ch7-r103",
+      "genericName": "Prothrombin Complex",
+      "persianName": "",
+      "brandNamesRaw": "Beriplex",
+      "uses": "کمبود فاکتورIX",
+      "dosageForms": "Vial (Injection Powder):  500IU",
+      "chapter": 7,
+      "sourceRows": [
+        103
+      ],
+      "reviewRequired": false,
+      "reviewFlags": []
+    },
+    {
+      "id": "book-ch7-r104",
+      "genericName": "Vit k1",
+      "persianName": "",
+      "brandNamesRaw": "Aimafix\nPhytone\nKonakion\nVitacon",
+      "uses": "افزایش دهنده پلاسما",
+      "dosageForms": "Tablet: 10mg\nAmpoule: 1mg/0.5ml, 10mg/1ml",
+      "chapter": 7,
+      "sourceRows": [
+        104
+      ],
+      "reviewRequired": false,
+      "reviewFlags": []
+    },
+    {
+      "id": "book-ch7-r105",
+      "genericName": "Tranexamic Acid",
+      "persianName": "",
+      "brandNamesRaw": "Tranexip\nTrancid",
+      "uses": "خون ساز",
+      "dosageForms": "Capsule: 250mg\nAmpoule: 500mg/5ml",
+      "chapter": 7,
+      "sourceRows": [
+        105
+      ],
+      "reviewRequired": false,
+      "reviewFlags": []
+    },
+    {
+      "id": "book-ch7-r106",
+      "genericName": "Aprotinin",
+      "persianName": "",
+      "brandNamesRaw": "Trasylol",
+      "uses": "کاهش خون ریزی در  جراحی بای پس قلب",
+      "dosageForms": "Vial Injection: 500000KIU/50ml",
+      "chapter": 7,
+      "sourceRows": [
+        106
+      ],
+      "reviewRequired": false,
+      "reviewFlags": []
+    },
+    {
+      "id": "book-ch7-r107",
+      "genericName": "L-Carnitine",
+      "persianName": "",
+      "brandNamesRaw": "Medice\nIntelecta",
+      "uses": "عوامل تغذیه ای",
+      "dosageForms": "Tablet: 250, 500, 1000, 2000mg\nChewable Tablet: 1000ng\nAmpoule (IV): 1000mg/5ml\nSyrup: 500mg/5ml\nOral Solution: 1000mg/10ml\nSachet: 1000mg/15ml, 1000mg/10ml",
+      "chapter": 7,
+      "sourceRows": [
+        107
+      ],
+      "reviewRequired": false,
+      "reviewFlags": []
+    },
+    {
+      "id": "book-ch7-r108",
+      "genericName": "Garlic (Allium Sativum)",
+      "persianName": "",
+      "brandNamesRaw": "Garlic",
+      "uses": "ضد باکتری",
+      "dosageForms": "Tablet: 1250mg",
+      "chapter": 7,
+      "sourceRows": [
+        108
+      ],
+      "reviewRequired": false,
+      "reviewFlags": []
+    },
+    {
+      "id": "book-ch7-r109",
+      "genericName": "Garlic",
+      "persianName": "",
+      "brandNamesRaw": "Alicom",
+      "uses": "کنترل فشار خون بالا",
+      "dosageForms": "Tablet: 260mg",
+      "chapter": 7,
+      "sourceRows": [
+        109
       ],
       "reviewRequired": false,
       "reviewFlags": []
@@ -2773,6 +3535,150 @@
       "reviewFlags": []
     },
     {
+      "id": "book-ch7-r110",
+      "genericName": "Garlic",
+      "persianName": "",
+      "brandNamesRaw": "Garlet",
+      "uses": "ضد التهاب",
+      "dosageForms": "Tablet: 570mg",
+      "chapter": 7,
+      "sourceRows": [
+        110
+      ],
+      "reviewRequired": false,
+      "reviewFlags": []
+    },
+    {
+      "id": "book-ch7-r111",
+      "genericName": "Garlic",
+      "persianName": "",
+      "brandNamesRaw": "Garlicap",
+      "uses": "پیشگیری از فشار خون بالا",
+      "dosageForms": "Capsule: 330mg",
+      "chapter": 7,
+      "sourceRows": [
+        111
+      ],
+      "reviewRequired": false,
+      "reviewFlags": []
+    },
+    {
+      "id": "book-ch7-r112",
+      "genericName": "Garlic",
+      "persianName": "",
+      "brandNamesRaw": "Garsin",
+      "uses": "",
+      "dosageForms": "Tablet: 600mg",
+      "chapter": 7,
+      "sourceRows": [
+        112
+      ],
+      "reviewRequired": true,
+      "reviewFlags": [
+        "کاربرد در همین ردیف ثبت نشده"
+      ]
+    },
+    {
+      "id": "book-ch7-r113",
+      "genericName": "Garlic",
+      "persianName": "",
+      "brandNamesRaw": "Allium S",
+      "uses": "ضد فشار خون",
+      "dosageForms": "Tablet: 700mg",
+      "chapter": 7,
+      "sourceRows": [
+        113
+      ],
+      "reviewRequired": false,
+      "reviewFlags": []
+    },
+    {
+      "id": "book-ch7-r114",
+      "genericName": "Garlic",
+      "persianName": "",
+      "brandNamesRaw": "Garlic",
+      "uses": "ضد فشار خون",
+      "dosageForms": "Drop",
+      "chapter": 7,
+      "sourceRows": [
+        114
+      ],
+      "reviewRequired": false,
+      "reviewFlags": []
+    },
+    {
+      "id": "book-ch7-r115",
+      "genericName": "Garlic",
+      "persianName": "",
+      "brandNamesRaw": "Garsin",
+      "uses": "",
+      "dosageForms": "Tablet: 300, 500mg",
+      "chapter": 7,
+      "sourceRows": [
+        115
+      ],
+      "reviewRequired": true,
+      "reviewFlags": [
+        "کاربرد در همین ردیف ثبت نشده"
+      ]
+    },
+    {
+      "id": "book-ch7-r116",
+      "genericName": "Cardiol",
+      "persianName": "",
+      "brandNamesRaw": "_",
+      "uses": "نارسایی قلبی خفیف تا شدید",
+      "dosageForms": "Soft Capsule",
+      "chapter": 7,
+      "sourceRows": [
+        116
+      ],
+      "reviewRequired": false,
+      "reviewFlags": []
+    },
+    {
+      "id": "book-ch7-r117",
+      "genericName": "Strauss",
+      "persianName": "",
+      "brandNamesRaw": "_",
+      "uses": "رقیق کننده خون\nتقویت عضلات قلب\nتقویت سیستم گردش خون",
+      "dosageForms": "Drop",
+      "chapter": 7,
+      "sourceRows": [
+        117
+      ],
+      "reviewRequired": false,
+      "reviewFlags": []
+    },
+    {
+      "id": "book-ch7-r118",
+      "genericName": "Omega3",
+      "persianName": "",
+      "brandNamesRaw": "Fish Oil\nCod Liver Oil",
+      "uses": "جلوگیری از مشکلات قلبی و عروقی",
+      "dosageForms": "Drop\nSyrup\nSoft Gel Capsule",
+      "chapter": 7,
+      "sourceRows": [
+        118
+      ],
+      "reviewRequired": false,
+      "reviewFlags": []
+    },
+    {
+      "id": "book-ch7-r119",
+      "genericName": "Nicotinic Acid",
+      "persianName": "",
+      "brandNamesRaw": "Niacin\nVit B3",
+      "uses": "درمان اختلالات چربی‌خون",
+      "dosageForms": "Tablet: 25, 100mg",
+      "chapter": 7,
+      "sourceRows": [
+        119
+      ],
+      "reviewRequired": false,
+      "reviewFlags": []
+    },
+    {
       "id": "book-ch7-r12",
       "genericName": "Amiloride + Hidrochlorothazide",
       "persianName": "",
@@ -2782,6 +3688,146 @@
       "chapter": 7,
       "sourceRows": [
         12
+      ],
+      "reviewRequired": false,
+      "reviewFlags": []
+    },
+    {
+      "id": "book-ch7-r120",
+      "genericName": "Cholestyramine",
+      "persianName": "",
+      "brandNamesRaw": "_",
+      "uses": "درمان زیادی کلسترول",
+      "dosageForms": "Powder for Oral Suspension ( Sachet): 4g/Sachet",
+      "chapter": 7,
+      "sourceRows": [
+        120
+      ],
+      "reviewRequired": false,
+      "reviewFlags": []
+    },
+    {
+      "id": "book-ch7-r121",
+      "genericName": "Clofibrate",
+      "persianName": "",
+      "brandNamesRaw": "_",
+      "uses": "درمان زیادی چربی خون",
+      "dosageForms": "Soft Capsule: 500mg",
+      "chapter": 7,
+      "sourceRows": [
+        121
+      ],
+      "reviewRequired": false,
+      "reviewFlags": []
+    },
+    {
+      "id": "book-ch7-r122",
+      "genericName": "Fenofibrate",
+      "persianName": "",
+      "brandNamesRaw": "Lipanthyl\nFenofibrat Hexal",
+      "uses": "درمان چربی خون بالا",
+      "dosageForms": "Capsule: 100, 200mg",
+      "chapter": 7,
+      "sourceRows": [
+        122
+      ],
+      "reviewRequired": false,
+      "reviewFlags": []
+    },
+    {
+      "id": "book-ch7-r123",
+      "genericName": "Gemfibrozil",
+      "persianName": "",
+      "brandNamesRaw": "Lopid",
+      "uses": "کاهش خطر بیماری عروق کرونر قلب",
+      "dosageForms": "Tablet: 450mg\nCapsule: 300mg",
+      "chapter": 7,
+      "sourceRows": [
+        123
+      ],
+      "reviewRequired": false,
+      "reviewFlags": []
+    },
+    {
+      "id": "book-ch7-r124",
+      "genericName": "Atorvastatin",
+      "persianName": "",
+      "brandNamesRaw": "Lipitor\nAtorexin\nTahor",
+      "uses": "کاهش خطر ناشی از چربی خون بالا\nکاهش سکته",
+      "dosageForms": "Tablet: 10, 20, 40mg",
+      "chapter": 7,
+      "sourceRows": [
+        124
+      ],
+      "reviewRequired": false,
+      "reviewFlags": []
+    },
+    {
+      "id": "book-ch7-r125",
+      "genericName": "Fluvastatin",
+      "persianName": "",
+      "brandNamesRaw": "Lescol",
+      "uses": "کاهش دهنده چربی خون",
+      "dosageForms": "Capsule: 20, 40mg",
+      "chapter": 7,
+      "sourceRows": [
+        125
+      ],
+      "reviewRequired": false,
+      "reviewFlags": []
+    },
+    {
+      "id": "book-ch7-r126",
+      "genericName": "Lovastatin",
+      "persianName": "",
+      "brandNamesRaw": "Lipostin\nLovastrol",
+      "uses": "مدیریت خطر بیماری های قلبی و عروقی",
+      "dosageForms": "Tablet: 20mg",
+      "chapter": 7,
+      "sourceRows": [
+        126
+      ],
+      "reviewRequired": false,
+      "reviewFlags": []
+    },
+    {
+      "id": "book-ch7-r127",
+      "genericName": "Simvastatin",
+      "persianName": "",
+      "brandNamesRaw": "SimvaHexal",
+      "uses": "مدیریت لیپید ها و کاهش حوادث قلبی",
+      "dosageForms": "Tablet: 10, 20mg",
+      "chapter": 7,
+      "sourceRows": [
+        127
+      ],
+      "reviewRequired": false,
+      "reviewFlags": []
+    },
+    {
+      "id": "book-ch7-r128",
+      "genericName": "Rosuvastatin",
+      "persianName": "",
+      "brandNamesRaw": "Crestor\nRusorexin",
+      "uses": "درمان چربی خون بالا",
+      "dosageForms": "Tablet: 5, 10, 20, 40mg",
+      "chapter": 7,
+      "sourceRows": [
+        128
+      ],
+      "reviewRequired": false,
+      "reviewFlags": []
+    },
+    {
+      "id": "book-ch7-r129",
+      "genericName": "Ezetimibe",
+      "persianName": "",
+      "brandNamesRaw": "Ezital\nZimoted\nEzetex",
+      "uses": "کاهش جذب کلسترول",
+      "dosageForms": "Tablet: 10mg",
+      "chapter": 7,
+      "sourceRows": [
+        129
       ],
       "reviewRequired": false,
       "reviewFlags": []
@@ -2803,6 +3849,148 @@
       ]
     },
     {
+      "id": "book-ch7-r130",
+      "genericName": "Ezetimibe + Simvastatin",
+      "persianName": "",
+      "brandNamesRaw": "Vytorin",
+      "uses": "کاهش جذب کلسترول از روده",
+      "dosageForms": "(Tablet: 10/20, 10/40mg)",
+      "chapter": 7,
+      "sourceRows": [
+        130
+      ],
+      "reviewRequired": false,
+      "reviewFlags": []
+    },
+    {
+      "id": "book-ch7-r131",
+      "genericName": "Orlistat",
+      "persianName": "",
+      "brandNamesRaw": "Xenical\nXenover",
+      "uses": "مدیریت چاقی حفظ وزن",
+      "dosageForms": "Capsule: 60, 120mg",
+      "chapter": 7,
+      "sourceRows": [
+        131
+      ],
+      "reviewRequired": false,
+      "reviewFlags": []
+    },
+    {
+      "id": "book-ch7-r132",
+      "genericName": "Policosanol",
+      "persianName": "",
+      "brandNamesRaw": "_",
+      "uses": "درمان کمکی در چربی‌خون بالا",
+      "dosageForms": "Tablet: 10mg\nCapsule: 20mg",
+      "chapter": 7,
+      "sourceRows": [
+        132
+      ],
+      "reviewRequired": false,
+      "reviewFlags": []
+    },
+    {
+      "id": "book-ch7-r133",
+      "genericName": "Flaxseed Oil",
+      "persianName": "",
+      "brandNamesRaw": "Irafleax",
+      "uses": "سلامت قلب",
+      "dosageForms": "Capsule: 1000mg",
+      "chapter": 7,
+      "sourceRows": [
+        133
+      ],
+      "reviewRequired": false,
+      "reviewFlags": []
+    },
+    {
+      "id": "book-ch7-r134",
+      "genericName": "Liporan",
+      "persianName": "",
+      "brandNamesRaw": "_",
+      "uses": "دفع چربی و کاهش کلسترول",
+      "dosageForms": "Tablet",
+      "chapter": 7,
+      "sourceRows": [
+        134
+      ],
+      "reviewRequired": false,
+      "reviewFlags": []
+    },
+    {
+      "id": "book-ch7-r135",
+      "genericName": "Artichoke",
+      "persianName": "",
+      "brandNamesRaw": "_",
+      "uses": "کاهش سطح کلسترول سم زدایی",
+      "dosageForms": "Capsule",
+      "chapter": 7,
+      "sourceRows": [
+        135
+      ],
+      "reviewRequired": false,
+      "reviewFlags": []
+    },
+    {
+      "id": "book-ch7-r136",
+      "genericName": "Alicom",
+      "persianName": "",
+      "brandNamesRaw": "_",
+      "uses": "کنترل فشار خون بالا",
+      "dosageForms": "Tablet",
+      "chapter": 7,
+      "sourceRows": [
+        136
+      ],
+      "reviewRequired": false,
+      "reviewFlags": []
+    },
+    {
+      "id": "book-ch7-r137",
+      "genericName": "Allium-s",
+      "persianName": "",
+      "brandNamesRaw": "_",
+      "uses": "",
+      "dosageForms": "Tablet",
+      "chapter": 7,
+      "sourceRows": [
+        137
+      ],
+      "reviewRequired": true,
+      "reviewFlags": [
+        "کاربرد در همین ردیف ثبت نشده"
+      ]
+    },
+    {
+      "id": "book-ch7-r138",
+      "genericName": "Anethum",
+      "persianName": "",
+      "brandNamesRaw": "_",
+      "uses": "ضد تشنج رفع استفراغ",
+      "dosageForms": "Tablet",
+      "chapter": 7,
+      "sourceRows": [
+        138
+      ],
+      "reviewRequired": false,
+      "reviewFlags": []
+    },
+    {
+      "id": "book-ch7-r139",
+      "genericName": "Dillsun",
+      "persianName": "",
+      "brandNamesRaw": "_",
+      "uses": "کاهش چربی خون",
+      "dosageForms": "Drop",
+      "chapter": 7,
+      "sourceRows": [
+        139
+      ],
+      "reviewRequired": false,
+      "reviewFlags": []
+    },
+    {
       "id": "book-ch7-r14",
       "genericName": "Spironolactone",
       "persianName": "",
@@ -2812,6 +4000,122 @@
       "chapter": 7,
       "sourceRows": [
         14
+      ],
+      "reviewRequired": false,
+      "reviewFlags": []
+    },
+    {
+      "id": "book-ch7-r140",
+      "genericName": "Garsin",
+      "persianName": "",
+      "brandNamesRaw": "_",
+      "uses": "",
+      "dosageForms": "Tablet",
+      "chapter": 7,
+      "sourceRows": [
+        140
+      ],
+      "reviewRequired": true,
+      "reviewFlags": [
+        "کاربرد در همین ردیف ثبت نشده"
+      ]
+    },
+    {
+      "id": "book-ch7-r141",
+      "genericName": "Garlet",
+      "persianName": "",
+      "brandNamesRaw": "_",
+      "uses": "ضد التهاب",
+      "dosageForms": "Tablet",
+      "chapter": 7,
+      "sourceRows": [
+        141
+      ],
+      "reviewRequired": false,
+      "reviewFlags": []
+    },
+    {
+      "id": "book-ch7-r142",
+      "genericName": "Garlic",
+      "persianName": "",
+      "brandNamesRaw": "_",
+      "uses": "",
+      "dosageForms": "Tablet\nDrop",
+      "chapter": 7,
+      "sourceRows": [
+        142
+      ],
+      "reviewRequired": true,
+      "reviewFlags": [
+        "کاربرد در همین ردیف ثبت نشده"
+      ]
+    },
+    {
+      "id": "book-ch7-r143",
+      "genericName": "Garlicap",
+      "persianName": "",
+      "brandNamesRaw": "_",
+      "uses": "درمان و پیشگیری فشار خون بالا",
+      "dosageForms": "Capsule",
+      "chapter": 7,
+      "sourceRows": [
+        143
+      ],
+      "reviewRequired": false,
+      "reviewFlags": []
+    },
+    {
+      "id": "book-ch7-r144",
+      "genericName": "Allopurinol",
+      "persianName": "",
+      "brandNamesRaw": "Allokim",
+      "uses": "بیماران مبتلا به نقرس",
+      "dosageForms": "Tablet: 100, 300mg",
+      "chapter": 7,
+      "sourceRows": [
+        144
+      ],
+      "reviewRequired": false,
+      "reviewFlags": []
+    },
+    {
+      "id": "book-ch7-r145",
+      "genericName": "Febuxostat",
+      "persianName": "",
+      "brandNamesRaw": "_",
+      "uses": "مدیریت مزمن افزایش اسید اوریک خون \nدر بیماران مبتلا به نقرس",
+      "dosageForms": "Tablet: 40mg",
+      "chapter": 7,
+      "sourceRows": [
+        145
+      ],
+      "reviewRequired": false,
+      "reviewFlags": []
+    },
+    {
+      "id": "book-ch7-r146",
+      "genericName": "Colchicine",
+      "persianName": "",
+      "brandNamesRaw": "Modacine",
+      "uses": "درمان حملات حاد نقرس",
+      "dosageForms": "Tablet: 1mg",
+      "chapter": 7,
+      "sourceRows": [
+        146
+      ],
+      "reviewRequired": false,
+      "reviewFlags": []
+    },
+    {
+      "id": "book-ch7-r147",
+      "genericName": "Crataegus",
+      "persianName": "",
+      "brandNamesRaw": "Crataegus\nRucardin",
+      "uses": "تقویت کننده عضلات قلب",
+      "dosageForms": "Tablet: 100mg \nCapsule\nSachet\nDrop",
+      "chapter": 7,
+      "sourceRows": [
+        147
       ],
       "reviewRequired": false,
       "reviewFlags": []
@@ -3169,6 +4473,20 @@
       "reviewFlags": []
     },
     {
+      "id": "book-ch7-r4",
+      "genericName": "Furosemide",
+      "persianName": "",
+      "brandNamesRaw": "Lasix",
+      "uses": "نارسایی قلبی \nسیروز کبدی \nبیماری های کلیوی",
+      "dosageForms": "Tablet: 40mg\nAmpoule: 20mg/2ml, 40mg/4ml, 40mg/2ml",
+      "chapter": 7,
+      "sourceRows": [
+        4
+      ],
+      "reviewRequired": false,
+      "reviewFlags": []
+    },
+    {
       "id": "book-ch7-r40",
       "genericName": "Aliskiren",
       "persianName": "",
@@ -3304,6 +4622,20 @@
       "chapter": 7,
       "sourceRows": [
         49
+      ],
+      "reviewRequired": false,
+      "reviewFlags": []
+    },
+    {
+      "id": "book-ch7-r5",
+      "genericName": "Bumetanide",
+      "persianName": "",
+      "brandNamesRaw": "Bumex",
+      "uses": "ورم و فشار خون بالا در اثر نارسایی قلبیی \nنارسایی کبد و نارسایی کلیوی",
+      "dosageForms": "(Tablet: 0.5, 1, 2mg)\nVial (Liquid): 2.5mg/10ml",
+      "chapter": 7,
+      "sourceRows": [
+        5
       ],
       "reviewRequired": false,
       "reviewFlags": []
@@ -3449,6 +4781,20 @@
       "reviewFlags": []
     },
     {
+      "id": "book-ch7-r6",
+      "genericName": "Hidrochlorothiazide",
+      "persianName": "",
+      "brandNamesRaw": "HTZ\nHCTZ",
+      "uses": "درمان فشار خون بالا",
+      "dosageForms": "Tablet: 25, 50mg",
+      "chapter": 7,
+      "sourceRows": [
+        6
+      ],
+      "reviewRequired": false,
+      "reviewFlags": []
+    },
+    {
       "id": "book-ch7-r60",
       "genericName": "Bosentan",
       "persianName": "",
@@ -3584,6 +4930,20 @@
       "chapter": 7,
       "sourceRows": [
         69
+      ],
+      "reviewRequired": false,
+      "reviewFlags": []
+    },
+    {
+      "id": "book-ch7-r7",
+      "genericName": "Indapamide",
+      "persianName": "",
+      "brandNamesRaw": "Natrilix SR",
+      "uses": "درمان  فشار خون بالا",
+      "dosageForms": "Tablet: 1.5mg",
+      "chapter": 7,
+      "sourceRows": [
+        7
       ],
       "reviewRequired": false,
       "reviewFlags": []
@@ -3729,6 +5089,20 @@
       "reviewFlags": []
     },
     {
+      "id": "book-ch7-r8",
+      "genericName": "Chlortalidone",
+      "persianName": "",
+      "brandNamesRaw": "Hygroton",
+      "uses": "درمان پر فشاری خون اولیه",
+      "dosageForms": "Tablet: 50mg",
+      "chapter": 7,
+      "sourceRows": [
+        8
+      ],
+      "reviewRequired": false,
+      "reviewFlags": []
+    },
+    {
       "id": "book-ch7-r80",
       "genericName": "Ticlopidine",
       "persianName": "",
@@ -3869,6 +5243,22 @@
       "reviewFlags": []
     },
     {
+      "id": "book-ch7-r9",
+      "genericName": "Metolazone",
+      "persianName": "",
+      "brandNamesRaw": "",
+      "uses": "کنترل فشار خون بالا،نارسایی قلبی",
+      "dosageForms": "Tablet: 5mg",
+      "chapter": 7,
+      "sourceRows": [
+        9
+      ],
+      "reviewRequired": true,
+      "reviewFlags": [
+        "نام تجاری در همین ردیف ثبت نشده"
+      ]
+    },
+    {
       "id": "book-ch7-r90",
       "genericName": "Ticagrelor",
       "persianName": "",
@@ -4004,688 +5394,6 @@
       "chapter": 7,
       "sourceRows": [
         99
-      ],
-      "reviewRequired": false,
-      "reviewFlags": []
-    },
-    {
-      "id": "book-ch7-r100",
-      "genericName": "Urokinase",
-      "persianName": "",
-      "brandNamesRaw": "Uronase\nAbbokinase\nKinlytic",
-      "uses": "انسداد عروق محیطی",
-      "dosageForms": "Vial (Injection Powder): 250000IU, 500000IU",
-      "chapter": 7,
-      "sourceRows": [
-        100
-      ],
-      "reviewRequired": false,
-      "reviewFlags": []
-    },
-    {
-      "id": "book-ch7-r101",
-      "genericName": "Factor VIII Inhibitor Bypassindg Fraction",
-      "persianName": "",
-      "brandNamesRaw": "Uman Complex\nFeiba\nOctaplex",
-      "uses": "درمان بیماران هموفیلی",
-      "dosageForms": "Vial (Injection Powder): 500, 1000IU",
-      "chapter": 7,
-      "sourceRows": [
-        101
-      ],
-      "reviewRequired": false,
-      "reviewFlags": []
-    },
-    {
-      "id": "book-ch7-r102",
-      "genericName": "Factor IX",
-      "persianName": "",
-      "brandNamesRaw": "Aimafix\nNanotiv\nImmunine\nBerinin\nOctamin F",
-      "uses": "درمان و پیشگیری از خون ریزی در هموفیلی",
-      "dosageForms": "Vial (Injection Powder): 500, 1000IU",
-      "chapter": 7,
-      "sourceRows": [
-        102
-      ],
-      "reviewRequired": false,
-      "reviewFlags": []
-    },
-    {
-      "id": "book-ch7-r103",
-      "genericName": "Prothrombin Complex",
-      "persianName": "",
-      "brandNamesRaw": "Beriplex",
-      "uses": "کمبود فاکتورIX",
-      "dosageForms": "Vial (Injection Powder):  500IU",
-      "chapter": 7,
-      "sourceRows": [
-        103
-      ],
-      "reviewRequired": false,
-      "reviewFlags": []
-    },
-    {
-      "id": "book-ch7-r104",
-      "genericName": "Vit k1",
-      "persianName": "",
-      "brandNamesRaw": "Aimafix\nPhytone\nKonakion\nVitacon",
-      "uses": "افزایش دهنده پلاسما",
-      "dosageForms": "Tablet: 10mg\nAmpoule: 1mg/0.5ml, 10mg/1ml",
-      "chapter": 7,
-      "sourceRows": [
-        104
-      ],
-      "reviewRequired": false,
-      "reviewFlags": []
-    },
-    {
-      "id": "book-ch7-r105",
-      "genericName": "Tranexamic Acid",
-      "persianName": "",
-      "brandNamesRaw": "Tranexip\nTrancid",
-      "uses": "خون ساز",
-      "dosageForms": "Capsule: 250mg\nAmpoule: 500mg/5ml",
-      "chapter": 7,
-      "sourceRows": [
-        105
-      ],
-      "reviewRequired": false,
-      "reviewFlags": []
-    },
-    {
-      "id": "book-ch7-r106",
-      "genericName": "Aprotinin",
-      "persianName": "",
-      "brandNamesRaw": "Trasylol",
-      "uses": "کاهش خون ریزی در  جراحی بای پس قلب",
-      "dosageForms": "Vial Injection: 500000KIU/50ml",
-      "chapter": 7,
-      "sourceRows": [
-        106
-      ],
-      "reviewRequired": false,
-      "reviewFlags": []
-    },
-    {
-      "id": "book-ch7-r107",
-      "genericName": "L-Carnitine",
-      "persianName": "",
-      "brandNamesRaw": "Medice\nIntelecta",
-      "uses": "عوامل تغذیه ای",
-      "dosageForms": "Tablet: 250, 500, 1000, 2000mg\nChewable Tablet: 1000ng\nAmpoule (IV): 1000mg/5ml\nSyrup: 500mg/5ml\nOral Solution: 1000mg/10ml\nSachet: 1000mg/15ml, 1000mg/10ml",
-      "chapter": 7,
-      "sourceRows": [
-        107
-      ],
-      "reviewRequired": false,
-      "reviewFlags": []
-    },
-    {
-      "id": "book-ch7-r108",
-      "genericName": "Garlic (Allium Sativum)",
-      "persianName": "",
-      "brandNamesRaw": "Garlic",
-      "uses": "ضد باکتری",
-      "dosageForms": "Tablet: 1250mg",
-      "chapter": 7,
-      "sourceRows": [
-        108
-      ],
-      "reviewRequired": false,
-      "reviewFlags": []
-    },
-    {
-      "id": "book-ch7-r109",
-      "genericName": "Garlic",
-      "persianName": "",
-      "brandNamesRaw": "Alicom",
-      "uses": "کنترل فشار خون بالا",
-      "dosageForms": "Tablet: 260mg",
-      "chapter": 7,
-      "sourceRows": [
-        109
-      ],
-      "reviewRequired": false,
-      "reviewFlags": []
-    },
-    {
-      "id": "book-ch7-r110",
-      "genericName": "Garlic",
-      "persianName": "",
-      "brandNamesRaw": "Garlet",
-      "uses": "ضد التهاب",
-      "dosageForms": "Tablet: 570mg",
-      "chapter": 7,
-      "sourceRows": [
-        110
-      ],
-      "reviewRequired": false,
-      "reviewFlags": []
-    },
-    {
-      "id": "book-ch7-r111",
-      "genericName": "Garlic",
-      "persianName": "",
-      "brandNamesRaw": "Garlicap",
-      "uses": "پیشگیری از فشار خون بالا",
-      "dosageForms": "Capsule: 330mg",
-      "chapter": 7,
-      "sourceRows": [
-        111
-      ],
-      "reviewRequired": false,
-      "reviewFlags": []
-    },
-    {
-      "id": "book-ch7-r112",
-      "genericName": "Garlic",
-      "persianName": "",
-      "brandNamesRaw": "Garsin",
-      "uses": "",
-      "dosageForms": "Tablet: 600mg",
-      "chapter": 7,
-      "sourceRows": [
-        112
-      ],
-      "reviewRequired": true,
-      "reviewFlags": [
-        "کاربرد در همین ردیف ثبت نشده"
-      ]
-    },
-    {
-      "id": "book-ch7-r113",
-      "genericName": "Garlic",
-      "persianName": "",
-      "brandNamesRaw": "Allium S",
-      "uses": "ضد فشار خون",
-      "dosageForms": "Tablet: 700mg",
-      "chapter": 7,
-      "sourceRows": [
-        113
-      ],
-      "reviewRequired": false,
-      "reviewFlags": []
-    },
-    {
-      "id": "book-ch7-r114",
-      "genericName": "Garlic",
-      "persianName": "",
-      "brandNamesRaw": "Garlic",
-      "uses": "ضد فشار خون",
-      "dosageForms": "Drop",
-      "chapter": 7,
-      "sourceRows": [
-        114
-      ],
-      "reviewRequired": false,
-      "reviewFlags": []
-    },
-    {
-      "id": "book-ch7-r115",
-      "genericName": "Garlic",
-      "persianName": "",
-      "brandNamesRaw": "Garsin",
-      "uses": "",
-      "dosageForms": "Tablet: 300, 500mg",
-      "chapter": 7,
-      "sourceRows": [
-        115
-      ],
-      "reviewRequired": true,
-      "reviewFlags": [
-        "کاربرد در همین ردیف ثبت نشده"
-      ]
-    },
-    {
-      "id": "book-ch7-r116",
-      "genericName": "Cardiol",
-      "persianName": "",
-      "brandNamesRaw": "_",
-      "uses": "نارسایی قلبی خفیف تا شدید",
-      "dosageForms": "Soft Capsule",
-      "chapter": 7,
-      "sourceRows": [
-        116
-      ],
-      "reviewRequired": false,
-      "reviewFlags": []
-    },
-    {
-      "id": "book-ch7-r117",
-      "genericName": "Strauss",
-      "persianName": "",
-      "brandNamesRaw": "_",
-      "uses": "رقیق کننده خون\nتقویت عضلات قلب\nتقویت سیستم گردش خون",
-      "dosageForms": "Drop",
-      "chapter": 7,
-      "sourceRows": [
-        117
-      ],
-      "reviewRequired": false,
-      "reviewFlags": []
-    },
-    {
-      "id": "book-ch7-r118",
-      "genericName": "Omega3",
-      "persianName": "",
-      "brandNamesRaw": "Fish Oil\nCod Liver Oil",
-      "uses": "جلوگیری از مشکلات قلبی و عروقی",
-      "dosageForms": "Drop\nSyrup\nSoft Gel Capsule",
-      "chapter": 7,
-      "sourceRows": [
-        118
-      ],
-      "reviewRequired": false,
-      "reviewFlags": []
-    },
-    {
-      "id": "book-ch7-r119",
-      "genericName": "Nicotinic Acid",
-      "persianName": "",
-      "brandNamesRaw": "Niacin\nVit B3",
-      "uses": "درمان اختلالات چربی‌خون",
-      "dosageForms": "Tablet: 25, 100mg",
-      "chapter": 7,
-      "sourceRows": [
-        119
-      ],
-      "reviewRequired": false,
-      "reviewFlags": []
-    },
-    {
-      "id": "book-ch7-r120",
-      "genericName": "Cholestyramine",
-      "persianName": "",
-      "brandNamesRaw": "_",
-      "uses": "درمان زیادی کلسترول",
-      "dosageForms": "Powder for Oral Suspension ( Sachet): 4g/Sachet",
-      "chapter": 7,
-      "sourceRows": [
-        120
-      ],
-      "reviewRequired": false,
-      "reviewFlags": []
-    },
-    {
-      "id": "book-ch7-r121",
-      "genericName": "Clofibrate",
-      "persianName": "",
-      "brandNamesRaw": "_",
-      "uses": "درمان زیادی چربی خون",
-      "dosageForms": "Soft Capsule: 500mg",
-      "chapter": 7,
-      "sourceRows": [
-        121
-      ],
-      "reviewRequired": false,
-      "reviewFlags": []
-    },
-    {
-      "id": "book-ch7-r122",
-      "genericName": "Fenofibrate",
-      "persianName": "",
-      "brandNamesRaw": "Lipanthyl\nFenofibrat Hexal",
-      "uses": "درمان چربی خون بالا",
-      "dosageForms": "Capsule: 100, 200mg",
-      "chapter": 7,
-      "sourceRows": [
-        122
-      ],
-      "reviewRequired": false,
-      "reviewFlags": []
-    },
-    {
-      "id": "book-ch7-r123",
-      "genericName": "Gemfibrozil",
-      "persianName": "",
-      "brandNamesRaw": "Lopid",
-      "uses": "کاهش خطر بیماری عروق کرونر قلب",
-      "dosageForms": "Tablet: 450mg\nCapsule: 300mg",
-      "chapter": 7,
-      "sourceRows": [
-        123
-      ],
-      "reviewRequired": false,
-      "reviewFlags": []
-    },
-    {
-      "id": "book-ch7-r124",
-      "genericName": "Atorvastatin",
-      "persianName": "",
-      "brandNamesRaw": "Lipitor\nAtorexin\nTahor",
-      "uses": "کاهش خطر ناشی از چربی خون بالا\nکاهش سکته",
-      "dosageForms": "Tablet: 10, 20, 40mg",
-      "chapter": 7,
-      "sourceRows": [
-        124
-      ],
-      "reviewRequired": false,
-      "reviewFlags": []
-    },
-    {
-      "id": "book-ch7-r125",
-      "genericName": "Fluvastatin",
-      "persianName": "",
-      "brandNamesRaw": "Lescol",
-      "uses": "کاهش دهنده چربی خون",
-      "dosageForms": "Capsule: 20, 40mg",
-      "chapter": 7,
-      "sourceRows": [
-        125
-      ],
-      "reviewRequired": false,
-      "reviewFlags": []
-    },
-    {
-      "id": "book-ch7-r126",
-      "genericName": "Lovastatin",
-      "persianName": "",
-      "brandNamesRaw": "Lipostin\nLovastrol",
-      "uses": "مدیریت خطر بیماری های قلبی و عروقی",
-      "dosageForms": "Tablet: 20mg",
-      "chapter": 7,
-      "sourceRows": [
-        126
-      ],
-      "reviewRequired": false,
-      "reviewFlags": []
-    },
-    {
-      "id": "book-ch7-r127",
-      "genericName": "Simvastatin",
-      "persianName": "",
-      "brandNamesRaw": "SimvaHexal",
-      "uses": "مدیریت لیپید ها و کاهش حوادث قلبی",
-      "dosageForms": "Tablet: 10, 20mg",
-      "chapter": 7,
-      "sourceRows": [
-        127
-      ],
-      "reviewRequired": false,
-      "reviewFlags": []
-    },
-    {
-      "id": "book-ch7-r128",
-      "genericName": "Rosuvastatin",
-      "persianName": "",
-      "brandNamesRaw": "Crestor\nRusorexin",
-      "uses": "درمان چربی خون بالا",
-      "dosageForms": "Tablet: 5, 10, 20, 40mg",
-      "chapter": 7,
-      "sourceRows": [
-        128
-      ],
-      "reviewRequired": false,
-      "reviewFlags": []
-    },
-    {
-      "id": "book-ch7-r129",
-      "genericName": "Ezetimibe",
-      "persianName": "",
-      "brandNamesRaw": "Ezital\nZimoted\nEzetex",
-      "uses": "کاهش جذب کلسترول",
-      "dosageForms": "Tablet: 10mg",
-      "chapter": 7,
-      "sourceRows": [
-        129
-      ],
-      "reviewRequired": false,
-      "reviewFlags": []
-    },
-    {
-      "id": "book-ch7-r130",
-      "genericName": "Ezetimibe + Simvastatin",
-      "persianName": "",
-      "brandNamesRaw": "Vytorin",
-      "uses": "کاهش جذب کلسترول از روده",
-      "dosageForms": "(Tablet: 10/20, 10/40mg)",
-      "chapter": 7,
-      "sourceRows": [
-        130
-      ],
-      "reviewRequired": false,
-      "reviewFlags": []
-    },
-    {
-      "id": "book-ch7-r131",
-      "genericName": "Orlistat",
-      "persianName": "",
-      "brandNamesRaw": "Xenical\nXenover",
-      "uses": "مدیریت چاقی حفظ وزن",
-      "dosageForms": "Capsule: 60, 120mg",
-      "chapter": 7,
-      "sourceRows": [
-        131
-      ],
-      "reviewRequired": false,
-      "reviewFlags": []
-    },
-    {
-      "id": "book-ch7-r132",
-      "genericName": "Policosanol",
-      "persianName": "",
-      "brandNamesRaw": "_",
-      "uses": "درمان کمکی در چربی‌خون بالا",
-      "dosageForms": "Tablet: 10mg\nCapsule: 20mg",
-      "chapter": 7,
-      "sourceRows": [
-        132
-      ],
-      "reviewRequired": false,
-      "reviewFlags": []
-    },
-    {
-      "id": "book-ch7-r133",
-      "genericName": "Flaxseed Oil",
-      "persianName": "",
-      "brandNamesRaw": "Irafleax",
-      "uses": "سلامت قلب",
-      "dosageForms": "Capsule: 1000mg",
-      "chapter": 7,
-      "sourceRows": [
-        133
-      ],
-      "reviewRequired": false,
-      "reviewFlags": []
-    },
-    {
-      "id": "book-ch7-r134",
-      "genericName": "Liporan",
-      "persianName": "",
-      "brandNamesRaw": "_",
-      "uses": "دفع چربی و کاهش کلسترول",
-      "dosageForms": "Tablet",
-      "chapter": 7,
-      "sourceRows": [
-        134
-      ],
-      "reviewRequired": false,
-      "reviewFlags": []
-    },
-    {
-      "id": "book-ch7-r135",
-      "genericName": "Artichoke",
-      "persianName": "",
-      "brandNamesRaw": "_",
-      "uses": "کاهش سطح کلسترول سم زدایی",
-      "dosageForms": "Capsule",
-      "chapter": 7,
-      "sourceRows": [
-        135
-      ],
-      "reviewRequired": false,
-      "reviewFlags": []
-    },
-    {
-      "id": "book-ch7-r136",
-      "genericName": "Alicom",
-      "persianName": "",
-      "brandNamesRaw": "_",
-      "uses": "کنترل فشار خون بالا",
-      "dosageForms": "Tablet",
-      "chapter": 7,
-      "sourceRows": [
-        136
-      ],
-      "reviewRequired": false,
-      "reviewFlags": []
-    },
-    {
-      "id": "book-ch7-r137",
-      "genericName": "Allium-s",
-      "persianName": "",
-      "brandNamesRaw": "_",
-      "uses": "",
-      "dosageForms": "Tablet",
-      "chapter": 7,
-      "sourceRows": [
-        137
-      ],
-      "reviewRequired": true,
-      "reviewFlags": [
-        "کاربرد در همین ردیف ثبت نشده"
-      ]
-    },
-    {
-      "id": "book-ch7-r138",
-      "genericName": "Anethum",
-      "persianName": "",
-      "brandNamesRaw": "_",
-      "uses": "ضد تشنج رفع استفراغ",
-      "dosageForms": "Tablet",
-      "chapter": 7,
-      "sourceRows": [
-        138
-      ],
-      "reviewRequired": false,
-      "reviewFlags": []
-    },
-    {
-      "id": "book-ch7-r139",
-      "genericName": "Dillsun",
-      "persianName": "",
-      "brandNamesRaw": "_",
-      "uses": "کاهش چربی خون",
-      "dosageForms": "Drop",
-      "chapter": 7,
-      "sourceRows": [
-        139
-      ],
-      "reviewRequired": false,
-      "reviewFlags": []
-    },
-    {
-      "id": "book-ch7-r140",
-      "genericName": "Garsin",
-      "persianName": "",
-      "brandNamesRaw": "_",
-      "uses": "",
-      "dosageForms": "Tablet",
-      "chapter": 7,
-      "sourceRows": [
-        140
-      ],
-      "reviewRequired": true,
-      "reviewFlags": [
-        "کاربرد در همین ردیف ثبت نشده"
-      ]
-    },
-    {
-      "id": "book-ch7-r141",
-      "genericName": "Garlet",
-      "persianName": "",
-      "brandNamesRaw": "_",
-      "uses": "ضد التهاب",
-      "dosageForms": "Tablet",
-      "chapter": 7,
-      "sourceRows": [
-        141
-      ],
-      "reviewRequired": false,
-      "reviewFlags": []
-    },
-    {
-      "id": "book-ch7-r142",
-      "genericName": "Garlic",
-      "persianName": "",
-      "brandNamesRaw": "_",
-      "uses": "",
-      "dosageForms": "Tablet\nDrop",
-      "chapter": 7,
-      "sourceRows": [
-        142
-      ],
-      "reviewRequired": true,
-      "reviewFlags": [
-        "کاربرد در همین ردیف ثبت نشده"
-      ]
-    },
-    {
-      "id": "book-ch7-r143",
-      "genericName": "Garlicap",
-      "persianName": "",
-      "brandNamesRaw": "_",
-      "uses": "درمان و پیشگیری فشار خون بالا",
-      "dosageForms": "Capsule",
-      "chapter": 7,
-      "sourceRows": [
-        143
-      ],
-      "reviewRequired": false,
-      "reviewFlags": []
-    },
-    {
-      "id": "book-ch7-r144",
-      "genericName": "Allopurinol",
-      "persianName": "",
-      "brandNamesRaw": "Allokim",
-      "uses": "بیماران مبتلا به نقرس",
-      "dosageForms": "Tablet: 100, 300mg",
-      "chapter": 7,
-      "sourceRows": [
-        144
-      ],
-      "reviewRequired": false,
-      "reviewFlags": []
-    },
-    {
-      "id": "book-ch7-r145",
-      "genericName": "Febuxostat",
-      "persianName": "",
-      "brandNamesRaw": "_",
-      "uses": "مدیریت مزمن افزایش اسید اوریک خون \nدر بیماران مبتلا به نقرس",
-      "dosageForms": "Tablet: 40mg",
-      "chapter": 7,
-      "sourceRows": [
-        145
-      ],
-      "reviewRequired": false,
-      "reviewFlags": []
-    },
-    {
-      "id": "book-ch7-r146",
-      "genericName": "Colchicine",
-      "persianName": "",
-      "brandNamesRaw": "Modacine",
-      "uses": "درمان حملات حاد نقرس",
-      "dosageForms": "Tablet: 1mg",
-      "chapter": 7,
-      "sourceRows": [
-        146
-      ],
-      "reviewRequired": false,
-      "reviewFlags": []
-    },
-    {
-      "id": "book-ch7-r147",
-      "genericName": "Crataegus",
-      "persianName": "",
-      "brandNamesRaw": "Crataegus\nRucardin",
-      "uses": "تقویت کننده عضلات قلب",
-      "dosageForms": "Tablet: 100mg \nCapsule\nSachet\nDrop",
-      "chapter": 7,
-      "sourceRows": [
-        147
       ],
       "reviewRequired": false,
       "reviewFlags": []
@@ -5577,721 +6285,6 @@
       ]
     },
     {
-      "id": "book-r6",
-      "genericName": "Conjugated Estrogens",
-      "persianName": "",
-      "brandNamesRaw": "Premarin, Estrin, Equin, Estromarin",
-      "uses": "استروژن کونژوگه",
-      "dosageForms": "Tablet: 0.625 ,  1.25mg \nVaginal cream: 0625mg/g\nVial (injection, Powder): 25mg",
-      "chapter": 9,
-      "sourceRows": [
-        6
-      ],
-      "reviewRequired": false,
-      "reviewFlags": []
-    },
-    {
-      "id": "book-r9",
-      "genericName": "Etihinyl Estradiol",
-      "persianName": "",
-      "brandNamesRaw": "",
-      "uses": "اتینیل استرادیول",
-      "dosageForms": "Tablet: 0.05 . 0.5mg",
-      "chapter": 9,
-      "sourceRows": [
-        9
-      ],
-      "reviewRequired": false,
-      "reviewFlags": []
-    },
-    {
-      "id": "book-r12",
-      "genericName": "Estradiol Hemihydrate",
-      "persianName": "",
-      "brandNamesRaw": "Oestrogeg* (Topical Gel), \nDivigel* (Topical Gel), \nVagifem* (Vaginal Tab)",
-      "uses": "استرادیول همی همیدرات",
-      "dosageForms": "Vaginal Tablet: 25mcg\nTopical Gel: 0.06% 500mcg)\n(Patch, Extended Release: 25, 50, 100,mcg/24h)",
-      "chapter": 9,
-      "sourceRows": [
-        12
-      ],
-      "reviewRequired": false,
-      "reviewFlags": []
-    },
-    {
-      "id": "book-r13",
-      "genericName": "Estradiol Valerate",
-      "persianName": "",
-      "brandNamesRaw": "",
-      "uses": "استرادیول والرات",
-      "dosageForms": "Tablet: 1.2mg\nAmpule: 10mg/mg",
-      "chapter": 9,
-      "sourceRows": [
-        13,
-        14
-      ],
-      "reviewRequired": true,
-      "reviewFlags": [
-        "نام تجاری در همین ردیف ثبت نشده",
-        "نام ژنریک در ردیف 14 به‌عنوان ادامه احتمالی نام ردیف قبل متصل شد؛ نیازمند تأیید"
-      ]
-    },
-    {
-      "id": "book-r16",
-      "genericName": "Agnugol",
-      "persianName": "",
-      "brandNamesRaw": "",
-      "uses": "داروی گیاهی اگنوگول و ویتاگنوس",
-      "dosageForms": "Tablet",
-      "chapter": 9,
-      "sourceRows": [
-        16
-      ],
-      "reviewRequired": true,
-      "reviewFlags": [
-        "نام تجاری در همین ردیف ثبت نشده"
-      ]
-    },
-    {
-      "id": "book-r17",
-      "genericName": "Vitgnus",
-      "persianName": "",
-      "brandNamesRaw": "Provera*, DMPA*",
-      "uses": "",
-      "dosageForms": "Tablet , Drop",
-      "chapter": 9,
-      "sourceRows": [
-        17
-      ],
-      "reviewRequired": false,
-      "reviewFlags": []
-    },
-    {
-      "id": "book-r20",
-      "genericName": "Medroxyprogestrerone Acetate",
-      "persianName": "",
-      "brandNamesRaw": "",
-      "uses": "داروهای مدروکسی پروژسترون و پروژسترون",
-      "dosageForms": "Tablet: 5mg\nVial (injectable suspension):  150mg/1mg, 150mg/3.3ml, 500mg/3.3ml",
-      "chapter": 9,
-      "sourceRows": [
-        20
-      ],
-      "reviewRequired": true,
-      "reviewFlags": [
-        "نام تجاری در همین ردیف ثبت نشده"
-      ]
-    },
-    {
-      "id": "book-r27",
-      "genericName": "Progestrone",
-      "persianName": "",
-      "brandNamesRaw": "",
-      "uses": "",
-      "dosageForms": "Ampule: 25, 50mg/ml\nSuppository: (100), 200, 400mg\nVaginal Tablet: 100mg\nCapsule: 100, 200mg\nCapsule(Soft Gel): 100, 200mg",
-      "chapter": 9,
-      "sourceRows": [
-        27
-      ],
-      "reviewRequired": true,
-      "reviewFlags": [
-        "نام تجاری در همین ردیف ثبت نشده",
-        "کاربرد در همین ردیف ثبت نشده"
-      ]
-    },
-    {
-      "id": "book-r39",
-      "genericName": "Menopace",
-      "persianName": "",
-      "brandNamesRaw": "",
-      "uses": "هورمونی و برطرف کردن عوارض یائسگی",
-      "dosageForms": "Tablet",
-      "chapter": 9,
-      "sourceRows": [
-        39
-      ],
-      "reviewRequired": false,
-      "reviewFlags": []
-    },
-    {
-      "id": "book-r40",
-      "genericName": "Soyagol",
-      "persianName": "",
-      "brandNamesRaw": "",
-      "uses": "",
-      "dosageForms": "Tablet",
-      "chapter": 9,
-      "sourceRows": [
-        40
-      ],
-      "reviewRequired": true,
-      "reviewFlags": [
-        "نام تجاری در همین ردیف ثبت نشده",
-        "کاربرد در همین ردیف ثبت نشده"
-      ]
-    },
-    {
-      "id": "book-r41",
-      "genericName": "Soy Menopause",
-      "persianName": "",
-      "brandNamesRaw": "",
-      "uses": "",
-      "dosageForms": "Tablet , Capsule",
-      "chapter": 9,
-      "sourceRows": [
-        41
-      ],
-      "reviewRequired": true,
-      "reviewFlags": [
-        "نام تجاری در همین ردیف ثبت نشده",
-        "کاربرد در همین ردیف ثبت نشده"
-      ]
-    },
-    {
-      "id": "book-r44",
-      "genericName": "Dydrogesterone",
-      "persianName": "",
-      "brandNamesRaw": "",
-      "uses": "داروی دیدروژسترون",
-      "dosageForms": "Tablet: (5), 10mg",
-      "chapter": 9,
-      "sourceRows": [
-        44
-      ],
-      "reviewRequired": true,
-      "reviewFlags": [
-        "نام تجاری در همین ردیف ثبت نشده"
-      ]
-    },
-    {
-      "id": "book-r47",
-      "genericName": "Dienojest",
-      "persianName": "",
-      "brandNamesRaw": "Proloton Depot*",
-      "uses": "داروی داینوژست",
-      "dosageForms": "Tablet: 2mg",
-      "chapter": 9,
-      "sourceRows": [
-        47
-      ],
-      "reviewRequired": false,
-      "reviewFlags": []
-    },
-    {
-      "id": "book-r49",
-      "genericName": "Hydroxyprogesterone Caproate",
-      "persianName": "",
-      "brandNamesRaw": "",
-      "uses": "هیپروکسی پروژسترون کاپروات",
-      "dosageForms": "Ampule: 250mg/1ml 500mg/2ml",
-      "chapter": 9,
-      "sourceRows": [
-        49
-      ],
-      "reviewRequired": true,
-      "reviewFlags": [
-        "نام تجاری در همین ردیف ثبت نشده"
-      ]
-    },
-    {
-      "id": "book-r52",
-      "genericName": "Megestrol Aacetate",
-      "persianName": "",
-      "brandNamesRaw": "",
-      "uses": "داروی مژسترول",
-      "dosageForms": "Tablet: 20,40mg\nSuspension: 40mg/ml",
-      "chapter": 9,
-      "sourceRows": [
-        52
-      ],
-      "reviewRequired": true,
-      "reviewFlags": [
-        "نام تجاری در همین ردیف ثبت نشده"
-      ]
-    },
-    {
-      "id": "book-r55",
-      "genericName": "Cyproteron",
-      "persianName": "",
-      "brandNamesRaw": "",
-      "uses": "داروی سیپروترون استات",
-      "dosageForms": "Tablet: 50, 100mg",
-      "chapter": 9,
-      "sourceRows": [
-        55
-      ],
-      "reviewRequired": true,
-      "reviewFlags": [
-        "نام تجاری در همین ردیف ثبت نشده"
-      ]
-    },
-    {
-      "id": "book-r60",
-      "genericName": "Medroxyprogestrone acetate+Estradiol Cypionate",
-      "persianName": "",
-      "brandNamesRaw": "",
-      "uses": "مدروکسی پروژسترون استات و استرادیول سیپیونات",
-      "dosageForms": "Ampule: (25+5)mg/0.5ml\nMedroxyprogestrone acetate25mg+Estradiol Cypionate5mg",
-      "chapter": 9,
-      "sourceRows": [
-        60
-      ],
-      "reviewRequired": true,
-      "reviewFlags": [
-        "نام تجاری در همین ردیف ثبت نشده"
-      ]
-    },
-    {
-      "id": "book-r65",
-      "genericName": "Lynestrenol",
-      "persianName": "",
-      "brandNamesRaw": "",
-      "uses": "داروی لاینسترنول",
-      "dosageForms": "Tablet:0.5mg",
-      "chapter": 9,
-      "sourceRows": [
-        65
-      ],
-      "reviewRequired": true,
-      "reviewFlags": [
-        "نام تجاری در همین ردیف ثبت نشده"
-      ]
-    },
-    {
-      "id": "book-r68",
-      "genericName": "Levonorgestrek",
-      "persianName": "",
-      "brandNamesRaw": "",
-      "uses": "داروی لونورژسترول",
-      "dosageForms": "Tablet: 0.75, 1.5mg",
-      "chapter": 9,
-      "sourceRows": [
-        68
-      ],
-      "reviewRequired": true,
-      "reviewFlags": [
-        "نام تجاری در همین ردیف ثبت نشده"
-      ]
-    },
-    {
-      "id": "book-r73",
-      "genericName": "Ulipristal acetate",
-      "persianName": "",
-      "brandNamesRaw": "",
-      "uses": "داروی یولی پریستال",
-      "dosageForms": "Tablet: 5mg",
-      "chapter": 9,
-      "sourceRows": [
-        73,
-        74
-      ],
-      "reviewRequired": true,
-      "reviewFlags": [
-        "نام تجاری در همین ردیف ثبت نشده",
-        "نام ژنریک در ردیف 74 به‌عنوان ادامه احتمالی نام ردیف قبل متصل شد؛ نیازمند تأیید"
-      ]
-    },
-    {
-      "id": "book-r75",
-      "genericName": "Ospemifene",
-      "persianName": "",
-      "brandNamesRaw": "",
-      "uses": "داروی اوسپمیفن",
-      "dosageForms": "Tablet: 60mg",
-      "chapter": 9,
-      "sourceRows": [
-        75
-      ],
-      "reviewRequired": true,
-      "reviewFlags": [
-        "نام تجاری در همین ردیف ثبت نشده"
-      ]
-    },
-    {
-      "id": "book-r76",
-      "genericName": "Tibolone",
-      "persianName": "",
-      "brandNamesRaw": "",
-      "uses": "داروی تیبولون",
-      "dosageForms": "Tablet: 2.5mg",
-      "chapter": 9,
-      "sourceRows": [
-        76
-      ],
-      "reviewRequired": true,
-      "reviewFlags": [
-        "نام تجاری در همین ردیف ثبت نشده"
-      ]
-    },
-    {
-      "id": "book-r77",
-      "genericName": "Raloxifene",
-      "persianName": "",
-      "brandNamesRaw": "",
-      "uses": "داروی رالوکسیفن",
-      "dosageForms": "Tablet: 60mg",
-      "chapter": 9,
-      "sourceRows": [
-        77
-      ],
-      "reviewRequired": true,
-      "reviewFlags": [
-        "نام تجاری در همین ردیف ثبت نشده"
-      ]
-    },
-    {
-      "id": "book-r78",
-      "genericName": "Clomiphene Citrate",
-      "persianName": "",
-      "brandNamesRaw": "",
-      "uses": "داروی کلومیفن سیترات",
-      "dosageForms": "Tablet: 50mg",
-      "chapter": 9,
-      "sourceRows": [
-        78
-      ],
-      "reviewRequired": true,
-      "reviewFlags": [
-        "نام تجاری در همین ردیف ثبت نشده"
-      ]
-    },
-    {
-      "id": "book-r79",
-      "genericName": "Tamoxifen",
-      "persianName": "",
-      "brandNamesRaw": "",
-      "uses": "داروی تاموکسیفن",
-      "dosageForms": "Tablet: 10, 20mg",
-      "chapter": 9,
-      "sourceRows": [
-        79
-      ],
-      "reviewRequired": true,
-      "reviewFlags": [
-        "نام تجاری در همین ردیف ثبت نشده"
-      ]
-    },
-    {
-      "id": "book-r80",
-      "genericName": "Anastrozole",
-      "persianName": "",
-      "brandNamesRaw": "",
-      "uses": "داروی آناستروزول",
-      "dosageForms": "Tablet: 1mg",
-      "chapter": 9,
-      "sourceRows": [
-        80
-      ],
-      "reviewRequired": true,
-      "reviewFlags": [
-        "نام تجاری در همین ردیف ثبت نشده"
-      ]
-    },
-    {
-      "id": "book-r81",
-      "genericName": "Letrozole",
-      "persianName": "",
-      "brandNamesRaw": "",
-      "uses": "داروی لتروزول",
-      "dosageForms": "Tablet: 2.5mg",
-      "chapter": 9,
-      "sourceRows": [
-        81
-      ],
-      "reviewRequired": true,
-      "reviewFlags": [
-        "نام تجاری در همین ردیف ثبت نشده"
-      ]
-    },
-    {
-      "id": "book-r82",
-      "genericName": "Exemestane",
-      "persianName": "",
-      "brandNamesRaw": "",
-      "uses": "داروی اگزمستان",
-      "dosageForms": "Tablet: 25mg",
-      "chapter": 9,
-      "sourceRows": [
-        82
-      ],
-      "reviewRequired": true,
-      "reviewFlags": [
-        "نام تجاری در همین ردیف ثبت نشده"
-      ]
-    },
-    {
-      "id": "book-r83",
-      "genericName": "Danazol",
-      "persianName": "",
-      "brandNamesRaw": "",
-      "uses": "داروی دانازول",
-      "dosageForms": "Capsule: 100, 200mg",
-      "chapter": 9,
-      "sourceRows": [
-        83
-      ],
-      "reviewRequired": true,
-      "reviewFlags": [
-        "نام تجاری در همین ردیف ثبت نشده"
-      ]
-    },
-    {
-      "id": "book-r84",
-      "genericName": "Goserelin",
-      "persianName": "",
-      "brandNamesRaw": "",
-      "uses": "داروی گوسرلین",
-      "dosageForms": "Injection: 3.6, 10.8mg",
-      "chapter": 9,
-      "sourceRows": [
-        84
-      ],
-      "reviewRequired": true,
-      "reviewFlags": [
-        "نام تجاری در همین ردیف ثبت نشده"
-      ]
-    },
-    {
-      "id": "book-r85",
-      "genericName": "Leuprolide",
-      "persianName": "",
-      "brandNamesRaw": "",
-      "uses": "داروی لوپرولاید",
-      "dosageForms": "Injection: 3.75, 7.5mg",
-      "chapter": 9,
-      "sourceRows": [
-        85
-      ],
-      "reviewRequired": true,
-      "reviewFlags": [
-        "نام تجاری در همین ردیف ثبت نشده"
-      ]
-    },
-    {
-      "id": "book-r86",
-      "genericName": "Triptorelin",
-      "persianName": "",
-      "brandNamesRaw": "",
-      "uses": "داروی تریپتورلین",
-      "dosageForms": "Injection: 3.75mg",
-      "chapter": 9,
-      "sourceRows": [
-        86
-      ],
-      "reviewRequired": true,
-      "reviewFlags": [
-        "نام تجاری در همین ردیف ثبت نشده"
-      ]
-    },
-    {
-      "id": "book-r87",
-      "genericName": "Buserelin",
-      "persianName": "",
-      "brandNamesRaw": "",
-      "uses": "داروی بوسرلین",
-      "dosageForms": "Nasal spray: 100mcg",
-      "chapter": 9,
-      "sourceRows": [
-        87
-      ],
-      "reviewRequired": true,
-      "reviewFlags": [
-        "نام تجاری در همین ردیف ثبت نشده"
-      ]
-    },
-    {
-      "id": "book-r88",
-      "genericName": "Gonadorelin",
-      "persianName": "",
-      "brandNamesRaw": "",
-      "uses": "داروی گنادورلین",
-      "dosageForms": "Injection: 100mcg",
-      "chapter": 9,
-      "sourceRows": [
-        88
-      ],
-      "reviewRequired": true,
-      "reviewFlags": [
-        "نام تجاری در همین ردیف ثبت نشده"
-      ]
-    },
-    {
-      "id": "book-r89",
-      "genericName": "Follitropin",
-      "persianName": "",
-      "brandNamesRaw": "",
-      "uses": "داروی فولیتروپین",
-      "dosageForms": "Injection: 75, 150IU",
-      "chapter": 9,
-      "sourceRows": [
-        89
-      ],
-      "reviewRequired": true,
-      "reviewFlags": [
-        "نام تجاری در همین ردیف ثبت نشده"
-      ]
-    },
-    {
-      "id": "book-r90",
-      "genericName": "Menotropins",
-      "persianName": "",
-      "brandNamesRaw": "",
-      "uses": "داروی منوتروپین",
-      "dosageForms": "Injection: 75IU",
-      "chapter": 9,
-      "sourceRows": [
-        90
-      ],
-      "reviewRequired": true,
-      "reviewFlags": [
-        "نام تجاری در همین ردیف ثبت نشده"
-      ]
-    },
-    {
-      "id": "book-r91",
-      "genericName": "Chorionic Gonadotropin",
-      "persianName": "",
-      "brandNamesRaw": "",
-      "uses": "داروی گنادوتروپین جفتی",
-      "dosageForms": "Injection: 1500, 5000IU",
-      "chapter": 9,
-      "sourceRows": [
-        91
-      ],
-      "reviewRequired": true,
-      "reviewFlags": [
-        "نام تجاری در همین ردیف ثبت نشده"
-      ]
-    },
-    {
-      "id": "book-r92",
-      "genericName": "Bromocriptine",
-      "persianName": "",
-      "brandNamesRaw": "",
-      "uses": "داروی بروموکریپتین",
-      "dosageForms": "Tablet: 2.5mg",
-      "chapter": 9,
-      "sourceRows": [
-        92
-      ],
-      "reviewRequired": true,
-      "reviewFlags": [
-        "نام تجاری در همین ردیف ثبت نشده"
-      ]
-    },
-    {
-      "id": "book-r93",
-      "genericName": "Cabergoline",
-      "persianName": "",
-      "brandNamesRaw": "",
-      "uses": "داروی کابرگولین",
-      "dosageForms": "Tablet: 0.5mg",
-      "chapter": 9,
-      "sourceRows": [
-        93
-      ],
-      "reviewRequired": true,
-      "reviewFlags": [
-        "نام تجاری در همین ردیف ثبت نشده"
-      ]
-    },
-    {
-      "id": "book-r94",
-      "genericName": "Mifepristone",
-      "persianName": "",
-      "brandNamesRaw": "",
-      "uses": "داروی میفپریستون",
-      "dosageForms": "Tablet: 200mg",
-      "chapter": 9,
-      "sourceRows": [
-        94
-      ],
-      "reviewRequired": true,
-      "reviewFlags": [
-        "نام تجاری در همین ردیف ثبت نشده"
-      ]
-    },
-    {
-      "id": "book-r95",
-      "genericName": "Misoprostol",
-      "persianName": "",
-      "brandNamesRaw": "",
-      "uses": "داروی میزوپروستول",
-      "dosageForms": "Tablet: 100, 200mcg",
-      "chapter": 9,
-      "sourceRows": [
-        95
-      ],
-      "reviewRequired": true,
-      "reviewFlags": [
-        "نام تجاری در همین ردیف ثبت نشده"
-      ]
-    },
-    {
-      "id": "book-r96",
-      "genericName": "Oxytocin",
-      "persianName": "",
-      "brandNamesRaw": "",
-      "uses": "داروی اکسی‌توسین",
-      "dosageForms": "Injection: 10IU/ml",
-      "chapter": 9,
-      "sourceRows": [
-        96
-      ],
-      "reviewRequired": true,
-      "reviewFlags": [
-        "نام تجاری در همین ردیف ثبت نشده"
-      ]
-    },
-    {
-      "id": "book-r97",
-      "genericName": "Dinoprostone",
-      "persianName": "",
-      "brandNamesRaw": "",
-      "uses": "داروی دینوپروستون",
-      "dosageForms": "Vaginal gel: 0.5mg",
-      "chapter": 9,
-      "sourceRows": [
-        97
-      ],
-      "reviewRequired": true,
-      "reviewFlags": [
-        "نام تجاری در همین ردیف ثبت نشده"
-      ]
-    },
-    {
-      "id": "book-r98",
-      "genericName": "Ergometrine",
-      "persianName": "",
-      "brandNamesRaw": "",
-      "uses": "داروی ارگومترين",
-      "dosageForms": "Injection: 0.2mg/ml",
-      "chapter": 9,
-      "sourceRows": [
-        98
-      ],
-      "reviewRequired": true,
-      "reviewFlags": [
-        "نام تجاری در همین ردیف ثبت نشده"
-      ]
-    },
-    {
-      "id": "book-r99",
-      "genericName": "Methylergometrine",
-      "persianName": "",
-      "brandNamesRaw": "",
-      "uses": "داروی متیل ارگومترين",
-      "dosageForms": "Tablet: 0.2mg\nInjection: 0.2mg/ml",
-      "chapter": 9,
-      "sourceRows": [
-        99
-      ],
-      "reviewRequired": true,
-      "reviewFlags": [
-        "نام تجاری در همین ردیف ثبت نشده"
-      ]
-    },
-    {
       "id": "book-r100",
       "genericName": "Terbutaline",
       "persianName": "",
@@ -6612,6 +6605,20 @@
       ]
     },
     {
+      "id": "book-r12",
+      "genericName": "Estradiol Hemihydrate",
+      "persianName": "",
+      "brandNamesRaw": "Oestrogeg* (Topical Gel), \nDivigel* (Topical Gel), \nVagifem* (Vaginal Tab)",
+      "uses": "استرادیول همی همیدرات",
+      "dosageForms": "Vaginal Tablet: 25mcg\nTopical Gel: 0.06% 500mcg)\n(Patch, Extended Release: 25, 50, 100,mcg/24h)",
+      "chapter": 9,
+      "sourceRows": [
+        12
+      ],
+      "reviewRequired": false,
+      "reviewFlags": []
+    },
+    {
       "id": "book-r120",
       "genericName": "Paricalcitol",
       "persianName": "",
@@ -6621,6 +6628,70 @@
       "chapter": 9,
       "sourceRows": [
         120
+      ],
+      "reviewRequired": true,
+      "reviewFlags": [
+        "نام تجاری در همین ردیف ثبت نشده"
+      ]
+    },
+    {
+      "id": "book-r13",
+      "genericName": "Estradiol Valerate",
+      "persianName": "",
+      "brandNamesRaw": "",
+      "uses": "استرادیول والرات",
+      "dosageForms": "Tablet: 1.2mg\nAmpule: 10mg/mg",
+      "chapter": 9,
+      "sourceRows": [
+        13,
+        14
+      ],
+      "reviewRequired": true,
+      "reviewFlags": [
+        "نام تجاری در همین ردیف ثبت نشده",
+        "نام ژنریک در ردیف 14 به‌عنوان ادامه احتمالی نام ردیف قبل متصل شد؛ نیازمند تأیید"
+      ]
+    },
+    {
+      "id": "book-r16",
+      "genericName": "Agnugol",
+      "persianName": "",
+      "brandNamesRaw": "",
+      "uses": "داروی گیاهی اگنوگول و ویتاگنوس",
+      "dosageForms": "Tablet",
+      "chapter": 9,
+      "sourceRows": [
+        16
+      ],
+      "reviewRequired": true,
+      "reviewFlags": [
+        "نام تجاری در همین ردیف ثبت نشده"
+      ]
+    },
+    {
+      "id": "book-r17",
+      "genericName": "Vitgnus",
+      "persianName": "",
+      "brandNamesRaw": "Provera*, DMPA*",
+      "uses": "",
+      "dosageForms": "Tablet , Drop",
+      "chapter": 9,
+      "sourceRows": [
+        17
+      ],
+      "reviewRequired": false,
+      "reviewFlags": []
+    },
+    {
+      "id": "book-r20",
+      "genericName": "Medroxyprogestrerone Acetate",
+      "persianName": "",
+      "brandNamesRaw": "",
+      "uses": "داروهای مدروکسی پروژسترون و پروژسترون",
+      "dosageForms": "Tablet: 5mg\nVial (injectable suspension):  150mg/1mg, 150mg/3.3ml, 500mg/3.3ml",
+      "chapter": 9,
+      "sourceRows": [
+        20
       ],
       "reviewRequired": true,
       "reviewFlags": [
@@ -7010,6 +7081,23 @@
       ]
     },
     {
+      "id": "book-r27",
+      "genericName": "Progestrone",
+      "persianName": "",
+      "brandNamesRaw": "",
+      "uses": "",
+      "dosageForms": "Ampule: 25, 50mg/ml\nSuppository: (100), 200, 400mg\nVaginal Tablet: 100mg\nCapsule: 100, 200mg\nCapsule(Soft Gel): 100, 200mg",
+      "chapter": 9,
+      "sourceRows": [
+        27
+      ],
+      "reviewRequired": true,
+      "reviewFlags": [
+        "نام تجاری در همین ردیف ثبت نشده",
+        "کاربرد در همین ردیف ثبت نشده"
+      ]
+    },
+    {
       "id": "book-r270",
       "genericName": "Terazosin",
       "persianName": "",
@@ -7320,57 +7408,63 @@
       ]
     },
     {
-      "id": "book-ch11-r4",
-      "genericName": "Calamin",
-      "persianName": "",
-      "brandNamesRaw": "Calamex",
-      "uses": "تسکین خارش ناشی از نیش حشرات-آبله مرغان-اگزما-گیاهان سمی",
-      "dosageForms": "Cream: 8%\nLotion: 8%",
-      "chapter": 11,
-      "sourceRows": [
-        4
-      ],
-      "reviewRequired": false,
-      "reviewFlags": []
-    },
-    {
-      "id": "book-ch11-r5",
-      "genericName": "Dexpanthenol",
-      "persianName": "",
-      "brandNamesRaw": "Bepanthe\n Ipanthan",
-      "uses": "درمان خشکی-اگزما-سوختگی سطحی-تحریکات پوستی",
-      "dosageForms": "Cream: 5%\nOintment: 5%",
-      "chapter": 11,
-      "sourceRows": [
-        5
-      ],
-      "reviewRequired": false,
-      "reviewFlags": []
-    },
-    {
-      "id": "book-ch11-r6",
-      "genericName": "Calendula",
-      "persianName": "",
-      "brandNamesRaw": "After Bite\nDermagol",
-      "uses": "درمان بیماری های التهابی پوست",
-      "dosageForms": "Cream\nOintment: 2, 4%\nLotion",
-      "chapter": 11,
-      "sourceRows": [
-        6
-      ],
-      "reviewRequired": false,
-      "reviewFlags": []
-    },
-    {
-      "id": "book-ch11-r7",
-      "genericName": "Enoxolone",
+      "id": "book-r39",
+      "genericName": "Menopace",
       "persianName": "",
       "brandNamesRaw": "",
-      "uses": "درمان برخی التهابات پوستی-آفتاب سوختگی-اگزما و ...",
-      "dosageForms": "Ointment",
-      "chapter": 11,
+      "uses": "هورمونی و برطرف کردن عوارض یائسگی",
+      "dosageForms": "Tablet",
+      "chapter": 9,
       "sourceRows": [
-        7
+        39
+      ],
+      "reviewRequired": false,
+      "reviewFlags": []
+    },
+    {
+      "id": "book-r40",
+      "genericName": "Soyagol",
+      "persianName": "",
+      "brandNamesRaw": "",
+      "uses": "",
+      "dosageForms": "Tablet",
+      "chapter": 9,
+      "sourceRows": [
+        40
+      ],
+      "reviewRequired": true,
+      "reviewFlags": [
+        "نام تجاری در همین ردیف ثبت نشده",
+        "کاربرد در همین ردیف ثبت نشده"
+      ]
+    },
+    {
+      "id": "book-r41",
+      "genericName": "Soy Menopause",
+      "persianName": "",
+      "brandNamesRaw": "",
+      "uses": "",
+      "dosageForms": "Tablet , Capsule",
+      "chapter": 9,
+      "sourceRows": [
+        41
+      ],
+      "reviewRequired": true,
+      "reviewFlags": [
+        "نام تجاری در همین ردیف ثبت نشده",
+        "کاربرد در همین ردیف ثبت نشده"
+      ]
+    },
+    {
+      "id": "book-r44",
+      "genericName": "Dydrogesterone",
+      "persianName": "",
+      "brandNamesRaw": "",
+      "uses": "داروی دیدروژسترون",
+      "dosageForms": "Tablet: (5), 10mg",
+      "chapter": 9,
+      "sourceRows": [
+        44
       ],
       "reviewRequired": true,
       "reviewFlags": [
@@ -7378,13 +7472,807 @@
       ]
     },
     {
-      "id": "book-ch11-r8",
-      "genericName": "Calcipotriol",
+      "id": "book-r47",
+      "genericName": "Dienojest",
       "persianName": "",
-      "brandNamesRaw": "Diavonex\nPsoriament",
-      "uses": "درمان پسوریازیس",
-      "dosageForms": "Ointment: 50mcg\nCream: 50mcg\nSolution: 50mcg",
-      "chapter": 11,
+      "brandNamesRaw": "Proloton Depot*",
+      "uses": "داروی داینوژست",
+      "dosageForms": "Tablet: 2mg",
+      "chapter": 9,
+      "sourceRows": [
+        47
+      ],
+      "reviewRequired": false,
+      "reviewFlags": []
+    },
+    {
+      "id": "book-r49",
+      "genericName": "Hydroxyprogesterone Caproate",
+      "persianName": "",
+      "brandNamesRaw": "",
+      "uses": "هیپروکسی پروژسترون کاپروات",
+      "dosageForms": "Ampule: 250mg/1ml 500mg/2ml",
+      "chapter": 9,
+      "sourceRows": [
+        49
+      ],
+      "reviewRequired": true,
+      "reviewFlags": [
+        "نام تجاری در همین ردیف ثبت نشده"
+      ]
+    },
+    {
+      "id": "book-r52",
+      "genericName": "Megestrol Aacetate",
+      "persianName": "",
+      "brandNamesRaw": "",
+      "uses": "داروی مژسترول",
+      "dosageForms": "Tablet: 20,40mg\nSuspension: 40mg/ml",
+      "chapter": 9,
+      "sourceRows": [
+        52
+      ],
+      "reviewRequired": true,
+      "reviewFlags": [
+        "نام تجاری در همین ردیف ثبت نشده"
+      ]
+    },
+    {
+      "id": "book-r55",
+      "genericName": "Cyproteron",
+      "persianName": "",
+      "brandNamesRaw": "",
+      "uses": "داروی سیپروترون استات",
+      "dosageForms": "Tablet: 50, 100mg",
+      "chapter": 9,
+      "sourceRows": [
+        55
+      ],
+      "reviewRequired": true,
+      "reviewFlags": [
+        "نام تجاری در همین ردیف ثبت نشده"
+      ]
+    },
+    {
+      "id": "book-r6",
+      "genericName": "Conjugated Estrogens",
+      "persianName": "",
+      "brandNamesRaw": "Premarin, Estrin, Equin, Estromarin",
+      "uses": "استروژن کونژوگه",
+      "dosageForms": "Tablet: 0.625 ,  1.25mg \nVaginal cream: 0625mg/g\nVial (injection, Powder): 25mg",
+      "chapter": 9,
+      "sourceRows": [
+        6
+      ],
+      "reviewRequired": false,
+      "reviewFlags": []
+    },
+    {
+      "id": "book-r60",
+      "genericName": "Medroxyprogestrone acetate+Estradiol Cypionate",
+      "persianName": "",
+      "brandNamesRaw": "",
+      "uses": "مدروکسی پروژسترون استات و استرادیول سیپیونات",
+      "dosageForms": "Ampule: (25+5)mg/0.5ml\nMedroxyprogestrone acetate25mg+Estradiol Cypionate5mg",
+      "chapter": 9,
+      "sourceRows": [
+        60
+      ],
+      "reviewRequired": true,
+      "reviewFlags": [
+        "نام تجاری در همین ردیف ثبت نشده"
+      ]
+    },
+    {
+      "id": "book-r65",
+      "genericName": "Lynestrenol",
+      "persianName": "",
+      "brandNamesRaw": "",
+      "uses": "داروی لاینسترنول",
+      "dosageForms": "Tablet:0.5mg",
+      "chapter": 9,
+      "sourceRows": [
+        65
+      ],
+      "reviewRequired": true,
+      "reviewFlags": [
+        "نام تجاری در همین ردیف ثبت نشده"
+      ]
+    },
+    {
+      "id": "book-r68",
+      "genericName": "Levonorgestrek",
+      "persianName": "",
+      "brandNamesRaw": "",
+      "uses": "داروی لونورژسترول",
+      "dosageForms": "Tablet: 0.75, 1.5mg",
+      "chapter": 9,
+      "sourceRows": [
+        68
+      ],
+      "reviewRequired": true,
+      "reviewFlags": [
+        "نام تجاری در همین ردیف ثبت نشده"
+      ]
+    },
+    {
+      "id": "book-r73",
+      "genericName": "Ulipristal acetate",
+      "persianName": "",
+      "brandNamesRaw": "",
+      "uses": "داروی یولی پریستال",
+      "dosageForms": "Tablet: 5mg",
+      "chapter": 9,
+      "sourceRows": [
+        73,
+        74
+      ],
+      "reviewRequired": true,
+      "reviewFlags": [
+        "نام تجاری در همین ردیف ثبت نشده",
+        "نام ژنریک در ردیف 74 به‌عنوان ادامه احتمالی نام ردیف قبل متصل شد؛ نیازمند تأیید"
+      ]
+    },
+    {
+      "id": "book-r75",
+      "genericName": "Ospemifene",
+      "persianName": "",
+      "brandNamesRaw": "",
+      "uses": "داروی اوسپمیفن",
+      "dosageForms": "Tablet: 60mg",
+      "chapter": 9,
+      "sourceRows": [
+        75
+      ],
+      "reviewRequired": true,
+      "reviewFlags": [
+        "نام تجاری در همین ردیف ثبت نشده"
+      ]
+    },
+    {
+      "id": "book-r76",
+      "genericName": "Tibolone",
+      "persianName": "",
+      "brandNamesRaw": "",
+      "uses": "داروی تیبولون",
+      "dosageForms": "Tablet: 2.5mg",
+      "chapter": 9,
+      "sourceRows": [
+        76
+      ],
+      "reviewRequired": true,
+      "reviewFlags": [
+        "نام تجاری در همین ردیف ثبت نشده"
+      ]
+    },
+    {
+      "id": "book-r77",
+      "genericName": "Raloxifene",
+      "persianName": "",
+      "brandNamesRaw": "",
+      "uses": "داروی رالوکسیفن",
+      "dosageForms": "Tablet: 60mg",
+      "chapter": 9,
+      "sourceRows": [
+        77
+      ],
+      "reviewRequired": true,
+      "reviewFlags": [
+        "نام تجاری در همین ردیف ثبت نشده"
+      ]
+    },
+    {
+      "id": "book-r78",
+      "genericName": "Clomiphene Citrate",
+      "persianName": "",
+      "brandNamesRaw": "",
+      "uses": "داروی کلومیفن سیترات",
+      "dosageForms": "Tablet: 50mg",
+      "chapter": 9,
+      "sourceRows": [
+        78
+      ],
+      "reviewRequired": true,
+      "reviewFlags": [
+        "نام تجاری در همین ردیف ثبت نشده"
+      ]
+    },
+    {
+      "id": "book-r79",
+      "genericName": "Tamoxifen",
+      "persianName": "",
+      "brandNamesRaw": "",
+      "uses": "داروی تاموکسیفن",
+      "dosageForms": "Tablet: 10, 20mg",
+      "chapter": 9,
+      "sourceRows": [
+        79
+      ],
+      "reviewRequired": true,
+      "reviewFlags": [
+        "نام تجاری در همین ردیف ثبت نشده"
+      ]
+    },
+    {
+      "id": "book-r80",
+      "genericName": "Anastrozole",
+      "persianName": "",
+      "brandNamesRaw": "",
+      "uses": "داروی آناستروزول",
+      "dosageForms": "Tablet: 1mg",
+      "chapter": 9,
+      "sourceRows": [
+        80
+      ],
+      "reviewRequired": true,
+      "reviewFlags": [
+        "نام تجاری در همین ردیف ثبت نشده"
+      ]
+    },
+    {
+      "id": "book-r81",
+      "genericName": "Letrozole",
+      "persianName": "",
+      "brandNamesRaw": "",
+      "uses": "داروی لتروزول",
+      "dosageForms": "Tablet: 2.5mg",
+      "chapter": 9,
+      "sourceRows": [
+        81
+      ],
+      "reviewRequired": true,
+      "reviewFlags": [
+        "نام تجاری در همین ردیف ثبت نشده"
+      ]
+    },
+    {
+      "id": "book-r82",
+      "genericName": "Exemestane",
+      "persianName": "",
+      "brandNamesRaw": "",
+      "uses": "داروی اگزمستان",
+      "dosageForms": "Tablet: 25mg",
+      "chapter": 9,
+      "sourceRows": [
+        82
+      ],
+      "reviewRequired": true,
+      "reviewFlags": [
+        "نام تجاری در همین ردیف ثبت نشده"
+      ]
+    },
+    {
+      "id": "book-r83",
+      "genericName": "Danazol",
+      "persianName": "",
+      "brandNamesRaw": "",
+      "uses": "داروی دانازول",
+      "dosageForms": "Capsule: 100, 200mg",
+      "chapter": 9,
+      "sourceRows": [
+        83
+      ],
+      "reviewRequired": true,
+      "reviewFlags": [
+        "نام تجاری در همین ردیف ثبت نشده"
+      ]
+    },
+    {
+      "id": "book-r84",
+      "genericName": "Goserelin",
+      "persianName": "",
+      "brandNamesRaw": "",
+      "uses": "داروی گوسرلین",
+      "dosageForms": "Injection: 3.6, 10.8mg",
+      "chapter": 9,
+      "sourceRows": [
+        84
+      ],
+      "reviewRequired": true,
+      "reviewFlags": [
+        "نام تجاری در همین ردیف ثبت نشده"
+      ]
+    },
+    {
+      "id": "book-r85",
+      "genericName": "Leuprolide",
+      "persianName": "",
+      "brandNamesRaw": "",
+      "uses": "داروی لوپرولاید",
+      "dosageForms": "Injection: 3.75, 7.5mg",
+      "chapter": 9,
+      "sourceRows": [
+        85
+      ],
+      "reviewRequired": true,
+      "reviewFlags": [
+        "نام تجاری در همین ردیف ثبت نشده"
+      ]
+    },
+    {
+      "id": "book-r86",
+      "genericName": "Triptorelin",
+      "persianName": "",
+      "brandNamesRaw": "",
+      "uses": "داروی تریپتورلین",
+      "dosageForms": "Injection: 3.75mg",
+      "chapter": 9,
+      "sourceRows": [
+        86
+      ],
+      "reviewRequired": true,
+      "reviewFlags": [
+        "نام تجاری در همین ردیف ثبت نشده"
+      ]
+    },
+    {
+      "id": "book-r87",
+      "genericName": "Buserelin",
+      "persianName": "",
+      "brandNamesRaw": "",
+      "uses": "داروی بوسرلین",
+      "dosageForms": "Nasal spray: 100mcg",
+      "chapter": 9,
+      "sourceRows": [
+        87
+      ],
+      "reviewRequired": true,
+      "reviewFlags": [
+        "نام تجاری در همین ردیف ثبت نشده"
+      ]
+    },
+    {
+      "id": "book-r88",
+      "genericName": "Gonadorelin",
+      "persianName": "",
+      "brandNamesRaw": "",
+      "uses": "داروی گنادورلین",
+      "dosageForms": "Injection: 100mcg",
+      "chapter": 9,
+      "sourceRows": [
+        88
+      ],
+      "reviewRequired": true,
+      "reviewFlags": [
+        "نام تجاری در همین ردیف ثبت نشده"
+      ]
+    },
+    {
+      "id": "book-r89",
+      "genericName": "Follitropin",
+      "persianName": "",
+      "brandNamesRaw": "",
+      "uses": "داروی فولیتروپین",
+      "dosageForms": "Injection: 75, 150IU",
+      "chapter": 9,
+      "sourceRows": [
+        89
+      ],
+      "reviewRequired": true,
+      "reviewFlags": [
+        "نام تجاری در همین ردیف ثبت نشده"
+      ]
+    },
+    {
+      "id": "book-r9",
+      "genericName": "Etihinyl Estradiol",
+      "persianName": "",
+      "brandNamesRaw": "",
+      "uses": "اتینیل استرادیول",
+      "dosageForms": "Tablet: 0.05 . 0.5mg",
+      "chapter": 9,
+      "sourceRows": [
+        9
+      ],
+      "reviewRequired": false,
+      "reviewFlags": []
+    },
+    {
+      "id": "book-r90",
+      "genericName": "Menotropins",
+      "persianName": "",
+      "brandNamesRaw": "",
+      "uses": "داروی منوتروپین",
+      "dosageForms": "Injection: 75IU",
+      "chapter": 9,
+      "sourceRows": [
+        90
+      ],
+      "reviewRequired": true,
+      "reviewFlags": [
+        "نام تجاری در همین ردیف ثبت نشده"
+      ]
+    },
+    {
+      "id": "book-r91",
+      "genericName": "Chorionic Gonadotropin",
+      "persianName": "",
+      "brandNamesRaw": "",
+      "uses": "داروی گنادوتروپین جفتی",
+      "dosageForms": "Injection: 1500, 5000IU",
+      "chapter": 9,
+      "sourceRows": [
+        91
+      ],
+      "reviewRequired": true,
+      "reviewFlags": [
+        "نام تجاری در همین ردیف ثبت نشده"
+      ]
+    },
+    {
+      "id": "book-r92",
+      "genericName": "Bromocriptine",
+      "persianName": "",
+      "brandNamesRaw": "",
+      "uses": "داروی بروموکریپتین",
+      "dosageForms": "Tablet: 2.5mg",
+      "chapter": 9,
+      "sourceRows": [
+        92
+      ],
+      "reviewRequired": true,
+      "reviewFlags": [
+        "نام تجاری در همین ردیف ثبت نشده"
+      ]
+    },
+    {
+      "id": "book-r93",
+      "genericName": "Cabergoline",
+      "persianName": "",
+      "brandNamesRaw": "",
+      "uses": "داروی کابرگولین",
+      "dosageForms": "Tablet: 0.5mg",
+      "chapter": 9,
+      "sourceRows": [
+        93
+      ],
+      "reviewRequired": true,
+      "reviewFlags": [
+        "نام تجاری در همین ردیف ثبت نشده"
+      ]
+    },
+    {
+      "id": "book-r94",
+      "genericName": "Mifepristone",
+      "persianName": "",
+      "brandNamesRaw": "",
+      "uses": "داروی میفپریستون",
+      "dosageForms": "Tablet: 200mg",
+      "chapter": 9,
+      "sourceRows": [
+        94
+      ],
+      "reviewRequired": true,
+      "reviewFlags": [
+        "نام تجاری در همین ردیف ثبت نشده"
+      ]
+    },
+    {
+      "id": "book-r95",
+      "genericName": "Misoprostol",
+      "persianName": "",
+      "brandNamesRaw": "",
+      "uses": "داروی میزوپروستول",
+      "dosageForms": "Tablet: 100, 200mcg",
+      "chapter": 9,
+      "sourceRows": [
+        95
+      ],
+      "reviewRequired": true,
+      "reviewFlags": [
+        "نام تجاری در همین ردیف ثبت نشده"
+      ]
+    },
+    {
+      "id": "book-r96",
+      "genericName": "Oxytocin",
+      "persianName": "",
+      "brandNamesRaw": "",
+      "uses": "داروی اکسی‌توسین",
+      "dosageForms": "Injection: 10IU/ml",
+      "chapter": 9,
+      "sourceRows": [
+        96
+      ],
+      "reviewRequired": true,
+      "reviewFlags": [
+        "نام تجاری در همین ردیف ثبت نشده"
+      ]
+    },
+    {
+      "id": "book-r97",
+      "genericName": "Dinoprostone",
+      "persianName": "",
+      "brandNamesRaw": "",
+      "uses": "داروی دینوپروستون",
+      "dosageForms": "Vaginal gel: 0.5mg",
+      "chapter": 9,
+      "sourceRows": [
+        97
+      ],
+      "reviewRequired": true,
+      "reviewFlags": [
+        "نام تجاری در همین ردیف ثبت نشده"
+      ]
+    },
+    {
+      "id": "book-r98",
+      "genericName": "Ergometrine",
+      "persianName": "",
+      "brandNamesRaw": "",
+      "uses": "داروی ارگومترين",
+      "dosageForms": "Injection: 0.2mg/ml",
+      "chapter": 9,
+      "sourceRows": [
+        98
+      ],
+      "reviewRequired": true,
+      "reviewFlags": [
+        "نام تجاری در همین ردیف ثبت نشده"
+      ]
+    },
+    {
+      "id": "book-r99",
+      "genericName": "Methylergometrine",
+      "persianName": "",
+      "brandNamesRaw": "",
+      "uses": "داروی متیل ارگومترين",
+      "dosageForms": "Tablet: 0.2mg\nInjection: 0.2mg/ml",
+      "chapter": 9,
+      "sourceRows": [
+        99
+      ],
+      "reviewRequired": true,
+      "reviewFlags": [
+        "نام تجاری در همین ردیف ثبت نشده"
+      ]
+    },
+    {
+      "id": "book-ch10-r1",
+      "genericName": "Insulin Lispro",
+      "persianName": "",
+      "brandNamesRaw": "Humalog",
+      "uses": "کنترل قند خون در بیماران مبتلا به دیابت انسولین سریع الاثر",
+      "dosageForms": "Injection : 100 IU/mL Ampoule : 100 IU/m Prefilled pen :100 IU/ml",
+      "chapter": 10,
+      "sourceRows": [
+        2
+      ],
+      "reviewRequired": false,
+      "reviewFlags": []
+    },
+    {
+      "id": "book-ch10-r10",
+      "genericName": "Insulin Ryzodeg",
+      "persianName": "",
+      "brandNamesRaw": "Insulin Ryzodeg",
+      "uses": "کنترل قند خون در بیماران مبتلا به دیابت انسولین مخلوط",
+      "dosageForms": "Injection : 100 IU/ml - Prefilled Pen",
+      "chapter": 10,
+      "sourceRows": [
+        11
+      ],
+      "reviewRequired": false,
+      "reviewFlags": []
+    },
+    {
+      "id": "book-ch10-r11",
+      "genericName": "Glucagon HCL",
+      "persianName": "",
+      "brandNamesRaw": "GlucaGen",
+      "uses": "درمان افت شدید قند خون ( هیپوگلیسمی )",
+      "dosageForms": "Vial Injection ( Powder ) : 1 mg",
+      "chapter": 10,
+      "sourceRows": [
+        12
+      ],
+      "reviewRequired": false,
+      "reviewFlags": []
+    },
+    {
+      "id": "book-ch10-r12",
+      "genericName": "Glimepiride",
+      "persianName": "",
+      "brandNamesRaw": "Tedaprid - Glyrix",
+      "uses": "کاهش قند خون در بیماران مبتلا به دیابت نوع 2",
+      "dosageForms": "Tablet : 1 , 2 , 3 , 4 mg",
+      "chapter": 10,
+      "sourceRows": [
+        13
+      ],
+      "reviewRequired": false,
+      "reviewFlags": []
+    },
+    {
+      "id": "book-ch10-r13",
+      "genericName": "Glibenclamide",
+      "persianName": "",
+      "brandNamesRaw": "Apo Glyburide - Daonil - Melix",
+      "uses": "کاهش قند خون در بیماران مبتلا به دیابت نوع 2",
+      "dosageForms": "Tablet : 5 mg",
+      "chapter": 10,
+      "sourceRows": [
+        14
+      ],
+      "reviewRequired": false,
+      "reviewFlags": []
+    },
+    {
+      "id": "book-ch10-r14",
+      "genericName": "Gliclazide",
+      "persianName": "",
+      "brandNamesRaw": "Diamicron",
+      "uses": "کاهش قند خون در بیماران مبتلا به دیابت نوع 2",
+      "dosageForms": "Tablet : 80 mg Tablet ( Extended Release ) : 30 mg",
+      "chapter": 10,
+      "sourceRows": [
+        15
+      ],
+      "reviewRequired": false,
+      "reviewFlags": []
+    },
+    {
+      "id": "book-ch10-r15",
+      "genericName": "Metformin",
+      "persianName": "",
+      "brandNamesRaw": "Glucophage - Brot - Metformin hexal - Metover - Apo Metformin",
+      "uses": "کاهش قند خون در بیماران مبتلا به دیابت نوع 2",
+      "dosageForms": "Tablet : 500 , 750 , 1000 mg",
+      "chapter": 10,
+      "sourceRows": [
+        16
+      ],
+      "reviewRequired": false,
+      "reviewFlags": []
+    },
+    {
+      "id": "book-ch10-r16",
+      "genericName": "Pioglitazone",
+      "persianName": "",
+      "brandNamesRaw": "Glitoz - Actos",
+      "uses": "افزایش حساسیت بدن به انسولین در دیابت نوع 2",
+      "dosageForms": "Tablet : 15 , 30 , 45 mg",
+      "chapter": 10,
+      "sourceRows": [
+        17
+      ],
+      "reviewRequired": false,
+      "reviewFlags": []
+    },
+    {
+      "id": "book-ch10-r17",
+      "genericName": "Repaglinide",
+      "persianName": "",
+      "brandNamesRaw": "Novonorm - Gluconorm",
+      "uses": "کنترل افزایش قند خون پس از غذا در دیابت نوع 2",
+      "dosageForms": "Tablet : 0.5 , 1 , 2 mg",
+      "chapter": 10,
+      "sourceRows": [
+        18
+      ],
+      "reviewRequired": false,
+      "reviewFlags": []
+    },
+    {
+      "id": "book-ch10-r18",
+      "genericName": "Acarbose",
+      "persianName": "",
+      "brandNamesRaw": "Glucoby ( Bayer )",
+      "uses": "کاهش افزایش قند خون پس از غذا",
+      "dosageForms": "Tablet : 50 , 100 mg",
+      "chapter": 10,
+      "sourceRows": [
+        19
+      ],
+      "reviewRequired": false,
+      "reviewFlags": []
+    },
+    {
+      "id": "book-ch10-r19",
+      "genericName": "Sitagliptin",
+      "persianName": "",
+      "brandNamesRaw": "Januvia - Ziptin",
+      "uses": "کنترل قند خون در دیابت نوع 2",
+      "dosageForms": "Tablet : 25 , 50 , 100 mg",
+      "chapter": 10,
+      "sourceRows": [
+        20
+      ],
+      "reviewRequired": false,
+      "reviewFlags": []
+    },
+    {
+      "id": "book-ch10-r2",
+      "genericName": "Insulin Glulisin",
+      "persianName": "",
+      "brandNamesRaw": "Apidra",
+      "uses": "کنترل قند خون در بیماران مبتلا به دیابت انسولین سریع الاثر",
+      "dosageForms": "Injection : 100 IU/ml Vial : 100 IU/ml Prefilled pen : 100 IU/ml",
+      "chapter": 10,
+      "sourceRows": [
+        3
+      ],
+      "reviewRequired": false,
+      "reviewFlags": []
+    },
+    {
+      "id": "book-ch10-r20",
+      "genericName": "Vildagliptin",
+      "persianName": "",
+      "brandNamesRaw": "Galvus",
+      "uses": "کنترل قند خون در دیابت نوع 2",
+      "dosageForms": "Tablet : 50 mg",
+      "chapter": 10,
+      "sourceRows": [
+        3
+      ],
+      "reviewRequired": false,
+      "reviewFlags": []
+    },
+    {
+      "id": "book-ch10-r21",
+      "genericName": "Linagliptin",
+      "persianName": "",
+      "brandNamesRaw": "Trajenta - Tradjenta - Melijent",
+      "uses": "کنترل قند خون در دیابت نوع 2",
+      "dosageForms": "Tablet : 5 mg",
+      "chapter": 10,
+      "sourceRows": [
+        4
+      ],
+      "reviewRequired": false,
+      "reviewFlags": []
+    },
+    {
+      "id": "book-ch10-r22",
+      "genericName": "Metformin + Sitagliptin",
+      "persianName": "",
+      "brandNamesRaw": "Sitaplus - Zipmet",
+      "uses": "کنترل قند خون در دیابت نوع 2",
+      "dosageForms": "Tablet:50/500,50/1000,50/850mg",
+      "chapter": 10,
+      "sourceRows": [
+        5
+      ],
+      "reviewRequired": false,
+      "reviewFlags": []
+    },
+    {
+      "id": "book-ch10-r23",
+      "genericName": "Dapagliflozin",
+      "persianName": "",
+      "brandNamesRaw": "Forxiga - Faxibet - Viadapazin",
+      "uses": "کاهش قند خون در دیابت نوع 2",
+      "dosageForms": "Tablet : 5 , 10 mg",
+      "chapter": 10,
+      "sourceRows": [
+        6
+      ],
+      "reviewRequired": false,
+      "reviewFlags": []
+    },
+    {
+      "id": "book-ch10-r24",
+      "genericName": "Dapagliflozin + Metformin",
+      "persianName": "",
+      "brandNamesRaw": "Gloxiga-M - Xigforvit-M",
+      "uses": "کنترل قند خون در دیابت نوع 2",
+      "dosageForms": "Tablet : 5/500 , 10/1000 , 5/1000 , 5/850 , 2.5/1000 mg",
+      "chapter": 10,
+      "sourceRows": [
+        7
+      ],
+      "reviewRequired": false,
+      "reviewFlags": []
+    },
+    {
+      "id": "book-ch10-r25",
+      "genericName": "Empagliflozin",
+      "persianName": "",
+      "brandNamesRaw": "Jardiance - Gloripa",
+      "uses": "کنترل قند خون در دیابت نوع 2",
+      "dosageForms": "Tablet : 10 , 25 mg",
+      "chapter": 10,
       "sourceRows": [
         8
       ],
@@ -7392,15 +8280,451 @@
       "reviewFlags": []
     },
     {
-      "id": "book-ch11-r9",
-      "genericName": "Calcipotriol + Betamethasone",
+      "id": "book-ch10-r26",
+      "genericName": "Empagliflozin + Linagliptin",
       "persianName": "",
-      "brandNamesRaw": "Daivobet",
-      "uses": "درمان پسوریازیس",
-      "dosageForms": "Ointment: 50mcg + 0.064mg",
-      "chapter": 11,
+      "brandNamesRaw": "Glyxambi - Empajent - Glose Lin",
+      "uses": "کنترل قند خون در دیابت نوع 2",
+      "dosageForms": "Tablet : 25/5 , 25/10 , 10/5 mg",
+      "chapter": 10,
       "sourceRows": [
         9
+      ],
+      "reviewRequired": false,
+      "reviewFlags": []
+    },
+    {
+      "id": "book-ch10-r27",
+      "genericName": "Liraglutide",
+      "persianName": "",
+      "brandNamesRaw": "Victoza - Sexenda - Melitide - Maciza liraglutide",
+      "uses": "کنترل قند خون در دیابت نوع 2 و کمک به کاهش وزن",
+      "dosageForms": "Prefilled Pen : 6 mg/ml",
+      "chapter": 10,
+      "sourceRows": [
+        10
+      ],
+      "reviewRequired": false,
+      "reviewFlags": []
+    },
+    {
+      "id": "book-ch10-r28",
+      "genericName": "Calcium",
+      "persianName": "",
+      "brandNamesRaw": "Calciram - Calcimax - Cal D Kal - Calcium Forte",
+      "uses": "پیشگیری و درمان کمبود کلسیم",
+      "dosageForms": "Tablet : 500 mg Tablet Effervescent ( Calcium Forte ) : 500 mg Coated Tablet : Calcium ( as Carbonate ) 500 mg ( Calcium Lactate Gluconate 2.94g + Calcium Carbonate 0.3g ) Tablet Cheweable : 600IU Ampule : 10% Syrup",
+      "chapter": 10,
+      "sourceRows": [
+        11
+      ],
+      "reviewRequired": false,
+      "reviewFlags": []
+    },
+    {
+      "id": "book-ch10-r29",
+      "genericName": "Calcium-D3",
+      "persianName": "",
+      "brandNamesRaw": "Osteocal - Liquid Calcium",
+      "uses": "پیشگیری و درمان کمبود کلسیم و ویتامین D",
+      "dosageForms": "Coated Tablet : Calcium ( as Corbonate ) 500 mg + Vitamin D 200 IU - Tablet : 500 mg + 400 IU Soft Capsule : 500mg + 400IU - 500mg + 200IU Chewable Tablet Effervescent Tablet",
+      "chapter": 10,
+      "sourceRows": [
+        12
+      ],
+      "reviewRequired": false,
+      "reviewFlags": []
+    },
+    {
+      "id": "book-ch10-r3",
+      "genericName": "Insulin Aspart",
+      "persianName": "",
+      "brandNamesRaw": "NovoLog NovoRapid",
+      "uses": "کنترل قند خون در بیماران مبتلا به دیابت انسولین سریع الاثر",
+      "dosageForms": "Injection : 100 IU/ml Vial : 100 IU/ml Prefilled pen : 100 IU/ml",
+      "chapter": 10,
+      "sourceRows": [
+        4
+      ],
+      "reviewRequired": false,
+      "reviewFlags": []
+    },
+    {
+      "id": "book-ch10-r30",
+      "genericName": "Vit D3",
+      "persianName": "",
+      "brandNamesRaw": "Sunvit - Cholecalciferol - D trol",
+      "uses": "کمک به پیشگیری و درمان کمبود ویتامین D و جذب کلسیم",
+      "dosageForms": "Injection : 300,000 IU Capsule : 50,000 IU Drop : 400 , 1000 IU/ml Tablet : 400 , 800 , 1000 , 2000 IU Strip : 1000 U - Pearl : 50000 IU Ampule : 300000 IU - Soft Capsule : 1000 IU Chewable Soft Capsule",
+      "chapter": 10,
+      "sourceRows": [
+        13
+      ],
+      "reviewRequired": false,
+      "reviewFlags": []
+    },
+    {
+      "id": "book-ch10-r31",
+      "genericName": "Calcitriol",
+      "persianName": "",
+      "brandNamesRaw": "Rocaltrol",
+      "uses": "درمان کمبود کلسیم و اختلالات متابولیسم کلسیم",
+      "dosageForms": "Soft Capsule : 0.25 mcg - Ampule : 1 mcg/ml",
+      "chapter": 10,
+      "sourceRows": [
+        14
+      ],
+      "reviewRequired": false,
+      "reviewFlags": []
+    },
+    {
+      "id": "book-ch10-r32",
+      "genericName": "Alendronate sodium",
+      "persianName": "",
+      "brandNamesRaw": "Osteofos - Fosamax - Ostomod - Alenate - Osimax",
+      "uses": "پیشگیری و درمان پوکی استخوان",
+      "dosageForms": "Tablet : 10 , 70 mg - 10mg Daily , 70mg Weekly",
+      "chapter": 10,
+      "sourceRows": [
+        15
+      ],
+      "reviewRequired": false,
+      "reviewFlags": []
+    },
+    {
+      "id": "book-ch10-r33",
+      "genericName": "Risedronate",
+      "persianName": "",
+      "brandNamesRaw": "Actonel - Risonex - Risedronate",
+      "uses": "پیشگیری و درمان پوکی استخوان",
+      "dosageForms": "Tablet : 5 , 35 mg - 5mg Daily , 35mg Weekly",
+      "chapter": 10,
+      "sourceRows": [
+        16
+      ],
+      "reviewRequired": false,
+      "reviewFlags": []
+    },
+    {
+      "id": "book-ch10-r34",
+      "genericName": "Ibandronate sodium",
+      "persianName": "",
+      "brandNamesRaw": "Ibandronate acid - Boniva - Bonviva - Bandrone",
+      "uses": "پیشگیری و درمان پوکی استخوان",
+      "dosageForms": "Tablet : 150 mg - Prefilled Syringe : 3mg/3ml",
+      "chapter": 10,
+      "sourceRows": [
+        17
+      ],
+      "reviewRequired": false,
+      "reviewFlags": []
+    },
+    {
+      "id": "book-ch10-r35",
+      "genericName": "Zoledronate ( acid )",
+      "persianName": "",
+      "brandNamesRaw": "Aredia - Aclasta - Zometa - Ostizol - Eriophos",
+      "uses": "درمان پوکی استخوان و کاهش عوارض استخوانی",
+      "dosageForms": "Vial (IV) : 5mg/100ml ( 50mcg/ml,100ml ) Vial ( Injection powder ) : 4mg/5ml - Annualy",
+      "chapter": 10,
+      "sourceRows": [
+        18
+      ],
+      "reviewRequired": false,
+      "reviewFlags": []
+    },
+    {
+      "id": "book-ch10-r36",
+      "genericName": "Pamidronate ( acid )",
+      "persianName": "",
+      "brandNamesRaw": "Pamidia - Pamidate",
+      "uses": "درمان افزایش کلسیم خون و عوارض استخوانی",
+      "dosageForms": "Vial : 30 , 90 mg/10ml - Ampule : 30 , 90 mg/10ml IV - Monthly",
+      "chapter": 10,
+      "sourceRows": [
+        19
+      ],
+      "reviewRequired": false,
+      "reviewFlags": []
+    },
+    {
+      "id": "book-ch10-r37",
+      "genericName": "Calcitonin",
+      "persianName": "",
+      "brandNamesRaw": "Mianin - Calci Hexal - Nasocalcin - Miacalcic - Fortical - Nylex",
+      "uses": "کاهش کلسیم خون و درمان برخی موارد پوکی استخوان",
+      "dosageForms": "Amp : 50 , 100 IU/ml - Nasal Spray : 100 , 200 IU/dose",
+      "chapter": 10,
+      "sourceRows": [
+        20
+      ],
+      "reviewRequired": false,
+      "reviewFlags": []
+    },
+    {
+      "id": "book-ch10-r38",
+      "genericName": "Tirzepatide",
+      "persianName": "",
+      "brandNamesRaw": "Spartina - Mounjaro",
+      "uses": "کنترل قند خون در دیابت نوع 2 و کمک به کاهش وزن",
+      "dosageForms": "Prefilled Pen : 5 mg/ 0.5 cc , 10 mg/ 0.6 , 7.5 mg/ 0.5 cc , 2.5 mg/ 0.5 cc",
+      "chapter": 10,
+      "sourceRows": [
+        21
+      ],
+      "reviewRequired": false,
+      "reviewFlags": []
+    },
+    {
+      "id": "book-ch10-r39",
+      "genericName": "Semaglutide",
+      "persianName": "",
+      "brandNamesRaw": "Ozempic",
+      "uses": "کنترل قند خون در دیابت نوع 2 و کمک به کاهش وزن",
+      "dosageForms": "Prefilled Pen",
+      "chapter": 10,
+      "sourceRows": [
+        2
+      ],
+      "reviewRequired": false,
+      "reviewFlags": []
+    },
+    {
+      "id": "book-ch10-r4",
+      "genericName": "Insulin ( Regular )",
+      "persianName": "",
+      "brandNamesRaw": "Actrapid - Humulin R - Novolin R - Insuman Rapid - Biosulin R",
+      "uses": "کنترل قند خون در بیماران مبتلا به دیابت انسولین کوتاه الاثر",
+      "dosageForms": "Vial : 100 IU/ml - Prefilled pen : 100 IU/ml",
+      "chapter": 10,
+      "sourceRows": [
+        5
+      ],
+      "reviewRequired": false,
+      "reviewFlags": []
+    },
+    {
+      "id": "book-ch10-r40",
+      "genericName": "Desmopressin",
+      "persianName": "",
+      "brandNamesRaw": "Minirin - Noctissin - Octostim",
+      "uses": "درمان دیابت بی مزه و شب ادراری",
+      "dosageForms": "( Sublingual ) Tablet : 60 , 120 mcg Nasal Spray ( Solution ) : 10 mcg/dose Tablet : 0.1 , 0.2 mg Injection : 4 mcg/ml Ampule : 4 , 15 mcg/dose - Vial : 4 , 15 mcg/ml",
+      "chapter": 10,
+      "sourceRows": [
+        3
+      ],
+      "reviewRequired": false,
+      "reviewFlags": []
+    },
+    {
+      "id": "book-ch10-r41",
+      "genericName": "Levothyroxine Sodium ( T4 )",
+      "persianName": "",
+      "brandNamesRaw": "Euthyrox - Synox - L Thyrox",
+      "uses": "درمان کم کاری تیرویید",
+      "dosageForms": "Tablet : 50 , 75 , 100 , 150 mcg",
+      "chapter": 10,
+      "sourceRows": [
+        4
+      ],
+      "reviewRequired": false,
+      "reviewFlags": []
+    },
+    {
+      "id": "book-ch10-r42",
+      "genericName": "Liothyronine Sodium ( T3 )",
+      "persianName": "",
+      "brandNamesRaw": "Cytomel - Tertroxin -Tiromel - Mytonine - Triiodothyronine",
+      "uses": "درمان کم کاری تیرویید",
+      "dosageForms": "Tablet ( Scored ) : 25 mcg",
+      "chapter": 10,
+      "sourceRows": [
+        5
+      ],
+      "reviewRequired": false,
+      "reviewFlags": []
+    },
+    {
+      "id": "book-ch10-r43",
+      "genericName": "Methimazole",
+      "persianName": "",
+      "brandNamesRaw": "",
+      "uses": "درمان پرکاری تیرویید",
+      "dosageForms": "Tablet : 5 mg",
+      "chapter": 10,
+      "sourceRows": [
+        6
+      ],
+      "reviewRequired": true,
+      "reviewFlags": [
+        "نام تجاری در همین ردیف ثبت نشده"
+      ]
+    },
+    {
+      "id": "book-ch10-r44",
+      "genericName": "Propylthiouracil",
+      "persianName": "",
+      "brandNamesRaw": "PTU - Thyracil - Prouracil",
+      "uses": "درمان پرکاری تیرویید",
+      "dosageForms": "Tablet : 50 mg",
+      "chapter": 10,
+      "sourceRows": [
+        7
+      ],
+      "reviewRequired": false,
+      "reviewFlags": []
+    },
+    {
+      "id": "book-ch10-r45",
+      "genericName": "Calcitonin Salmon",
+      "persianName": "",
+      "brandNamesRaw": "Apo Calcitonin - Calci Hexal - Miacalcic - Nylex",
+      "uses": "کاهش کلسیم خون و درمان برخی موارد پوکی استخوان",
+      "dosageForms": "Injection : 50 , 100 IU/ml - Spray : 100 , 200 IU/dose",
+      "chapter": 10,
+      "sourceRows": [
+        8
+      ],
+      "reviewRequired": false,
+      "reviewFlags": []
+    },
+    {
+      "id": "book-ch10-r46",
+      "genericName": "Cinacalcet",
+      "persianName": "",
+      "brandNamesRaw": "Sensipar - Calcimimetic - Mimpara",
+      "uses": "درمان افزایش هورمون پاراتیرویید و کاهش کلسیم خون",
+      "dosageForms": "Tablet : 30 , 60 , 90 mg",
+      "chapter": 10,
+      "sourceRows": [
+        9
+      ],
+      "reviewRequired": false,
+      "reviewFlags": []
+    },
+    {
+      "id": "book-ch10-r47",
+      "genericName": "Raloxifene",
+      "persianName": "",
+      "brandNamesRaw": "Evista - Ralofen - Raloxen",
+      "uses": "پیشگیری و درمان پوکی استخوان پس از یائسگی",
+      "dosageForms": "Tablet : 60 mg",
+      "chapter": 10,
+      "sourceRows": [
+        10
+      ],
+      "reviewRequired": false,
+      "reviewFlags": []
+    },
+    {
+      "id": "book-ch10-r48",
+      "genericName": "Denosumab",
+      "persianName": "",
+      "brandNamesRaw": "Prolia",
+      "uses": "درمان پوکی استخوان و کاهش خطر شکستگی استخوان",
+      "dosageForms": "Vial : 120 mg/1.7ml - Prefilled Syringe : 60 mg/ml",
+      "chapter": 10,
+      "sourceRows": [
+        11
+      ],
+      "reviewRequired": false,
+      "reviewFlags": []
+    },
+    {
+      "id": "book-ch10-r49",
+      "genericName": "Teriparatide",
+      "persianName": "",
+      "brandNamesRaw": "Forteo - Cinnopar",
+      "uses": "درمان پوکی استخوان شدید",
+      "dosageForms": "Ampule : 250 mcg/2.4ml - Vial : 750 mcg/3ml Prefilled Syringe",
+      "chapter": 10,
+      "sourceRows": [
+        12
+      ],
+      "reviewRequired": false,
+      "reviewFlags": []
+    },
+    {
+      "id": "book-ch10-r5",
+      "genericName": "Insulin Isophane",
+      "persianName": "",
+      "brandNamesRaw": "Biosulin N - Insulin ( NPH )",
+      "uses": "کنترل قند خون در بیماران مبتلا به دیابت انسولین متوسط الاثر",
+      "dosageForms": "Vial : 100 IU/ml Cartridge : 100 IU/ml Injection : 100 IU/ml",
+      "chapter": 10,
+      "sourceRows": [
+        6
+      ],
+      "reviewRequired": false,
+      "reviewFlags": []
+    },
+    {
+      "id": "book-ch10-r50",
+      "genericName": "Strontium ranelate",
+      "persianName": "",
+      "brandNamesRaw": "Protelus - Protos",
+      "uses": "درمان پوکی استخوان شدید",
+      "dosageForms": "Powder : 2 g/sachet ( For oral Susp )",
+      "chapter": 10,
+      "sourceRows": [
+        13
+      ],
+      "reviewRequired": false,
+      "reviewFlags": []
+    },
+    {
+      "id": "book-ch10-r6",
+      "genericName": "Insulin Glargine",
+      "persianName": "",
+      "brandNamesRaw": "lantus - lantus solostar",
+      "uses": "کنترل قند خون در بیماران مبتلا به دیابت انسولین بلند الاثر",
+      "dosageForms": "Vial : 100 IU/ml Injection : 100 IU/ml Prefilled pen",
+      "chapter": 10,
+      "sourceRows": [
+        7
+      ],
+      "reviewRequired": false,
+      "reviewFlags": []
+    },
+    {
+      "id": "book-ch10-r7",
+      "genericName": "Insulin Detemir",
+      "persianName": "",
+      "brandNamesRaw": "Levemir",
+      "uses": "کنترل قند خون در بیماران مبتلا به دیابت انسولین بلند الاثر",
+      "dosageForms": "Vial : 100 IU/ml Injection : 100 IU/ml Prefilled pen : 100 IU/ml",
+      "chapter": 10,
+      "sourceRows": [
+        8
+      ],
+      "reviewRequired": false,
+      "reviewFlags": []
+    },
+    {
+      "id": "book-ch10-r8",
+      "genericName": "Insulin degludec",
+      "persianName": "",
+      "brandNamesRaw": "Tresiba",
+      "uses": "کنترل قند خون در بیماران مبتلا به دیابت انسولین بلند الاثر",
+      "dosageForms": "Injection : 100 IU/ml - Prefilled Pen : 100 , 200 IU/ml",
+      "chapter": 10,
+      "sourceRows": [
+        9
+      ],
+      "reviewRequired": false,
+      "reviewFlags": []
+    },
+    {
+      "id": "book-ch10-r9",
+      "genericName": "Insulin Aspart + Insulin Aspart Protamine",
+      "persianName": "",
+      "brandNamesRaw": "NovoMIX - Novolin 70/30 - Novolog MIX 70/30 - Novolin 50/50 - Humalog 70/30",
+      "uses": "کنترل قند خون در بیماران مبتلا به دیابت انسولین مخلوط",
+      "dosageForms": "Injection : 100 IU/ml - Prefilled syringe Pen",
+      "chapter": 10,
+      "sourceRows": [
+        10
       ],
       "reviewRequired": false,
       "reviewFlags": []
@@ -7854,6 +9178,20 @@
       ]
     },
     {
+      "id": "book-ch11-r4",
+      "genericName": "Calamin",
+      "persianName": "",
+      "brandNamesRaw": "Calamex",
+      "uses": "تسکین خارش ناشی از نیش حشرات-آبله مرغان-اگزما-گیاهان سمی",
+      "dosageForms": "Cream: 8%\nLotion: 8%",
+      "chapter": 11,
+      "sourceRows": [
+        4
+      ],
+      "reviewRequired": false,
+      "reviewFlags": []
+    },
+    {
       "id": "book-ch11-r40",
       "genericName": "Methoxsalen",
       "persianName": "",
@@ -7997,6 +9335,20 @@
       "chapter": 11,
       "sourceRows": [
         49
+      ],
+      "reviewRequired": false,
+      "reviewFlags": []
+    },
+    {
+      "id": "book-ch11-r5",
+      "genericName": "Dexpanthenol",
+      "persianName": "",
+      "brandNamesRaw": "Bepanthe\n Ipanthan",
+      "uses": "درمان خشکی-اگزما-سوختگی سطحی-تحریکات پوستی",
+      "dosageForms": "Cream: 5%\nOintment: 5%",
+      "chapter": 11,
+      "sourceRows": [
+        5
       ],
       "reviewRequired": false,
       "reviewFlags": []
@@ -8146,6 +9498,20 @@
       "reviewFlags": []
     },
     {
+      "id": "book-ch11-r6",
+      "genericName": "Calendula",
+      "persianName": "",
+      "brandNamesRaw": "After Bite\nDermagol",
+      "uses": "درمان بیماری های التهابی پوست",
+      "dosageForms": "Cream\nOintment: 2, 4%\nLotion",
+      "chapter": 11,
+      "sourceRows": [
+        6
+      ],
+      "reviewRequired": false,
+      "reviewFlags": []
+    },
+    {
       "id": "book-ch11-r60",
       "genericName": "Tobramycin + Dexamethasone",
       "persianName": "",
@@ -8288,6 +9654,22 @@
       "reviewFlags": []
     },
     {
+      "id": "book-ch11-r7",
+      "genericName": "Enoxolone",
+      "persianName": "",
+      "brandNamesRaw": "",
+      "uses": "درمان برخی التهابات پوستی-آفتاب سوختگی-اگزما و ...",
+      "dosageForms": "Ointment",
+      "chapter": 11,
+      "sourceRows": [
+        7
+      ],
+      "reviewRequired": true,
+      "reviewFlags": [
+        "نام تجاری در همین ردیف ثبت نشده"
+      ]
+    },
+    {
       "id": "book-ch11-r70",
       "genericName": "Betaxolol",
       "persianName": "",
@@ -8423,6 +9805,20 @@
       "chapter": 11,
       "sourceRows": [
         79
+      ],
+      "reviewRequired": false,
+      "reviewFlags": []
+    },
+    {
+      "id": "book-ch11-r8",
+      "genericName": "Calcipotriol",
+      "persianName": "",
+      "brandNamesRaw": "Diavonex\nPsoriament",
+      "uses": "درمان پسوریازیس",
+      "dosageForms": "Ointment: 50mcg\nCream: 50mcg\nSolution: 50mcg",
+      "chapter": 11,
+      "sourceRows": [
+        8
       ],
       "reviewRequired": false,
       "reviewFlags": []
@@ -8570,6 +9966,20 @@
       "reviewFlags": [
         "نام تجاری در همین ردیف ثبت نشده"
       ]
+    },
+    {
+      "id": "book-ch11-r9",
+      "genericName": "Calcipotriol + Betamethasone",
+      "persianName": "",
+      "brandNamesRaw": "Daivobet",
+      "uses": "درمان پسوریازیس",
+      "dosageForms": "Ointment: 50mcg + 0.064mg",
+      "chapter": 11,
+      "sourceRows": [
+        9
+      ],
+      "reviewRequired": false,
+      "reviewFlags": []
     },
     {
       "id": "book-ch11-r90",
